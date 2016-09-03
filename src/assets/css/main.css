@@ -1304,13 +1304,7 @@ p+img {
     position: absolute;
     top: -5.75em;
     left: 1.25em;
-    height: 90px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    height: 0px;
 }
 
 #lockup object {
@@ -1604,11 +1598,16 @@ footer {
     .container {
         margin:10em auto;
         width:49em;
-        padding:0;
+        padding:0.8em 0 0 0;
         height: auto;
         min-height: 100%;
         background-color: rgba(51,51,51,0.0);
 
+    }
+
+    #home-page #container {
+        padding:0;
+        margin-top: -0.8em;
     }
 
     section {
