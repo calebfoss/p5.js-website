@@ -8,21 +8,14 @@
     <title tabindex="1">p5.js | tutorials</title>
     <link rel="stylesheet" href="/../../assets/css/all.css">
     <script type="text/javascript" src="//fast.fonts.net/jsapi/5ace315e-3b19-4568-9e85-5bfcb29004c0.js"></script>
-    <script type="text/javascript">
-    var test_js = function() {
-      // http://stackoverflow.com/a/12410668/1293700
-      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'') + ' js';
-    }();
-    var test_pointerevents = function() {
-      // https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js
-      var el = document.createElement('x');
-      el.style.cssText = 'pointer-events:auto';
-      return el.style.pointerEvents === 'auto';
-    };
-    if (test_pointerevents()) {
-      document.documentElement.className += ' pointerevents';
-    }
-    </script>
+
+
+    <script type="text/javascript" src="/../../assets/js/vendor/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/../../assets/js/vendor/ace-nc/ace.js"></script>
+    <script type="text/javascript" src="/../../assets/js/vendor/ace-nc/mode-javascript.js"></script>
+    <script type="text/javascript" src="/../../assets/js/vendor/prism.js"></script>
+    <script type="text/javascript" src="/../../assets/js/scroll.js"></script>
+    <script type="text/javascript" src="/../../assets/js/init.js"></script>
   </head>
   <body>
 
