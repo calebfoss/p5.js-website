@@ -29,27 +29,9 @@ $(function() {
       offset     = $sidebar.offset();
 
   $window.scroll(function() {
-    if (window.matchMedia("(min-width: 720px)").matches) { 
-      
-      if ($window.scrollTop() > offset.top) {
-        $sidebar.stop().animate({
-          marginTop: $window.scrollTop() - offset.top + 18
-        });
-      }
-
-      else {
-        $sidebar.stop().animate({
-          marginTop: 0
-        });
-      }
-
-      // rotate
-      var rotation = $(window).scrollTop() / 40 - 21;
-      $('#download-page #asterisk-design-element, #reference-page #asterisk-design-element').css({
-        '-ms-transform': 'rotate(' + rotation + 'deg)',
-        '-webkit-transform': 'rotate(' + rotation + 'deg)',
-        'transform': 'rotate(' + rotation + 'deg)'
-      });
+    if (isWidescreen()) {
+      //setSidebarPosition(); // temp to stop buggy scrolling
+      rotateElements();
     }
   });
 });
