@@ -3,6 +3,21 @@ var langs = ['en', 'es'];
 // =================================================
 // Family bar:
 window.onload = function() {
+
+  var test_js = function() {
+    // http://stackoverflow.com/a/12410668/1293700
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'') + ' js';
+  }();
+  var test_pointerevents = function() {
+    // https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js
+    var el = document.createElement('x');
+    el.style.cssText = 'pointer-events:auto';
+    return el.style.pointerEvents === 'auto';
+  };
+  if (test_pointerevents()) {
+    document.documentElement.className += ' pointerevents';
+  }
+
   var search_form = document.getElementById('search_form'),
       search_field = document.getElementById('search_field');
   var open_field = function() {
@@ -28,7 +43,7 @@ window.onload = function() {
     search_form.attachEvent('onfocusout', close_field);
   }
 
-  
+
   // ===============================================
   // Language detection:
 
@@ -154,13 +169,15 @@ window.onload = function() {
   // =================================================
   // disable i18n for now
   // @TODO remove on i18n launch
+  console.log("testing i18n");
   var buttons = document.getElementById('i18n-btn');
   if (window.location.hostname === 'p5js.org') {
+    console.log("hide i18n");
     buttons.parentNode.removeChild(buttons);
   } else {
+    console.log("show i18n");
     buttons.style.display = 'block';
   }
 
 
 }
-
