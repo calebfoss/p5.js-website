@@ -1,4 +1,4 @@
-var langs = ['en', 'es'];
+var langs = ['en', 'es', 'zh-Hans'];
 
 // =================================================
 // Family bar:
@@ -113,14 +113,32 @@ window.onload = function() {
   var loc_lang = get_loc_lang(window);
   var is_root = (loc == '/');
 
-  // Default lang:
-  var lang = 'en';
-  if (can_store) {
-    if (window.localStorage.getItem('lang') !== null) {
-      var saved_lang = window.localStorage.getItem('lang');
-      if (saved_lang !== loc_lang) {
-        if (saved_lang == 'en') {
-          loc = '/' + loc.replace('\/' + loc_lang + '\/', '');
+    var get_loc_lang = function(w) {
+      if ((w.location.pathname == '/') === false) {
+        for (var i=0, l=langs.length; i < l; i++) {
+          if (w.location.pathname.indexOf('/' + langs[i] + '/') !== -1) {
+            return langs[i];
+          }
+        }
+      }
+      return 'en';
+    };
+    var loc = String(window.location.pathname);
+    var loc_lang = get_loc_lang(window);
+    var is_root = (loc == '/');
+
+    // Default lang:
+    var lang = 'en';
+    if (can_store) {
+      if (window.localStorage.getItem('lang') !== null) {
+        var saved_lang = window.localStorage.getItem('lang');
+        if (saved_lang !== loc_lang) {
+          if (saved_lang == 'en') {
+            loc = '/' + loc.replace('\/' + loc_lang + '\/', '');
+          } else {
+            loc = '/' + saved_lang + loc;
+          }
+          window.location = loc;
         } else {
           loc = '/' + saved_lang + loc;
         }
@@ -186,5 +204,19 @@ window.onload = function() {
     }
   }
 
+  // =================================================
+  // disable i18n for now
+  // @TODO remove on i18n launch
+  var buttons = document.getElementById('i18n-btn');
+  if (window.location.hostname === 'p5js.org') {
+    buttons.parentNode.removeChild(buttons);
+  } else {
+    buttons.style.display = 'block';
+  }
 
+  // =================================================
+  // Chinese spacing
+  if(window.pangu){
+    pangu.spacingPage();
+  }
 }
