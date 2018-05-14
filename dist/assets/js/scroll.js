@@ -24,13 +24,65 @@ TO DO:
 
 $(function() {
 
-  var $sidebar   = $("#menu"),
-      $window    = $(window),
-      offset     = $sidebar.offset();
+  var $window           = $(window),
+      $sidebar          = $("#menu"),
+      sidebarOffset     = $sidebar.offset(),
+      $rotationElements = $([
+        '#download-page #asterisk-design-element',
+        '#reference-page #asterisk-design-element'
+      ].join()),
+      rotationDegrees   = 0;
+
+  var isWidescreen = function() {
+    return window.matchMedia("(min-width: 720px)").matches;
+  };
+
+  // Calculate what the top for the sidebar should be.
+  var getNewTop = function(){
+    return Math.max($window.scrollTop() - sidebarOffset.top, 0);
+  }
+
+  // Change sidebar position:
+  var setSidebarPosition = function(newTop) {
+    // If it is already animating, return. This makes the animation less choppy.
+    // It will pick up the final top when the current animation ends.
+    if ($sidebar.is(':animated')){
+      return;
+    }
+
+    // Calculate new top if none passed in.
+    newTop = newTop || getNewTop();
+
+    $sidebar.animate({top: newTop}, { 
+      easing: 'linear',
+      duration: 100,
+      complete: function(){
+        // Go again if a subsequent scroll has changed the final top.
+        var finalTop = getNewTop();
+        if (newTop != finalTop){
+          setSidebarPosition(finalTop);
+        }
+      }
+    });
+  };
+  
+  if (isWidescreen()){
+    $sidebar.css('top', getNewTop());
+  }
+
+  // Rotate specific elements:
+  var rotateElements = function() {
+    rotationDegrees = ($window.scrollTop() / 40) - 21;
+    $rotationElements.css({
+      '-ms-transform': 'rotate(' + rotationDegrees + 'deg)',
+      '-webkit-transform': 'rotate(' + rotationDegrees + 'deg)',
+      'transform': 'rotate(' + rotationDegrees + 'deg)'
+    });
+  };
 
   $window.scroll(function() {
     if (isWidescreen()) {
-      //setSidebarPosition(); // temp to stop buggy scrolling
+      setSidebarPosition();
       rotateElements();
     }
   });
