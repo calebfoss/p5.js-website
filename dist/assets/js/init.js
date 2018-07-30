@@ -160,7 +160,7 @@ window.onload = function() {
 
   // temp until chinese launch
   // if (lang !== 'pangu' || isStaging()) {
-  //   window.lang = lang;
+  window.lang = lang;
   // } 
 
   // temp until chinese launch
