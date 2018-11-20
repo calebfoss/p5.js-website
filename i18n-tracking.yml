@@ -20,12 +20,6 @@ es:
     line 80: '  editor-includes'
     line 196: '  nodejs-and-socketio'
     line 204: '  color-title'
-    line 205: '  color'
-    line 194: '  creating-libraries-title'
-    line 195: '  creating-libraries'
-    line 426: '  contributors-conference-support5'
-    line 427: '  contributors-conference-support6'
-    line 356: '  create2'
 zh-Hans:
   src/data/en.yml:
     line 43: '  sketch_info'
