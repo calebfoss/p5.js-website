@@ -8,7 +8,7 @@
  * will use the function variable to make its calculations within the current
  * scope.
  */
-var a = 80;  // Create a global variable "a"
+let a = 80; // 创建一个全局变量"a"
 
 function setup() {
   createCanvas(720, 400);
@@ -21,12 +21,12 @@ function draw() {
   // Draw a line using the global variable "a"
   line(a, 0, a, height);
 
-  for (var a = 120; a < 200; a += 3) {
+  for (let a = 120; a < 200; a += 3) {
     line(a, 0, a, height);
   }
 
-  var a = 300;
-  // Draw a line using the new local variable "a"
+  let a = 300;
+  // 使用新的本地变量 “a” 画一条线
   line(a, 0, a, height);
 
   // Make a call to the custom function drawAnotherLine()
@@ -37,15 +37,13 @@ function draw() {
 }
 
 function drawAnotherLine() {
-  // Create a new variable "a" local to this function
-  var a = 320;
-  // Draw a line using the local variable "a"
+  // 在此函数的本地创建一个新变量 “a”
+  let a = 320;
+  // 使用本地变量 “a” 画一条线
   line(a, 0, a, height);
 }
 
 function drawYetAnotherLine() {
-  // Because no new local variable "a" is set,
-  // this line draws using the original global
-  // variable "a" which is set to the value 20.
-  line(a+3, 0, a+3, height);
+  // 因为没有设置新的本地变量 “a”，所以该线使用设置为值 20 的原始全局变量 “a” 进行绘制
+  line(a + 3, 0, a + 3, height);
 }
