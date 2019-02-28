@@ -79,9 +79,4 @@ es:
     line 108: '  coordinate-system-simple-shapes-p2x1'
     line 120: '  coordinate-system-simple-shapes-p9x1'
 zh-Hans:
-  src/data/en.yml:
-    line 329: '  coordinate-system-simple-shapes-p2x1'
-    line 341: '  coordinate-system-simple-shapes-p9x1'
-    line 99: '  your-first-sketch12'
-    line 108: '  coordinate-system-simple-shapes-p2x1'
-    line 120: '  coordinate-system-simple-shapes-p9x1'
+  src/data/en.yml: {}
