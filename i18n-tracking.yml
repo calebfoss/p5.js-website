@@ -79,4 +79,4 @@ es:
     line 108: '  coordinate-system-simple-shapes-p2x1'
     line 120: '  coordinate-system-simple-shapes-p9x1'
 zh-Hans:
-  src/data/en.yml: {}
+  src/data/en.yml:
