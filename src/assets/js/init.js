@@ -1,3 +1,5 @@
+var langs = ['en', 'es', 'ko', 'zh-Hans'];
+
 // =================================================
 // Family bar:
 window.onload = function() {
