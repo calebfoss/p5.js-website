@@ -126,12 +126,19 @@
   float: left;
 }
 
-.download_box h4 {
+.download_box.half_box.last_box {
+  margin-right: 0;
+}
+
+.download_box .download_name {
   font-size: 1em;
   margin: 0;
   padding-bottom: 0.3em;
   border-bottom: 0.09em dashed;
   border-bottom-color: #ED225D;
+  line-height: 1.2;
+  font-family: AvenirNextLTW01-Medium;
+  display: block;
 }
 
 .download_box:hover h4 {
@@ -1041,6 +1048,10 @@ body {
     color: #333;
 }
 
+p {
+    font-size: 1.2em;
+}
+
 .freeze {
   overflow: hidden;
 }
@@ -1086,15 +1097,6 @@ a:hover,
     border-bottom: 0.11em dashed;
     border-bottom-color: #ED225D;
     transition: border-bottom 30ms linear;
-}
-
-a.anchor {
-    color: #222 !important;
-    /*outline: none !important; keep on for accessibility */ 
-}
-
-a.anchor:hover {
-    color:#ED225D !important;
 }
 
 a.nounderline:hover {
@@ -1279,29 +1281,36 @@ main {
     */
 }
 
-main p, main li {
-    font-size: 1.20em;
-}
-
 .spacer {
     clear: both;
 }
 
 
 ul {
-    margin:0.5em 0 0 0;
+    margin: 0;
     padding: 0;
-    list-style: disc;
-    list-style-position: outside;
+    list-style: none;
 }
 
 li {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul.list_view {
+  margin:0.5em 0 0 1em;
+  padding: 0;
+  list-style: disc;
+  list-style-position: outside;
+  font-size: 1.2em;
+}
+
+ul.list_view li {
     margin: 0 0 1em 0;
 }
 
-main li {
-    margin: 0 0 1em 0.04em;
-}
+
 
 ul.nobullet, div.params ul {
     margin:0.5em 0 0 0;
@@ -1919,6 +1928,11 @@ footer {
     width: 46%;
     margin-right: 4%;
     float: left;
+  }
+
+  #etc_list {
+    font-size: 1.2em;
+    margin-top: 1em;
   }
 
   #asterisk-design-element, .separator-design-element {
