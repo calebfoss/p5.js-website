@@ -127,6 +127,7 @@ es:
     line 550: '  project-moon-xin'
     line 551: '  credit-moon-xin'
     line 552: '  description-moon-xin'
+    line 669: '  credit-moon-xin'
 zh-Hans:
   src/data/en.yml:
     line 516: '  showcase-intro3'
@@ -191,3 +192,4 @@ zh-Hans:
     line 550: '  project-moon-xin'
     line 551: '  credit-moon-xin'
     line 552: '  description-moon-xin'
+    line 669: '  credit-moon-xin'
