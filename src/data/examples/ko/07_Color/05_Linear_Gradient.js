@@ -1,7 +1,6 @@
 /*
- * @name Linear Gradient
- * @description The lerpColor() function is useful for interpolating between
- * two colors.
+ * @name 선형 그래디언트
+ * @description lerpColor() 함수는 두 가지 색상을 보간하는 데에 쓰입니다.
  */
 // Constants
 const Y_AXIS = 1;

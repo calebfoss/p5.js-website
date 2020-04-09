@@ -1,6 +1,6 @@
 /*
- * @name Particle System
- * @description This is a basic Particle System
+ * @name 파티클 시스템
+ * @description 이 예제는 기초적인 파티클 시스템을 다룹니다.
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 let system;

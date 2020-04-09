@@ -1,7 +1,7 @@
 /*
- * @name Array of Objects
- * @description Create a Jitter class, instantiate an array of objects
- * and move them around the screen.
+ * @name 객체 배열
+ * @description Jitter 클래스를 만들고, 객체 배열을 인스턴스화하여
+ * 화면 안에서 움직여보세요.
  */
 
 let bugs = []; // array of Jitter objects
