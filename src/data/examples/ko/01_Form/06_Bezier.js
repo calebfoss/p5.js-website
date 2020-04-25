@@ -1,6 +1,6 @@
 /*
  * @name 베지어 곡선
- * @description bezier()함수의 처음 두 인수들은 각각 곡선의 시작점과 끝점을 지정합니다.
+ * @description bezier()함수의 처음 두 매개변수들은 각각 곡선의 시작점과 끝점을 지정합니다.
  * 중간의 인수들은 곡선의 모양을 조정하는 '조정점(control point)'들입니다.
  */
 function setup() {

@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   background(150);
   image(fingers, 10, 10); // 캔버스에 비디오 프레임 그리기
-  filter('GRAY');
+  filter(GRAY);
   image(fingers, 150, 150); // 캔버스에 두번째 사본 그리기
 }
 

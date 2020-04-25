@@ -31,7 +31,7 @@ function mousePressed() {
   systems.push(p);
 }
 
-// 간단한 Particle 클래스
+// 간단한 파티클 클래스
 let Particle = function(position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-1, 1), random(-1, 0));
@@ -51,7 +51,7 @@ Particle.prototype.update = function(){
   this.lifespan -= 2;
 };
 
-// 화면에 보이게 하기 위한 메소드
+// 화면에 보이기 위한 메소드
 Particle.prototype.display = function () {
   stroke(200, this.lifespan);
   strokeWeight(2);
@@ -59,7 +59,8 @@ Particle.prototype.display = function () {
   ellipse(this.position.x, this.position.y, 12, 12);
 };
 
-// 파티클이 여전히 유용한가요?
+// 파티클이 여전히 쓸만한가요?
+>>>>>>> cf3314557fcd084720a3cbca0fa45ce5ce151753
 Particle.prototype.isDead = function () {
   if (this.lifespan < 0) {
     return true;

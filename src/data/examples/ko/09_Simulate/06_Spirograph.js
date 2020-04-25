@@ -17,7 +17,7 @@ let fund = 0.005; // 중심 싸인의 속도
 let ratio = 1; // 더해진 각 싸인은 속도에 몇을 곱하나요?
 let alpha = 50; // 궤도 추적 시스템의 투명도
 
-let trace = false; // 추적을 하나요?
+let trace = false; // 추적 중인가요?
 
 function setup() {
   createCanvas(710, 400);

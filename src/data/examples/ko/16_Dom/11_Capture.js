@@ -1,5 +1,5 @@
 /*
- * @name 실시간 비디오 화면
+ * @name 실시간 비디오
  * @frame 710,240
  * <p><em><span class="small"> 로컬 프로젝트에서 이 예제를 실행하려면 적어도 한 개의 비디오 파일이 필요하고,
  * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom 라이브러리</a>를 추가해야 되며, 

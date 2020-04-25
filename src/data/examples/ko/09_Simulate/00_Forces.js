@@ -1,6 +1,6 @@
 /*
  * @name 힘
- * @description 바디 오브젝트에 작용하는 여러가지 물리학적 힘
+ * @description 바디 객체에 작용하는 여러가지 물리학적 힘
  * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 // 바디에 적용되는 여러가지 물리학적 힘(Mover 클래스)
@@ -16,7 +16,7 @@ let liquid;
 function setup() {
   createCanvas(640, 360);
   reset();
-  // 액체 오브젝트 생성
+  // liquid(액체) 객체 생성
   liquid = new Liquid(0, height / 2, width, height / 2, 0.1);
 }
 

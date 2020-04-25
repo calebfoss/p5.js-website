@@ -1,5 +1,5 @@
 /*
- * @name 공 흔들고 튕기기
+ * @name 흔들기와 바운스
  * @description Ball 클래스를 생성하고 복수의 객체를 인스턴스화한 뒤, 화면 위에서 움직여보세요.
  * 공이 캔버스의 경계에 닿으면 튕깁니다. 
  * accelerationX와 accelerationY의 총 변화를 기반으로 흔들림을 감지하고,
@@ -33,7 +33,7 @@ function draw() {
 }
 
 function checkForShake() {
-  // accelerationX and accelerationY의 총 변화 계산
+  // accelerationX와 accelerationY의 총 변화 계산
   accChangeX = abs(accelerationX - pAccelerationX);
   accChangeY = abs(accelerationY - pAccelerationY);
   accChangeT = accChangeX + accChangeY;

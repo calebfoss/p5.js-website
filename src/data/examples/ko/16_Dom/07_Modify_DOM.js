@@ -2,7 +2,7 @@
  * @name DOM 변경
  * @frame 710,300
  * @description <p>DOM 요소를 만들고 draw()함수가 매번 호출될 때마다
- * 그 속성들을 변경해보세요. 여러분의 프로젝트에서 이 예제를 실행하려면, 
+ * 그 속성들을 변경해보세요. 로컬 프로젝트에서 이 예제를 실행하려면, 
  * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom 라이브러리</a>
  * 를 추가하면 됩니다.</p>
  */

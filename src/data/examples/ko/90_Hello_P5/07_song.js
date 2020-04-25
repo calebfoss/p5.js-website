@@ -9,7 +9,6 @@
 // MIDI 음계의 음표들
 let notes = [ 60, 62, 64, 65, 67, 69, 71];
 
-// 노래를 자동 재생하기 위한 처리
 let index = 0;
 let song = [
   { note: 4, duration: 400, display: "D" },
@@ -74,7 +73,7 @@ function draw() {
   }
 
 
-  // 키보드 긜기
+  // 키보드 그리기
 
   // 각 건반의 너비
   let w = width / notes.length;

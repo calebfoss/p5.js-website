@@ -1,7 +1,8 @@
 /*
- * @name 스모크 파티클
+<<<<<<< HEAD
+ * @name 연기 파티클
  * @description 다니엘 쉬프만(Dan Shiffman)이 프로세싱(Processing)을 위해 제작한
- * 스모크 파티클 시스템(SmokeParticleSystem) 예제를 옮겨왔습니다.
+ * 연기 파티클 시스템(SmokeParticleSystem) 예제를 옮겨왔습니다.
  * 마치 연기와 같은 파티클을 만들어볼까요 :p
  */
 
@@ -118,6 +119,7 @@ ParticleSystem.prototype.addParticle = function() {
     this.particles.push(new Particle(this.origin, this.img));
 }
 
+
 //========= 파티클 ===========
 /**
  * 파티클을 이미지로 렌더링하는 간단한 파티클 클래스
@@ -135,7 +137,7 @@ let Particle = function (pos, img_) {
 }
 
 /**
- *  파티클을 동시에 업데이트하고 보이게 하기
+ *  파티클을 업데이트하는 동시에 보이게 하기
  */
 Particle.prototype.run = function() {
   this.update();
@@ -143,7 +145,7 @@ Particle.prototype.run = function() {
 }
 
 /**
- *  A function to display a particle
+ *  파티클을 화면에 보이게하는 메소드
  */
 Particle.prototype.render = function() {
   imageMode(CENTER);

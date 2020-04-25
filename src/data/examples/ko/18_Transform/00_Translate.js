@@ -1,9 +1,9 @@
 /*
- * @name 치환(Translate)
+ * @name 변환(Translate)
  * @description translate() 함수는 객체를 화면 내 어떤 위치로든 이동하게 합니다.
- * 그 첫 번째 매개 변수는 x축의 오프셋(offset)을,
- * 두 번째 매개 변수는 y축의 오프셋을 지정합니다.
- * 이 예제는 이러한 치환들이 축적되는 것을 보여줍니다.
+ * 그 첫 번째 매개변수는 x축의 오프셋(offset)을,
+ * 두 번째 매개변수는 y축의 오프셋을 지정합니다.
+ * 이 예제는 이러한 변환들이 축적되는 것을 보여줍니다.
  */
 
 let x = 0;
@@ -30,8 +30,8 @@ function draw() {
   fill(255);
   rect(-dim / 2, -dim / 2, dim, dim);
 
-  // translate(치환)은 축적됩니다. 이 rect가 다른 rect와
-  // 동일한 x축값 매개 변수를 가졌음에도
+  // translate(변환)은 축적됩니다. 이 rect가 다른 rect와
+  // 동일한 x축값 매개변수를 가졌음에도
   // 두 배로 빠르게 움직이는 걸 볼 수 있습니다.
   translate(x, dim);
   fill(0);

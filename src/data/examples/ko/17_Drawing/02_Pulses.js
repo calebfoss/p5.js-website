@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  // 마우스 버튼이 눌렸을 때만 그리기
+  // 마우스가 클릭될 때만 그리기
   if (mouseIsPressed === true) {
     angle += 5;
     let val = cos(radians(angle)) * 12.0;

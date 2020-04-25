@@ -26,7 +26,7 @@ function draw() {
   // 위의 선의 끝 지점으로 이동하기
   translate(0,-120);
   // 나뭇가지의 재귀적 분기 시작하기!
-  branchㅌ(120);
+  branch(120);
 
 }
 

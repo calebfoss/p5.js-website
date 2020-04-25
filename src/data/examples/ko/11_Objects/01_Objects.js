@@ -1,15 +1,15 @@
 /*
- * @name 객체(object)
+ * @name 객체
  * @description Jitter 클래스를 만들고, 객체를 인스턴스화하여
- * 화면 안에서 움직여보세요. 캐시 리아즈(Casey Reas) & 벤 프라이(Ben Fry) 저 Getting Started with
+ * 화면 안에서 움직여보세요. 캐시 리스(Casey Reas) & 벤 프라이(Ben Fry) 저 Getting Started with
  * Processing에서 옮김.
  */
 
-let bug; // 객체 선언
+let bug; // 객체 선언하기
 
 function setup() {
   createCanvas(710, 400);
-  // 객체 생성
+  // 객체 생성하기
   bug = new Jitter();
 }
 

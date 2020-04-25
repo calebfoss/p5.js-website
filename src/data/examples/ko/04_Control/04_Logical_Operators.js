@@ -32,7 +32,6 @@ function setup() {
       point(width / 3, i);
     }
 
-      
     // 불리언 값이 거짓(false)인지 여부를 테스트
     // "if(!test)"이 "if(test == false)"와 동일한지 여부를 확인
     if (!test) {

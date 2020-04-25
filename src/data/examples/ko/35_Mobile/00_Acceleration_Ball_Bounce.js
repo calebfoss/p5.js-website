@@ -1,5 +1,5 @@
 /*
- * @name 가속 공 바운스
+ * @name 가속도와 바운스
  * @description accelerationX와 accelerationY 값을 활용해 타원을 움직이고, 캔버스의 경계에 닿았을 때 튕기도록 만듭니다.
  */
 

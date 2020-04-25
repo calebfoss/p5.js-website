@@ -1,6 +1,6 @@
 /*
- * @name 무작위 선들
- * @description 원형을 그리는 무작위 선들을 축적합니다.
+ * @name 랜덤 선들
+ * @description 원형을 그리는 무작위의 선들을 축적합니다.
  * 불투명하게 처리된 선들이 축적될수록 마치 명암이 적용된 구처럼 보입니다.
  * 애티쉬 바티아(Aatish Bhatia) 기여, <a href ="http://inconvergent.net/">앤더스 호프(Anders Hoff)</a>로부터 영감을 받음.
  */

@@ -11,7 +11,7 @@ let accelX = 0.0, accelY = 0.0;
 let deltaX = 0.0, deltaY = 0.0;
 let springing = 0.0009, damping = 0.98;
 
-// 코너 노드들
+// 모서리의 노드들
 let nodes = 5;
 
 // 빈 배열
@@ -41,7 +41,7 @@ function setup() {
     angle[i] = 0;
   }
 
-  // 코너 노드의 빈도수 초기화
+  // 모서리 노드들의 빈도수 초기화
   for (let i = 0; i < nodes; i++){
     frequency[i] = random(5, 12);
   }

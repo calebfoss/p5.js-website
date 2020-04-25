@@ -4,14 +4,14 @@
  * 화면 안에서 움직여보세요.
  */
 
-let bug1; // 객체들 선언
+let bug1; // 객체들 선언하기
 let bug2;
 let bug3;
 let bug4;
 
 function setup() {
   createCanvas(710, 400);
-  // 객체 생성
+  // 객체 생성하기
   bug1 = new Jitter();
   bug2 = new Jitter();
   bug3 = new Jitter();

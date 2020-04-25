@@ -3,7 +3,7 @@
  * @description createImage() 함수로 재밌는 픽셀 버퍼를 만들 수 있습니다.
  * 이 예제는 그래디언트 이미지를 만듭니다.
  */
-let img; // Declare variable 'img'.
+let img; // 'img' 변수 선언하기
 
 function setup() {
   createCanvas(720, 400);

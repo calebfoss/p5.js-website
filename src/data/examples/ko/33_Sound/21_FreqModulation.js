@@ -89,7 +89,6 @@ function setup() {
 function draw() {
   background(30);
 
-
   // 최대 및 최소 주파수 사이의 변조기 주파수에 mouseY를 매핑하기
   let modFreq = map(mouseY, height, 0, modMinFreq, modMaxFreq);
   modulator.freq(modFreq);
