@@ -4697,7 +4697,8 @@ define('router',[
     get: function(searchClass, searchItem) {
 
       // if looking for a library page, redirect
-      if (searchClass === 'p5.sound' && !searchItem) {
+      if (searchClass === 'p5.sound')
+          && !searchItem) {
         window.location.hash = '/libraries/'+searchClass;
         return;
       }

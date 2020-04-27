@@ -492,13 +492,14 @@ div.reference-subgroup {
   vertical-align: top;
 }
 
-#library-page .group-name {
+#library-page .group-name{
   display: inline-block;
 }
 
-#library-page .group-name:hover {
-  color: #ed225d;
+#library-page .group-name:hover  {
+  color: #ED225D;
 }
+
 
 /* EXAMPLES IN REF */
 
@@ -1003,6 +1004,10 @@ h3.contribute-title {
   margin: 0.5em 0 0 0;
 }
 
+.label .nounderline img{
+  margin: .5em 0 0 0
+}
+
 .label h3 {
   color: white;
   position: absolute;
@@ -1319,12 +1324,12 @@ img.gallery-img {
   transition: all 0.3s;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) {	
   #showcase-page .nominate a,
   #showcase-page .nominate a:visited {
     padding: 0.4em 0.3em;
     font: 1.3rem "Montserrat", sans-serif;
-  }
+  }	
 }
 
 #showcase-page .nominate a:hover {
@@ -1853,6 +1858,10 @@ ol {
   font-size: 1.2em;
 }
 
+ol {
+  font-size: 1.2em;
+}
+
 li {
   margin: 0;
   padding: 0;
@@ -1871,6 +1880,10 @@ ul.nobullet, div.params ul {
 
 div.params ul li {
     margin-left: -0.23em;
+}
+
+ol ul.list_view {
+  font-size: 1em;
 }
 
 ol ul.list_view {
@@ -2615,8 +2628,8 @@ iframe {
 }
 
 .email-octopus-form-row button {
-  border: 1px solid #ed225d;
-  color: #ed225d;
+  border: 1px solid #ED225D;
+  color: #ED225D;
   padding: 0.4em 0.6em;
   margin: 1em 0 0 0;
   font-family: "Montserrat", sans-serif;
@@ -2624,22 +2637,14 @@ iframe {
 }
 
 .email-octopus-form-row button:hover {
-  background-color: #ed225d;
+  background-color: #ED225D;
   color: white;
 }
 
-.email-octopus-email-address::-webkit-input-placeholder {
-  color: #ababab;
-}
-.email-octopus-email-address::-moz-placeholder {
-  color: #ababab;
-}
-.email-octopus-email-address:-moz-placeholder {
-  color: #ababab;
-}
-.email-octopus-email-address:-ms-input-placeholder {
-  color: #ababab;
-}
+.email-octopus-email-address::-webkit-input-placeholder { color:#ABABAB; }
+.email-octopus-email-address::-moz-placeholder { color:#ABABAB; }
+.email-octopus-email-address:-moz-placeholder { color:#ABABAB; }
+.email-octopus-email-address:-ms-input-placeholder { color:#ABABAB; }
 
 @media (min-width: 720px) {
   .email-octopus-email-address {
