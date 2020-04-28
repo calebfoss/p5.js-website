@@ -973,9 +973,24 @@ h3.contribute-title {
   margin: 1em;
 }
 
-#exampleDisplay, #exampleFrame, #exampleEditor {
-    width: 36em;
-    border: none;
+.label:hover h3 {
+  color: #ED225D;
+}
+
+h3 {
+  font-size: 1.33em;
+  margin: 1em 0 0 0;
+}
+
+.label .nounderline img {
+  height: fit-content;
+}
+
+#exampleDisplay,
+#exampleFrame,
+#exampleEditor {
+  width: 36em;
+  border: none;
 }
 
 #exampleDisplay {
