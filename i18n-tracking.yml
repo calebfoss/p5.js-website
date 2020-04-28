@@ -171,7 +171,7 @@ es:
     line 485: '  notes5'
     line 608: '  book-1-authors'
     line 617: '  book-2-authors'
-    line 430: '  Rotating knobs'
+    line 409: '  p5.bots'
 zh-Hans:
   src/data/en.yml:
     line 44: '  description-roni'
@@ -280,4 +280,4 @@ zh-Hans:
     line 485: '  notes5'
     line 608: '  book-1-authors'
     line 617: '  book-2-authors'
-    line 430: '  Rotating knobs'
+    line 409: '  p5.bots'
