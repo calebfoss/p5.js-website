@@ -1024,12 +1024,9 @@ h3 {
   margin: 1em 0 0 0;
 }
 
-#learn-page .label .nounderline img {
-  height: fit-content;
-}
-
-#learn-page .info {
-  display: inline-block;
+.bullet-list {
+  padding: 0 0 0 40px;
+  list-style: disc;
 }
 
 #exampleDisplay,
