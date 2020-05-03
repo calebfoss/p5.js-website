@@ -1240,32 +1240,34 @@ books:
   book-6-order-a: Download the PDF (FREE)
   book-6-order-b: Order from Barnes & Noble
 examples:
-  Examples: Examples
-  back-examples: Back to Examples
-  Structure: Structure
-  Form: Form
-  Data: Data
-  Arrays: Arrays
-  Control: Control
-  Image: Image
-  Color: Color
-  Math: Math
-  Simulate: Simulate
-  Interaction: Interaction
-  Objects: Objects
-  Lights: Lights
-  Motion: Motion
-  Instance_Mode: Instance Mode
-  Dom: DOM
-  Drawing: Drawing
-  Transform: Transform
-  Typography: Typography
-  3D: 3D
-  Input: Input
-  Advanced_Data: Advanced Data
-  Sound: Sound
-  Mobile: Mobile
-  Hello_P5: Hello p5
+  Examples: "Examples"
+  back-examples: "Back to Examples"
+  Structure: "Structure"
+  Form: "Form"
+  Data: "Data"
+  Arrays: "Arrays"
+  Control: "Control"
+  Image: "Image"
+  Image_Processing: "Image Processing"
+  Color: "Color"
+  Math: "Math"
+  Simulate: "Simulate"
+  Interaction: "Interaction"
+  Objects: "Objects"
+  Lights: "Lights"
+  Motion: "Motion"
+  Instance_Mode: "Instance Mode"
+  Dom: "DOM"
+  Drawing: "Drawing"
+  Transform: "Transform"
+  Typography: "Typography"
+  3D: "3D"
+  Input: "Input"
+  Advanced_Data: "Advanced Data"
+  Sound: "Sound"
+  Mobile: "Mobile"
+  Hello_P5: "Hello p5"
+
 reference:
   Reference: Reference
 showcase:

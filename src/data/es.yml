@@ -1322,32 +1322,34 @@ books:
   book-6-order-a: Descarga en PDF (gratis)
   book-6-order-b: Comprar en Barnes & Noble
 examples:
-  Examples: Ejemplos
-  back-examples: Volver a Ejemplos
-  Structure: Estructura
-  Form: Forma
-  Data: Datos
-  Arrays: Arreglos
-  Control: Control
-  Image: Imagen
-  Color: Color
-  Math: Matemática
-  Simulate: Simulación
-  Interaction: Interacción
-  Objects: Objetos
-  Lights: Luces
-  Motion: Movimiento
-  Instance_Mode: Modo Instancia
-  Dom: DOM
-  Drawing: Dibujo
-  Transform: Transformar
-  Typography: Tipografía
-  3D: 3D
-  Input: Input
-  Advanced_Data: Avanzado Datos
-  Sound: Sonido
-  Mobile: Móvil
-  Hello_P5: Hola p5
+  Examples: "Ejemplos"
+  back-examples: "Volver a Ejemplos"
+  Structure: "Estructura"
+  Form: "Forma"
+  Data: "Datos"
+  Arrays: "Arreglos"
+  Control: "Control"
+  Image: "Imagen"
+  Image_Processing: "Procesamiento de imagen"
+  Color: "Color"
+  Math: "Matemática"
+  Simulate: "Simulación"
+  Interaction: "Interacción"
+  Objects: "Objetos"
+  Lights: "Luces"
+  Motion: "Movimiento"
+  Instance_Mode: "Modo Instancia"
+  Dom: "DOM"
+  Drawing: "Dibujo"
+  Transform: "Transformar"
+  Typography: "Tipografía"
+  3D: "3D"
+  Input: "Input"
+  Sound: "Sonido"
+  Advanced_Data: "Avanzado Datos"
+  Mobile: "Móvil"
+  Hello_P5: "Hola p5"
+
 reference:
   Reference: Referencia
 showcase:
