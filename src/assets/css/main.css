@@ -1365,18 +1365,15 @@ img.gallery-img {
   margin-top: 1em;
 }
 
-ul.project-tags a{
-  line-height: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  font-size: .5em;
-  margin: 0px;
-}
-h3.title{
-  margin-top: 3em;
+#showcase-page ul.project-tags {
+/* display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-flex-wrap: wrap;
+flex-wrap: wrap;
+margin-top: -0.2em;
+margin-bottom: 2em; */
+display: none;
 }
 #showcase-page ul.project-tags li {
   margin: 5px;
@@ -1388,10 +1385,10 @@ h2.featuring{
 #showcase-page a.tag{
   display: inline-block;
   padding: 6px 14px;
-  background-color: #ffe8e8;
   border-radius: 27px;
+background-color: #ffeaf0;
   font: 0.7rem "Montserrat", sans-serif;
-  color: #333;
+  color: #848484;
 }
 #showcase-page ul.project-tags li{
   margin: 0px;
