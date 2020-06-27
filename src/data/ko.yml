@@ -30,6 +30,16 @@ tagline5: "프로세싱 커뮤니티에 자바스크립트 커뮤니티를 곱�
 tagline6: "프로세싱의 강력함에 자바스크립트의 범용성을 곱하다*"
 
 home:
+  blmnamelistending: "and too many more to list here..."
+  blmstatement1: "This site is currently offline, as a small mark of respect, and expression of solidarity."
+  blmstatement2: "remains available."
+  blmstatement3: "Please consider donating to "
+  blacklivesmatter: "Black Lives Matter"
+  naacp: "The NAACP Legal Defense and Educational Fund"
+  equaljustice: "The Equal Justice Initiative"
+  bailfund: "your local bail fund"
+  floydmemorial: "George Floyd Memorial Fund"
+
   start-creating: "p5 에디터로 프로젝트 시작하기"
   p1xh1: "안녕하세요!"
   p1x1: "p5.js는 크리에이티브 코딩을 위한 자바스크립트 라이브러리입니다. 특히, 예술가, 디자이너, 교육자, 초심자, 그리고 모두에게 접근성이 높고 포용적인 언어를 지향합니다. p5.js는 무료 오픈 소스로 제공됩니다. 이는 소프트웨어와 그 학습 도구들이 누구에게나 열려있어야 한다는 생각에 기반합니다."
