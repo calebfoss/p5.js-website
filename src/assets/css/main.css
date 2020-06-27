@@ -1296,7 +1296,7 @@ img.gallery-img {
 
 #showcase-page .showcase-featured p.description {
   font-size: 1em;
-  margin-bottom: 3rem;
+  margin-bottom: .5rem;
 }
 
 #showcase-page .nominate {
@@ -1344,7 +1344,9 @@ img.gallery-img {
 #showcase-page .showcase-featured a::after {
   content: " →";
 }
-
+#showcase-page .showcase-featured .tag a::after {
+  content: "";
+}
 #showcase-page .showcase-featured .no-arrow-link::after {
   content: " ";
 }
@@ -1359,30 +1361,37 @@ img.gallery-img {
   margin-top: 1em;
 }
 
-#showcase-page ul.project-tags {
-display: -webkit-box;
-display: -webkit-flex;
-display: flex;
--webkit-flex-wrap: wrap;
-flex-wrap: wrap;
-margin-top: -0.2em;
-margin-bottom: 2em;
+ul.project-tags a{
+  line-height: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: .5em;
+  margin: 0px;
 }
-
+h3.title{
+  margin-top: 3em;
+}
 #showcase-page ul.project-tags li {
   margin: 5px;
+  display: inline-block;
 }
-
-#showcase-page .tag {
+h2.featuring{
+  margin-top: 0px;
+}
+#showcase-page .tag a{
   display: inline-block;
   padding: 6px 14px;
-  border: dashed #69ffe3;
+  background-color: #ffe8e8;
   border-radius: 27px;
-
   font: 0.7rem "Montserrat", sans-serif;
   color: #333;
 }
-
+#showcase-page ul.project-tags li{
+  margin: 0px;
+}
 /*
   //////////////////////////////////////////////////
     SHOWCASE - FEATURED PROJECT PAGE
@@ -2191,10 +2200,10 @@ footer {
       padding-top: 0.5em;
       /*border-top: 0.06em solid rgba(51,51,51,0.25);*/
   }
-
-  #home-page .column-span {
-      /*margin:0 0.75em 0 -1.85em; /* margin-right: 0.75em;  */
-      margin-left:7.7em;
+  .left-column {
+    width: 48%;
+    float: left;
+    margin-bottom: 40px;
   }
 
   .left-column  {
