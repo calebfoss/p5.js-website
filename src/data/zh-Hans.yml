@@ -285,240 +285,183 @@ download:
   support-30-alt: ''
   support-31-alt: ''
 learn:
-  learn-title: 学习
-  learn1: 以下教程将提供更多深入及详细的步骤，专注于特定的主题。请参考
-  learn2: 范例页面
-  learn3: 以查看 p5.js 多种功能的简单范例。
-  introduction-to-p5js-title: p5.js 简介
-  hello-p5js-title: Hello p5.js
-  hello-p5js: >-
-    This short video will introduce you to the library and what you can do with
-    it.
-  getting-started-title: 入门简介
-  getting-started: 欢迎来到 p5.js！<br>这简介将涵盖 p5.js 的基本设置。
-  p5js-overview-title: 一览 p5.js
-  p5js-overview: p5.js 主要功能的介绍
-  p5js-processing-title: p5.js 及 Processing
-  p5js-processing: 两者之间的差别及如何将两者之间互相转换。
-  p5-screen-reader-title: p5 及荧幕阅读器
-  p5-screen-reader: 设置 p5 以让它可以和荧幕阅读器一起使用。（英文内文）
-  using-local-server-title: 本地伺服器
-  using-local-server: 如何在 Mac OSX、Windows 或 Linux 上设置本地伺服器。
-  p5js-wiki-title: p5.js wiki
-  p5js-wiki: Additonal documentation and tutorials contributed by the community
-  connecting-p5js-title: 链接 p5.js
-  creating-libraries-title: 制作程式库
-  creating-libraries: 制作 p5.js 附加程式库。
-  nodejs-and-socketio-title: node.js 及 socket.io
-  nodejs-and-socketio: 链接 node.js 伺服器及 p5.js，通过 socket.io 通讯。
-  programming-topics-title: 编程问题
-  beyond-the-canvas-title: 画布之外
-  beyond-the-canvas: 创建及控制画布以外的元素。
-  3d-webgl-title: 3D/WebGL
-  3d-webgl: 使用 p5.js WebGL 模式制作高级图形程式。
-  color-title: 颜色
-  color: 数码颜色的简介。
-  coordinate-system-and-shapes-title: 坐标系统与图形
-  coordinate-system-and-shapes: 利用坐标系统绘制简单图形。
-  interactivity-title: 互动性
-  interactivity: 鼠标与键盘的互动简介。
-  program-flow-title: 程序流程
-  program-flow: p5.js 控制程序流程简介。
-  curves-title: 曲线
-  curves: 介绍 p5.js 中的三种曲线：弧形，样条曲线和 Bézier 曲线。
-  becoming-a-better-programmer-title: 成为更好的程式设计师
-  debugging-title: 调试
-  debugging: 调试程序的简介。
-  optimizing-title: 优化 p5.js 程式
-  optimizing: 此教程包含技巧及窍门以进一步优化您的程式，使它执行得更快更顺畅。
-  test-driven-development-title: 单元测试及测试驱动开发
-  test-driven-development: 避免安装时不必要的烦恼。什么是单元测试？如何使用单元测试？作者 Andy Timmons。
-  contributing-to-the-community-title: 回馈社群
-  development-title: 开发
-  development: 开发设置简介及一览。
-  looking-inside-title: 窥看 p5
-  looking-inside: 一个简单易懂的教程，当中含括了 p5.js 源代码的文件格局及开发工具，作者 Luisa Pereira。
-  writing-tutorial-title: 编写教程
-  writing-tutorial: 编写 p5.js 教程的指南。
-  writing-a-tutorial-title: p5.js 回馈指南
-  writing-a-tutorial-author: 教程作者为 Tega Brain。
-  writing-a-tutorial-1: >-
-    我们欢迎教育家、合作者和一般爱好者开发更多 p5.js 教程。p5.js
-    旨在让创意编程及开源软件开发更易接近及吸引更多元化的社群，同时我们也很高兴能够公开的发布 p5.js
-    开发的完整过程及教程。我们现有的教程含括了各种课题如：学习使用 p5.js、编程技巧及如何帮助开发开源项目。
-  writing-a-tutorial-2: 我们欢迎任何人提交全新教程，这份指南将包括新教程的提议、准备和提交的所需步骤。
-  writing-a-tutorial-how-start-title: 如何开始：
-  writing-a-tutorial-how-start-1: 先确定您所建议的课题尚未被涵盖，在此链接有
-  writing-a-tutorial-how-start-2: 一个列表
-  writing-a-tutorial-how-start-3: >-
-    列出了正在进行中的教程。如果您想开发的课题被列为正在进行中 (in
-    progress)，您或许能帮助完成该项目或为现有的项目做预备发布的工作，您只需联络我们。
-  writing-a-tutorial-how-start-4: 如果您的课题尚未被涵盖及尚未被列为正在进行中，请寄份电子邮件去 education@p5js.org 并简略的讲述您所建议的教程。
-  writing-a-tutorial-how-prepare-title: 如何准备网上 p5.js 教程：
-  writing-a-tutorial-how-prepare-1: 当您以准备发布您的教程，请按着以下步骤准备您的教程给 p5.js 的网页。
-  writing-a-tutorial-how-prepare-2: 将您的教程写在一个命名为 tutorial-name.hbs 的文件并跟从
-  writing-a-tutorial-how-prepare-3: 这基本结构
-  writing-a-tutorial-how-prepare-4: 。如该文件所示，它必须有以下开端：
-  writing-a-tutorial-how-prepare-5: 您的教程文件夹将被置放在 p5.js 网站一个命名为“tutorials”的文件夹内。index.hbs 是
-  writing-a-tutorial-how-prepare-6: p5.js 教程的主页
-  writing-a-tutorial-how-prepare-7: 而 test-tutorial.hbs 为空白范例教程。
-  writing-a-tutorial-how-prepare-8: 所有内容必须被包含在以下标签内：
-  writing-a-tutorial-how-prepare-9: 内容格式可以使用 &lt;h1&gt;、&lt;h2&gt; 及 &lt;p&gt; 段落标签定义，如
-  writing-a-tutorial-how-prepare-10: 空白范例教程所示。
-  writing-a-tutorial-how-prepare-11: >-
-    如果您的教程包含图像，它们必须被置放在 p5 网站的 asset 文件夹，该文件夹位于
-    src/assets/learn/test-tutorial/images 如以下所示。
-  writing-a-tutorial-how-prepare-12: 以在 HTML 页面内格式化您的源代码，请使用以下标签：
-  writing-a-tutorial-embedding-title: 嵌入 p5.js 绘图
-  writing-a-tutorial-embedding-1: >-
-    使用 p5.js 的一个好处是您可以制作动画驱动、互动性或可编辑的教程，方便更简易的演示程式设计概念。您的范例必须是 p5.js
-    绘图而它能用以下两种方式嵌入在您的教程中。
-  writing-a-tutorial-embedding-2: 如果该范例需保持可编辑性，如在 p5.js 网站的
-  writing-a-tutorial-embedding-3: 参考文献
-  writing-a-tutorial-embedding-4: 内，该 p5 绘图必须使用 p5.js 部件以嵌入在 HTML 页面内，请使用
-  writing-a-tutorial-embedding-5: 这指南
-  writing-a-tutorial-embedding-6: 以了解如何使用该部件嵌入 p5.js 绘图，部件
-  writing-a-tutorial-embedding-7: 。您也可以在
-  writing-a-tutorial-embedding-8: 空白范例教程内
-  writing-a-tutorial-embedding-9: 查看使用范例。
-  writing-a-tutorial-embedding-10: 如果该范例必须是动画驱动或互动性的但并不需要是可编辑的，该 p5.js 绘图需使用 iframe 以嵌入在页面内，如以下所示。
-  writing-a-tutorial-iframe-title: 使用 iframe 嵌入 p5 绘图
-  writing-a-tutorial-iframe-1: >-
-    iframe 让您能在原有的页面上开启一个通往另一个页面的窗口，同时该页面并不能直接和原有页面互动。在此例， 原有页面内会被嵌入一个含有您 p5.js
-    绘图的 index.html 窗口。
-  writing-a-tutorial-iframe-2: >-
-    在 /src/assets/learn 文件夹内，将您的 p5 绘图置放在一个命名为您的绘图名的文件夹内如以下截图所示。这文件夹是您置放所有
-    iframe 内将使用的图像及 p5 绘图的地方。
-  writing-a-tutorial-iframe-3: 在含有您的 p5 范例的子文件夹内应该含有一个 sketch.js 文件及一个 embed.html 文件。
-  writing-a-tutorial-iframe-4: >-
-    请确保 embed.html 内的 p5 程式库有正确的链接。如果您的文件结构和以上相同，p5.js 程式库的链接将会是
-    "../../../js/p5.min.js"。
-  writing-a-tutorial-iframe-5: 这时你可以将 p5.js 绘图文件以 iframe 的方式嵌入在您的教程的 .hbs 文件中。iframe 嵌入代码如下：
-  writing-a-tutorial-iframe-6: 以格式化 iframe，您可以将以下包括在文件内或使用样式表：
-  writing-a-tutorial-iframe-7: 在以下链接您可以直接查看绘图：
-  writing-a-tutorial-iframe-8: 而在以下您可以查看绘图被嵌入在 p5 网页中：
-  writing-a-tutorial-iframe-9: 还有一项您需要注意的是您必须设置 iframe 的大小，以确保其大小不会随着窗口大小而改变。
-  writing-a-tutorial-iframe-10: 另外，p5.js 程式库的文件链接并不是在 .eps 文件内（如其他教程），而是在您的 HTML 页面内（通常是 embed.html）。
-  writing-a-tutorial-iframe-11: 更多关于嵌入 p5.js 绘图的信息可在
-  writing-a-tutorial-embed-iframe-12: 以下链接查找。
-  writing-a-tutorial-finishing-title: 结束
-  writing-a-tutorial-finishing-1: >-
-    一旦您完成编辑您的教程并且您的教程已经被许可，分叉 p5.js 网站的代码库，如以上所示的步骤准备您的教程然后开启一个 pull request 给
-    p5.js 网站的代码库以便我们能发布您的教程！
-  writing-a-tutorial-finishing-2: 谢谢！
-  color-description1: >-
-    以下教程来自于由 Daniel Shiffman 篇写的《 Learning Processing 》（原文英文），并由 Morgan Kaufmann
-    出版，© 2008 Elsevier Inc。版权所有。此教程由 Kelly Chang 移植成 P5 代码。如果您发现任何错误或有任何评论，
-  color-description2: 请联络我们。
-  color-p1x1: >-
-    在数码世界中，当我们要介绍一个颜色时，我们需要有一定的精确度。单纯说“嘿，你能把那圆形变成蓝绿色吗？”并不足够。在这，颜色可以被定义为在一个范围内的数字。让我们从最简单的范例开始：黑白色或灰渐色。0
-    为纯黑色，255 为纯白色。在两者之间任何数字 – 50、87、162、209 等等 – 都是介于黑与白之间的灰色。
-  color-p2x1: '只要在任何东西被画在画布上之前使用 '
-  color-p2x2: ' 及 '
-  color-p2x3: ' 函数，我们能设置任何图形的颜色。我们也能使用 '
-  color-p2x4: ' 函数来设定窗口的背景颜色。如下范例。'
-  color-code1: |-
-    background(255);    // 设置背景颜色为白色 
-     stroke(0);          // 设置外线颜色为黑色 
-     fill(150);          // 设置填充色为灰色 
-     rect(50,50,75,100); // 绘制四方形
-  color-p3x1: '使用 '
-  color-p3x2: ' 及 '
-  color-p3x3: >-
-    函数将会分别去除外线色灰填充色。我们直觉上可能会以为“ stroke(0) ”表示没有外线，可是我们必须记得 0
-    在这并不代表“无”，然而是代表黑色。此外，我们必须记得不要同时去除 
-  color-p3x4: ' 及 '
-  color-p3x5: ' 不然不会有任何图形出现在画布上！'
-  color-p4x1: 以此同时，如果我们绘制两个图形，p5.js 将会使用最近（代码内从上至下）所定义的外线色及填充色值。
-  color-rgb-title: RGB 颜色值
-  color-rgb-p1x1: >-
-    您还记得手指绘画吗？选择混合三原色，我们能混合出任何颜色。同时混合所有颜色的结果是个浑浊的褐色。添加越多颜料，给颜色将会变得更暗。数码颜色也是使用三原色的混合来构造新的颜色的，但是它和颜料的混合原理不一样。首先，其原色为：红、绿、蓝（也为
-    RGB 颜色，Red、Green、Blue）。而当您在混合荧幕上的颜色时，您将混合的是光而不是颜料，因此它的混合原理并不一样。
-  color-rgb-li1: 红 + 绿 = 黄
-  color-rgb-li2: 红 + 蓝 = 紫
-  color-rgb-li3: 绿 + 蓝 = 青（蓝绿色）
-  color-rgb-li4: 红 + 绿 + 蓝 = 白
-  color-rgb-li5: 无色 = 黑
-  color-rgb-p2x1: >-
-    这假设所有色颜色都为最亮的亮度，但是您也能同时使用一系列的颜色值，因此一些红加上一些绿再加上一些蓝将等于灰，而一点红加上一点蓝将等于深紫色。虽然这可能需要一点时间来习惯，随着您编程及使用
-    RGB
-    颜色值来试验的经验越多，您会对它越熟悉，就如使用您的手指来混合颜色一样。当然您不能单纯说“混合一些红与一点蓝”，您必须提供确切的数值。就如灰渐值，个别颜色的值也是由介于
-    0（不使用任何该颜色）与 255（完全使用该颜色）之间，而他们的顺序为红（R）、绿（G）及蓝（B）。通过更多的试验您将会对 RGB
-    颜色更加熟悉，不过接下来我们将介绍一些使用常用颜色的代码。
-  color-transparency-title: 颜色透明度
-  color-transparency-p1x1: >-
-    除了个别颜色的红、绿、蓝值之外，我们也能提供多一个可选性的值，此值被称为该颜色的 “alpha” 值。Alpha
-    代表透明度，当您要绘制多个重叠部分透视的图形时，透明度在这就特别有用。一个图像的 alpha 值有时也会被称为该图像的 “alpha channel”。
-  color-transparency-p2x1: >-
-    我们必须记得像素并不是真的透明的，这单纯是个使用混合颜色所达成的便利错觉。p5.js
-    在幕后将会使用该颜色的数值再加上一定百分率的另外一个颜色，创作出混合颜色的视觉错觉。（如果您有兴趣编程一个“粉色镜片”，您可以从这开始。）
-  color-transparency-p3x1: Alpha 值也是介于 0 与 255 之间，0 代表完全透明而 255 代表完全不透明。
-  color-custom-ranges-title: 自定义颜色值范围
-  color-custom-ranges-p1x1: >-
-    介于 0 与 255 之间的 RGB 颜色值并不是 p5.js 唯一定义颜色的方法，事实上，我们能使用多种方法来定义颜色。比如说，您可能比较偏向于使用
-    0 至 100（如百分比）来定义颜色。为此您可以使用 
-  color-custom-ranges-p2x1: 以上函数表示：“OK，我们要使用红、绿、蓝值来定义颜色。而他们的值将介于 0 至 100 之间。
-  color-custom-ranges-p3x1: 虽然一般上这么做不会提供任何便利，您可以为个别颜色值提供不同的数值范围：
-  color-custom-ranges-p4x1: >-
-    这时此函数表示：“红色值将会是介于 0 至 100 之间，绿色值将会是介于 0 至 500 之间，蓝色值将会是介于 0 至 10 之间，而 alpha
-    至将会是介于 0 至 255 之间。
-  color-custom-ranges-p5x1: 最后，虽然您通常在编程时只需要用到 RGB 色值，您也能使用 HSB（色调、饱和度及亮度）模式来定义颜色。简单来说，HSB 色值使用方法如下：
-  color-custom-ranges-li1x1: 色调
-  color-custom-ranges-li1x2: —色调值，默认上介于 0 至 255 之间。
-  color-custom-ranges-li2x1: 饱和度
-  color-custom-ranges-li2x2: —该颜色的饱和度，默认上介于 0 至 255 之间。
-  color-custom-ranges-li3x1: 亮度
-  color-custom-ranges-li3x2: —该颜色的亮度，默认上介于 0 至 255 之间。
-  color-custom-ranges-p6x1: '使用函数 '
-  color-custom-ranges-p6x2: ' 您就能设定您自选的数字范围。有些人会比较偏好使用介于 0 至 360 之间的数值来定义色调（就如色轮的 360 度一样）及 0 至 100 之间的数值来定义饱和度及亮度（介于 0% 至 100%）。'
-  coordinate-system-description1: '以下教程来自于由 Daniel Shiffman 篇写的《 '
-  coordinate-system-description2: Learning Processing
-  coordinate-system-description3: ' 》（原文英文），并由 Morgan Kaufmann 出版，© 2008 Elsevier Inc。版权所有。此教程由移植成 P5 代码。如果您发现任何错误或有任何评论，'
-  coordinate-system-description4: 请联络我们
-  coordinate-system-description5: 。
-  coordinate-system-description-title: 坐标系统及图形
-  coordinate-system-description-p1x1: >-
-    在我们开始使用 p5
-    编程前，我们得先回到我们初中二时的记忆，找出一张坐标纸并画一条直线。两点之间最短的距离正是一条直线，我们将使用坐标纸上的直线的两点作为起点。
-  coordinate-system-description-p2x1: >-
-    以上图解显示一条介于点 A (1,0) 及点 B (4,5)
-    的直线。如果您想要指示您的朋友画出一样的直线，您或许会对他说：“请从点一、零开始画一条直线去点四、五”。
-    那么现在暂时想象您的朋友是个电脑而您想要指示这位数码朋友如何画在荧幕上出一样的直线。这情况下您也能使用一样的指示（只不过现在您可以跳过任何客气话但是必须使用精准的格式来表达）。该指示将会是如下：
-  coordinate-system-description-p3x1: >-
-    就算您还没学习过编写程式的语法，以上的语句应该仍然多少都能理解。我们提供电脑一个指令（我们称这指令为 function
-    或函数）以让其画出直线（line）。此外，我们也提供一些用于定义该直线的参数：从点 A (1,0) 至点 B (4,5)。
-    如果您假想这行代码为一个句子，这函数就是个动词而参数就是宾语。这代码句子使用分号作为句尾符号而不是句号。
-  coordinate-system-description-p4x1: >-
-    这里关键是了解电脑屏幕就只是个比较花俏的坐标纸。荧幕上每一个像素都代表着一个坐标 - 或两个数字：“x”（横向）及 “y”（纵向）-
-    代表着在空间内一点的位置。而我们的工作就是指定该在这些像素坐标位置出现的图形及颜色。
-  coordinate-system-description-p5x1: >-
-    不过，这里有个需要注意的东西。那张来自初中二的坐标纸（使用笛卡尔坐标系）将 (0,0) 放置在正中央，y 轴由下至上 x
-    轴由左至右。但是电脑窗口的坐标系在 y 轴的方向是相反的。(0,0) 被定义在左上角并往右边及往下延伸。
-  coordinate-system-simple-shapes-title: 基本图形
-  coordinate-system-simple-shapes-p1x1: 大多数使用 p5 的编程范例一般都会使视觉上的绘图范例。本质上，这些范例都和绘制图形及设定像素有关。我们将从绘制四种基本图形开始。
-  coordinate-system-simple-shapes-p2x1: >-
-    针对每个形状，我们需要问我们需要什么资料才可以定义该图形的位置及大小（更之后其颜色）然后再了解 p5
-    如何接收这些信息。在以下的绘图内，我们将使用一个宽度为 100 像素及高度为 100 像素的画布。
-  coordinate-system-simple-shapes-p3x1: ''
-  coordinate-system-simple-shapes-p3x2: ' （点）是最简单的图形同时也是个不错的起点。以绘制一个点（point），我们只需要提供 x 及 y 坐标。'
-  coordinate-system-simple-shapes-p4x1: ''
-  coordinate-system-simple-shapes-p4x2: ' （直线）也不会特别困难，我们只需提供两个点 (x1,y1) 及 (x2,y2)：'
-  coordinate-system-simple-shapes-p5x1: '当我们想要绘制一个 '
-  coordinate-system-simple-shapes-p5x2: ' （四方形）时，这就会变得比较复杂一点。在 p5 内，一个四方形是由其左上角的坐标点与其宽度及高度来定义的。'
-  coordinate-system-simple-shapes-p6x1: '第二个绘制四方形的方法是定义其中心点的位置，然后定义其宽度及高度。如果我们想要使用这方法，我们必须先表示我们要使用 '
-  coordinate-system-simple-shapes-p6x2: ' 模式然后才输入绘制四方形的指示。请注意 p5 有区分大小写字母。'
-  coordinate-system-simple-shapes-p7x1: '最后我们也能使用两个点来绘制一个四方形（分别定义左上角及右下角）。这模式为 '
-  coordinate-system-simple-shapes-p7x2: 。请注意这范例在荧幕上显示的结果和上方的范例一样。
-  coordinate-system-simple-shapes-p8x1: '当我们对于绘制一个四方形有了不错的掌握时，绘制一个 '
-  coordinate-system-simple-shapes-p8x2: ' （椭圆形）可是轻而易举。事实上，它和绘制 '
-  coordinate-system-simple-shapes-p8x3: ' （四方形）一样，唯一不同的是椭圆形将会被绘制在所定义的四方形内。'
-  coordinate-system-simple-shapes-p8x4: ' 的默认模式为 '
-  coordinate-system-simple-shapes-p8x5: ' 而不是 '
-  coordinate-system-simple-shapes-p8x6: 。
-  coordinate-system-simple-shapes-p9x1: >-
-    现在让我们来看看一些使用更实际绘图设置的程式代码。我们将使用一个大小为 200 乘 200 的画布大小。请注意我们这里使用的
-    createCanvas() 函数内所设定的画布高度及宽度。
-test-tutorial: null
+  learn-title: "学习 & "
+  teach-title2: "Teach"
+  learn1: "以下教程将提供更多深入及详细的步骤，专注于特定的主题。请参考"
+  learn2: "范例页面"
+  learn3: "以查看 p5.js 多种功能的简单范例。"
+  introduction-to-p5js-title: "p5.js 简介"
+  hello-p5js-title: "Hello p5.js"
+  hello-p5js: "This short video will introduce you to the library and what you can do with it."
+  getting-started-title: "入门简介"
+  getting-started: "欢迎来到 p5.js！<br>这简介将涵盖 p5.js 的基本设置。"
+  p5js-overview-title: "一览 p5.js"
+  p5js-overview: "p5.js 主要功能的介绍"
+  p5js-processing-title: "p5.js 及 Processing"
+  p5js-processing: "两者之间的差别及如何将两者之间互相转换。"
+  p5-screen-reader-title: "p5 及荧幕阅读器"
+  p5-screen-reader: "设置 p5 以让它可以和荧幕阅读器一起使用。（英文内文）"
+  using-local-server-title: "本地伺服器"
+  using-local-server: "如何在 Mac OSX、Windows 或 Linux 上设置本地伺服器。"
+  p5js-wiki-title: "p5.js wiki"
+  p5js-wiki: "Additonal documentation and tutorials contributed by the community"
+  connecting-p5js-title: "链接 p5.js"
+  creating-libraries-title: "制作程式库"
+  creating-libraries: "制作 p5.js 附加程式库。"
+  nodejs-and-socketio-title: "node.js 及 socket.io"
+  nodejs-and-socketio: "链接 node.js 伺服器及 p5.js，通过 socket.io 通讯。"
+  programming-topics-title: "编程问题"
+  beyond-the-canvas-title: "画布之外"
+  beyond-the-canvas: "创建及控制画布以外的元素。"
+  3d-webgl-title: "3D/WebGL"
+  3d-webgl: "使用 p5.js WebGL 模式制作高级图形程式。"
+  color-title: "颜色"
+  color: "数码颜色的简介。"
+  coordinate-system-and-shapes-title: "坐标系统与图形"
+  coordinate-system-and-shapes: "利用坐标系统绘制简单图形。"
+  interactivity-title: "互动性"
+  interactivity: "鼠标与键盘的互动简介。"
+  program-flow-title: "程序流程"
+  program-flow: "p5.js 控制程序流程简介。"
+  curves-title: "曲线"
+  curves: "介绍 p5.js 中的三种曲线：弧形，样条曲线和 Bézier 曲线。"
+  becoming-a-better-programmer-title: "成为更好的程式设计师"
+  debugging-title: "调试"
+  debugging: "调试程序的简介。"
+  optimizing-title: "优化 p5.js 程式"
+  optimizing: "此教程包含技巧及窍门以进一步优化您的程式，使它执行得更快更顺畅。"
+  test-driven-development-title: "单元测试及测试驱动开发"
+  test-driven-development: "避免安装时不必要的烦恼。什么是单元测试？如何使用单元测试？作者 Andy Timmons。"
+  contributing-to-the-community-title: "回馈社群"
+  development-title: "开发"
+  development: "开发设置简介及一览。"
+  looking-inside-title: "窥看 p5"
+  looking-inside: "一个简单易懂的教程，当中含括了 p5.js 源代码的文件格局及开发工具，作者 Luisa Pereira。"
+  writing-tutorial-title: "编写教程"
+  writing-tutorial: "编写 p5.js 教程的指南。"
+  writing-a-tutorial-title: "p5.js 回馈指南"
+  writing-a-tutorial-author: "教程作者为 Tega Brain。"
+  writing-a-tutorial-1: "我们欢迎教育家、合作者和一般爱好者开发更多 p5.js 教程。p5.js 旨在让创意编程及开源软件开发更易接近及吸引更多元化的社群，同时我们也很高兴能够公开的发布 p5.js 开发的完整过程及教程。我们现有的教程含括了各种课题如：学习使用 p5.js、编程技巧及如何帮助开发开源项目。"
+  writing-a-tutorial-2: "我们欢迎任何人提交全新教程，这份指南将包括新教程的提议、准备和提交的所需步骤。"
+  writing-a-tutorial-how-start-title: "如何开始："
+  writing-a-tutorial-how-start-1: "先确定您所建议的课题尚未被涵盖，在此链接有"
+  writing-a-tutorial-how-start-2: "一个列表"
+  writing-a-tutorial-how-start-3: "列出了正在进行中的教程。如果您想开发的课题被列为正在进行中 (in progress)，您或许能帮助完成该项目或为现有的项目做预备发布的工作，您只需联络我们。"
+  writing-a-tutorial-how-start-4: "如果您的课题尚未被涵盖及尚未被列为正在进行中，请寄份电子邮件去 education@p5js.org 并简略的讲述您所建议的教程。"
+  writing-a-tutorial-how-prepare-title: "如何准备网上 p5.js 教程："
+  writing-a-tutorial-how-prepare-1: "当您以准备发布您的教程，请按着以下步骤准备您的教程给 p5.js 的网页。"
+  writing-a-tutorial-how-prepare-2: "将您的教程写在一个命名为 tutorial-name.hbs 的文件并跟从"
+  writing-a-tutorial-how-prepare-3: "这基本结构"
+  writing-a-tutorial-how-prepare-4: "。如该文件所示，它必须有以下开端："
+  writing-a-tutorial-how-prepare-5: "您的教程文件夹将被置放在 p5.js 网站一个命名为“tutorials”的文件夹内。index.hbs 是"
+  writing-a-tutorial-how-prepare-6: "p5.js 教程的主页"
+  writing-a-tutorial-how-prepare-7: "而 test-tutorial.hbs 为空白范例教程。"
+  writing-a-tutorial-how-prepare-8: "所有内容必须被包含在以下标签内："
+  writing-a-tutorial-how-prepare-9: "内容格式可以使用 &lt;h1&gt;、&lt;h2&gt; 及 &lt;p&gt; 段落标签定义，如"
+  writing-a-tutorial-how-prepare-10: "空白范例教程所示。"
+  writing-a-tutorial-how-prepare-11: "如果您的教程包含图像，它们必须被置放在 p5 网站的 asset 文件夹，该文件夹位于 src/assets/learn/test-tutorial/images 如以下所示。"
+  writing-a-tutorial-how-prepare-12: "以在 HTML 页面内格式化您的源代码，请使用以下标签："
+  writing-a-tutorial-embedding-title: "嵌入 p5.js 绘图"
+  writing-a-tutorial-embedding-1: "使用 p5.js 的一个好处是您可以制作动画驱动、互动性或可编辑的教程，方便更简易的演示程式设计概念。您的范例必须是 p5.js 绘图而它能用以下两种方式嵌入在您的教程中。"
+  writing-a-tutorial-embedding-2: "如果该范例需保持可编辑性，如在 p5.js 网站的"
+  writing-a-tutorial-embedding-3: "参考文献"
+  writing-a-tutorial-embedding-4: "内，该 p5 绘图必须使用 p5.js 部件以嵌入在 HTML 页面内，请使用"
+  writing-a-tutorial-embedding-5: "这指南"
+  writing-a-tutorial-embedding-6: "以了解如何使用该部件嵌入 p5.js 绘图，部件"
+  writing-a-tutorial-embedding-7: "。您也可以在"
+  writing-a-tutorial-embedding-8: "空白范例教程内"
+  writing-a-tutorial-embedding-9: "查看使用范例。"
+  writing-a-tutorial-embedding-10: "如果该范例必须是动画驱动或互动性的但并不需要是可编辑的，该 p5.js 绘图需使用 iframe 以嵌入在页面内，如以下所示。"
+  writing-a-tutorial-iframe-title: "使用 iframe 嵌入 p5 绘图"
+  writing-a-tutorial-iframe-1: "iframe 让您能在原有的页面上开启一个通往另一个页面的窗口，同时该页面并不能直接和原有页面互动。在此例， 原有页面内会被嵌入一个含有您 p5.js 绘图的 index.html 窗口。"
+  writing-a-tutorial-iframe-2: "在 /src/assets/learn 文件夹内，将您的 p5 绘图置放在一个命名为您的绘图名的文件夹内如以下截图所示。这文件夹是您置放所有 iframe 内将使用的图像及 p5 绘图的地方。"
+  writing-a-tutorial-iframe-3: "在含有您的 p5 范例的子文件夹内应该含有一个 sketch.js 文件及一个 embed.html 文件。"
+  writing-a-tutorial-iframe-4: "请确保 embed.html 内的 p5 程式库有正确的链接。如果您的文件结构和以上相同，p5.js 程式库的链接将会是 \"../../../js/p5.min.js\"。"
+  writing-a-tutorial-iframe-5: "这时你可以将 p5.js 绘图文件以 iframe 的方式嵌入在您的教程的 .hbs 文件中。iframe 嵌入代码如下："
+  writing-a-tutorial-iframe-6: "以格式化 iframe，您可以将以下包括在文件内或使用样式表："
+  writing-a-tutorial-iframe-7: "在以下链接您可以直接查看绘图："
+  writing-a-tutorial-iframe-8: "而在以下您可以查看绘图被嵌入在 p5 网页中："
+  writing-a-tutorial-iframe-9: "还有一项您需要注意的是您必须设置 iframe 的大小，以确保其大小不会随着窗口大小而改变。"
+  writing-a-tutorial-iframe-10: "另外，p5.js 程式库的文件链接并不是在 .eps 文件内（如其他教程），而是在您的 HTML 页面内（通常是 embed.html）。"
+  writing-a-tutorial-iframe-11: "更多关于嵌入 p5.js 绘图的信息可在"
+  writing-a-tutorial-embed-iframe-12: "以下链接查找。"
+  writing-a-tutorial-finishing-title: "结束"
+  writing-a-tutorial-finishing-1: "一旦您完成编辑您的教程并且您的教程已经被许可，分叉 p5.js 网站的代码库，如以上所示的步骤准备您的教程然后开启一个 pull request 给 p5.js 网站的代码库以便我们能发布您的教程！"
+  writing-a-tutorial-finishing-2: "谢谢！"
+  color-description1: "以下教程来自于由 Daniel Shiffman 篇写的《 Learning Processing 》（原文英文），并由 Morgan Kaufmann 出版，© 2008 Elsevier Inc。版权所有。此教程由 Kelly Chang 移植成 P5 代码。如果您发现任何错误或有任何评论，"
+  color-description2: "请联络我们。"
+  color-p1x1: "在数码世界中，当我们要介绍一个颜色时，我们需要有一定的精确度。单纯说“嘿，你能把那圆形变成蓝绿色吗？”并不足够。在这，颜色可以被定义为在一个范围内的数字。让我们从最简单的范例开始：黑白色或灰渐色。0 为纯黑色，255 为纯白色。在两者之间任何数字 – 50、87、162、209 等等 – 都是介于黑与白之间的灰色。"
+  color-p2x1: "只要在任何东西被画在画布上之前使用 "
+  color-p2x2: " 及 "
+  color-p2x3: " 函数，我们能设置任何图形的颜色。我们也能使用 "
+  color-p2x4: " 函数来设定窗口的背景颜色。如下范例。"
+  color-code1: "background(255);    // 设置背景颜色为白色 \n stroke(0);          // 设置外线颜色为黑色 \n fill(150);          // 设置填充色为灰色 \n rect(50,50,75,100); // 绘制四方形"
+  color-p3x1: "使用 "
+  color-p3x2: " 及 "
+  color-p3x3: "函数将会分别去除外线色灰填充色。我们直觉上可能会以为“ stroke(0) ”表示没有外线，可是我们必须记得 0 在这并不代表“无”，然而是代表黑色。此外，我们必须记得不要同时去除 "
+  color-p3x4: " 及 "
+  color-p3x5: " 不然不会有任何图形出现在画布上！"
+  color-p4x1: "以此同时，如果我们绘制两个图形，p5.js 将会使用最近（代码内从上至下）所定义的外线色及填充色值。"
+  color-rgb-title: "RGB 颜色值"
+  color-rgb-p1x1: "您还记得手指绘画吗？选择混合三原色，我们能混合出任何颜色。同时混合所有颜色的结果是个浑浊的褐色。添加越多颜料，给颜色将会变得更暗。数码颜色也是使用三原色的混合来构造新的颜色的，但是它和颜料的混合原理不一样。首先，其原色为：红、绿、蓝（也为 RGB 颜色，Red、Green、Blue）。而当您在混合荧幕上的颜色时，您将混合的是光而不是颜料，因此它的混合原理并不一样。"
+  color-rgb-li1: "红 + 绿 = 黄"
+  color-rgb-li2: "红 + 蓝 = 紫"
+  color-rgb-li3: "绿 + 蓝 = 青（蓝绿色）"
+  color-rgb-li4: "红 + 绿 + 蓝 = 白"
+  color-rgb-li5: "无色 = 黑"
+  color-rgb-p2x1: "这假设所有色颜色都为最亮的亮度，但是您也能同时使用一系列的颜色值，因此一些红加上一些绿再加上一些蓝将等于灰，而一点红加上一点蓝将等于深紫色。虽然这可能需要一点时间来习惯，随着您编程及使用 RGB 颜色值来试验的经验越多，您会对它越熟悉，就如使用您的手指来混合颜色一样。当然您不能单纯说“混合一些红与一点蓝”，您必须提供确切的数值。就如灰渐值，个别颜色的值也是由介于 0（不使用任何该颜色）与 255（完全使用该颜色）之间，而他们的顺序为红（R）、绿（G）及蓝（B）。通过更多的试验您将会对 RGB 颜色更加熟悉，不过接下来我们将介绍一些使用常用颜色的代码。"
+  color-transparency-title: "颜色透明度"
+  color-transparency-p1x1: "除了个别颜色的红、绿、蓝值之外，我们也能提供多一个可选性的值，此值被称为该颜色的 “alpha” 值。Alpha 代表透明度，当您要绘制多个重叠部分透视的图形时，透明度在这就特别有用。一个图像的 alpha 值有时也会被称为该图像的 “alpha channel”。"
+  color-transparency-p2x1: "我们必须记得像素并不是真的透明的，这单纯是个使用混合颜色所达成的便利错觉。p5.js 在幕后将会使用该颜色的数值再加上一定百分率的另外一个颜色，创作出混合颜色的视觉错觉。（如果您有兴趣编程一个“粉色镜片”，您可以从这开始。）"
+  color-transparency-p3x1: "Alpha 值也是介于 0 与 255 之间，0 代表完全透明而 255 代表完全不透明。"
+  color-custom-ranges-title: "自定义颜色值范围"
+  color-custom-ranges-p1x1: "介于 0 与 255 之间的 RGB 颜色值并不是 p5.js 唯一定义颜色的方法，事实上，我们能使用多种方法来定义颜色。比如说，您可能比较偏向于使用 0 至 100（如百分比）来定义颜色。为此您可以使用 "
+  color-custom-ranges-p2x1: "以上函数表示：“OK，我们要使用红、绿、蓝值来定义颜色。而他们的值将介于 0 至 100 之间。"
+  color-custom-ranges-p3x1: "虽然一般上这么做不会提供任何便利，您可以为个别颜色值提供不同的数值范围："
+  color-custom-ranges-p4x1: "这时此函数表示：“红色值将会是介于 0 至 100 之间，绿色值将会是介于 0 至 500 之间，蓝色值将会是介于 0 至 10 之间，而 alpha 至将会是介于 0 至 255 之间。"
+  color-custom-ranges-p5x1: "最后，虽然您通常在编程时只需要用到 RGB 色值，您也能使用 HSB（色调、饱和度及亮度）模式来定义颜色。简单来说，HSB 色值使用方法如下："
+  color-custom-ranges-li1x1: "色调"
+  color-custom-ranges-li1x2: "—色调值，默认上介于 0 至 255 之间。"
+  color-custom-ranges-li2x1: "饱和度"
+  color-custom-ranges-li2x2: "—该颜色的饱和度，默认上介于 0 至 255 之间。"
+  color-custom-ranges-li3x1: "亮度"
+  color-custom-ranges-li3x2: "—该颜色的亮度，默认上介于 0 至 255 之间。"
+  color-custom-ranges-p6x1: "使用函数 "
+  color-custom-ranges-p6x2: " 您就能设定您自选的数字范围。有些人会比较偏好使用介于 0 至 360 之间的数值来定义色调（就如色轮的 360 度一样）及 0 至 100 之间的数值来定义饱和度及亮度（介于 0% 至 100%）。"
+  coordinate-system-description1: "以下教程来自于由 Daniel Shiffman 篇写的《 "
+  coordinate-system-description2: "Learning Processing"
+  coordinate-system-description3: " 》（原文英文），并由 Morgan Kaufmann 出版，© 2008 Elsevier Inc。版权所有。此教程由移植成 P5 代码。如果您发现任何错误或有任何评论，"
+  coordinate-system-description4: "请联络我们"
+  coordinate-system-description5: "。"
+  coordinate-system-description-title: "坐标系统及图形"
+  coordinate-system-description-p1x1: "在我们开始使用 p5 编程前，我们得先回到我们初中二时的记忆，找出一张坐标纸并画一条直线。两点之间最短的距离正是一条直线，我们将使用坐标纸上的直线的两点作为起点。"
+  coordinate-system-description-p2x1: "以上图解显示一条介于点 A (1,0) 及点 B (4,5) 的直线。如果您想要指示您的朋友画出一样的直线，您或许会对他说：“请从点一、零开始画一条直线去点四、五”。 那么现在暂时想象您的朋友是个电脑而您想要指示这位数码朋友如何画在荧幕上出一样的直线。这情况下您也能使用一样的指示（只不过现在您可以跳过任何客气话但是必须使用精准的格式来表达）。该指示将会是如下："
+  coordinate-system-description-p3x1: "就算您还没学习过编写程式的语法，以上的语句应该仍然多少都能理解。我们提供电脑一个指令（我们称这指令为 function 或函数）以让其画出直线（line）。此外，我们也提供一些用于定义该直线的参数：从点 A (1,0) 至点 B (4,5)。 如果您假想这行代码为一个句子，这函数就是个动词而参数就是宾语。这代码句子使用分号作为句尾符号而不是句号。"
+  coordinate-system-description-p4x1: "这里关键是了解电脑屏幕就只是个比较花俏的坐标纸。荧幕上每一个像素都代表着一个坐标 - 或两个数字：“x”（横向）及 “y”（纵向）- 代表着在空间内一点的位置。而我们的工作就是指定该在这些像素坐标位置出现的图形及颜色。"
+  coordinate-system-description-p5x1: "不过，这里有个需要注意的东西。那张来自初中二的坐标纸（使用笛卡尔坐标系）将 (0,0) 放置在正中央，y 轴由下至上 x 轴由左至右。但是电脑窗口的坐标系在 y 轴的方向是相反的。(0,0) 被定义在左上角并往右边及往下延伸。"
+  coordinate-system-simple-shapes-title: "基本图形"
+  coordinate-system-simple-shapes-p1x1: "大多数使用 p5 的编程范例一般都会使视觉上的绘图范例。本质上，这些范例都和绘制图形及设定像素有关。我们将从绘制四种基本图形开始。"
+  coordinate-system-simple-shapes-p2x1: "针对每个形状，我们需要问我们需要什么资料才可以定义该图形的位置及大小（更之后其颜色）然后再了解 p5 如何接收这些信息。在以下的绘图内，我们将使用一个宽度为 100 像素及高度为 100 像素的画布。"
+  coordinate-system-simple-shapes-p3x1: ""
+  coordinate-system-simple-shapes-p3x2: " （点）是最简单的图形同时也是个不错的起点。以绘制一个点（point），我们只需要提供 x 及 y 坐标。"
+  coordinate-system-simple-shapes-p4x1: ""
+  coordinate-system-simple-shapes-p4x2: " （直线）也不会特别困难，我们只需提供两个点 (x1,y1) 及 (x2,y2)："
+  coordinate-system-simple-shapes-p5x1: "当我们想要绘制一个 "
+  coordinate-system-simple-shapes-p5x2: " （四方形）时，这就会变得比较复杂一点。在 p5 内，一个四方形是由其左上角的坐标点与其宽度及高度来定义的。"
+  coordinate-system-simple-shapes-p6x1: "第二个绘制四方形的方法是定义其中心点的位置，然后定义其宽度及高度。如果我们想要使用这方法，我们必须先表示我们要使用 "
+  coordinate-system-simple-shapes-p6x2: " 模式然后才输入绘制四方形的指示。请注意 p5 有区分大小写字母。"
+  coordinate-system-simple-shapes-p7x1: "最后我们也能使用两个点来绘制一个四方形（分别定义左上角及右下角）。这模式为 "
+  coordinate-system-simple-shapes-p7x2: "。请注意这范例在荧幕上显示的结果和上方的范例一样。"
+  coordinate-system-simple-shapes-p8x1: "当我们对于绘制一个四方形有了不错的掌握时，绘制一个 "
+  coordinate-system-simple-shapes-p8x2: " （椭圆形）可是轻而易举。事实上，它和绘制 "
+  coordinate-system-simple-shapes-p8x3: " （四方形）一样，唯一不同的是椭圆形将会被绘制在所定义的四方形内。"
+  coordinate-system-simple-shapes-p8x4: " 的默认模式为 "
+  coordinate-system-simple-shapes-p8x5: " 而不是 "
+  coordinate-system-simple-shapes-p8x6: "。"
+  coordinate-system-simple-shapes-p9x1: "现在让我们来看看一些使用更实际绘图设置的程式代码。我们将使用一个大小为 200 乘 200 的画布大小。请注意我们这里使用的 createCanvas() 函数内所设定的画布高度及宽度。"
+
+test-tutorial:
+
 libraries:
   Libraries: 程式库
   core-libraries: 核心程式库
@@ -1009,4 +952,4 @@ showcase:
   project-a-5-2-moon: " in Milan, Italy."
 
 teach:
-  teach-title2: "중국어ggg"
+  teach-title2: "Teach"
