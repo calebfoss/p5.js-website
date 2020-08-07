@@ -9,7 +9,6 @@
 const yaml = require('js-yaml');
 const fs = require('fs').promises;
 const fse = require('fs-extra');
-const git = require('simple-git');
 const pkg = require('./package.json');
 
 module.exports = function(grunt) {
@@ -355,8 +354,19 @@ module.exports = function(grunt) {
       }
     },
     shell: {
+      make_tmp_dir: {
+        command: 'mkdir -p tmp/p5.js'
+      },
+      clone_p5js_repo: {
+        command: 'git clone https://github.com/processing/p5.js .',
+        options: {
+          execOptions: {
+            cwd: 'tmp/p5.js'
+          }
+        }
+      },
       generate_dataJSON: {
-        command: 'npm ci && npm run grunt yui',
+        command: 'npm i && npm run grunt yui',
         options: {
           execOptions: {
             cwd: 'tmp/p5.js'
@@ -391,21 +401,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-html');
 
-  grunt.registerTask('make_tmp_dir', function() {
-    const tmp_path = 'tmp/p5.js';
-    fse.mkdirpSync(tmp_path);
-  });
-
-  grunt.registerTask('clone_p5js_repo', async function() {
-    const done = this.async();
-    try {
-      await git().clone('https://github.com/processing/p5.js', 'tmp/p5.js');
-      done();
-    } catch (err) {
-      console.log('Failed to clone p5.js repository.');
-      throw new Error(err);
-    }
-  });
+  grunt.registerTask('clone_p5js', [
+    'shell:make_tmp_dir',
+    'shell:clone_p5js_repo'
+  ]);
 
   grunt.registerTask('generate_dataJSON', ['shell:generate_dataJSON']);
 
@@ -425,8 +424,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('update-enJSON', [
-    'make_tmp_dir',
-    'clone_p5js_repo',
+    'clone_p5js',
     'generate_dataJSON',
     'move_dataJSON',
     'generate_enJSON'
