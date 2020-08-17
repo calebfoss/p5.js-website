@@ -112,11 +112,9 @@
         "alpha": "Número: valor de alpha relativo al rango de color actual (por defecto es 0-100)",
         "v1": "Número|String: valor de rojo o tinte relativo al rango de color actual, o un string de color",
         "v2": "Número: valor de verde o saturación relativo al rango de color actual",
-        "v3": "Número: valor de azul o brillo relativo al rango de color actual",
-        "value": "String: a color string",
-        "values": "Number[]: an array containing the red,green,blue &  and alpha components of the color",
-        "color": "p5.Color"
-      }
+        "v3": "Número: valor de azul o brillo relativo al rango de color actual"
+      },
+      "returns": "Arreglo: color resultante"
     },
     "green": {
       "description": [
@@ -187,15 +185,15 @@
       ],
       "params": {
         "color": "Color: cualquier valor creado con la función color()",
-        "colorstring": "colorstring: string de color, formatos posibles: enteros rgb() o rgba(), porcentajes rgb() o rgba(), hex 3 dígitos, hex 6 dígitos",
         "a": "Número: opacidad del fondo relativo al rango de color actual (por defecto es 0-100)",
+        "colorstring": "colorstring: string de color, formatos posibles: enteros rgb() o rgba(), porcentajes rgb() o rgba(), hex 3 dígitos, hex 6 dígitos",
         "gray": "Número: especifica un valor entre blanco y negro",
         "v1": "Número: valor de rojo o hue (dependiendo del modo de color actual)",
         "v2": "Número: valor de verde o saturación (dependiendo del modo de color actual)",
         "v3": "Número: valor de azul o brillo (dependiendo del modo de color actual)",
-        "values": "Number[]: an array containing the red, green, blue  and alpha components of the color",
         "image": "p5.Image: imagen creada con loadImage() o createImage(), para ser definida como fondo (debe ser del mismo tamaño que la ventana del bosquejo)"
-      }
+      },
+      "returns": "el objeto p5"
     },
     "clear": {
       "description": [
@@ -373,22 +371,8 @@
         "bl": "Número: radio opcional de la esquina inferior izquierda.",
         "detailX": "Número:",
         "detailY": "Número:"
-      }
-    },
-    "square": {
-      "description": [
-        "Draws a square to the screen. A square is a four-sided shape with every angle at ninety degrees, and equal side size. This function is a special case of the rect() function, where the width and height are the same, and the parameter is called \"s\" for side size. By default, the first two parameters set the location of the upper-left corner, the third sets the side size of the square. The way these parameters are interpreted, may be changed with the <a href=\"#/p5/rectMode\">rectMode()</a> function. ",
-        "The fourth, fifth, sixth and seventh parameters, if specified, determine corner radius for the top-left, top-right, lower-right and lower-left corners, respectively. An omitted corner radius parameter is set to the value of the previously specified radius value in the parameter list."
-      ],
-      "params": {
-        "x": "Number: x-coordinate of the square.",
-        "y": "Number: y-coordinate of the square.",
-        "s": "Number: side size of the square.",
-        "tl": "Number: (Optional) optional radius of top-left corner.",
-        "tr": "Number: (Optional) optional radius of top-right corner.",
-        "br": "Number: (Optional) optional radius of bottom-right corner.",
-        "bl": "Number: (Optional) optional radius of bottom-left corner."
-      }
+      },
+      "returns": "el objeto p5"
     },
     "triangle": {
       "description": [
@@ -671,8 +655,93 @@
     },
     "WEBGL": {
       "description": [
-        "One of the two render modes in p5.js: P2D (default renderer) and WEBGL Enables 3D render by introducing the third dimension: Z"
-      ]
+        "Carga un modelo 3d desde un archivo OBJ. Una de las limitaciones del formato OBJ es que no trae incorporado un sentido de escala. Esto significa que los modelos exportados por distintos programas pueden ser de tamaños radicalmente distintos. Si tu modelo no está siendo mostrado en pantalla, trata llamando a la función loadMode() con el parámetro de normalización configurado como verdadero. Esto escalará el tamaño del modelo a una escala apropiada para p5. También puedes hacer cambios adicionales al tamaño final de tu modelo con la función scale()."
+      ],
+      "params": {
+        "path": "String: ubicación del modelo a cargar",
+        "normalize": "Boolean:  Si es verdadero (true), escala el modelo a un tamaño estandarizado al momento de cargarlo.",
+        "successCallback": "Función(p5.Geometry3D): función a ser llamada cuando el modelo se cargue. Será pasada al modelo del objeto 3D.",
+        "failureCallback": "Función(evento): llamada con el error evento si la imagen no falla al cargar."
+      },
+      "returns": "el objeto p5.Geometry3D"
+    },
+    "model": {
+      "description": ["Hace el render de un modelo 3D en la pantalla."],
+      "params": {
+        "model": "p5.Geometry: modelo 3D cargado para realizar render"
+      },
+      "returns": "el objeto p5"
+    },
+    "plane": {
+      "description": ["Dibuja un plano con ancho y altura dados."],
+      "params": {
+        "width": "Número: ancho del plano",
+        "height": "Número: altura del plano",
+        "detailX": "Número: número opcional de subdivisiones triangulares en la dimensión x",
+        "detailY": "Número: número opcional de subdivisiones triangulares en la dimensión y"
+      },
+      "returns": "el objeto p5"
+    },
+    "box": {
+      "description": ["Dibuja una caja con ancho, altura y profundidad dados."],
+      "params": {
+        "width": "Número: ancho de la caja",
+        "Height": "Número: altura de la caja",
+        "depth": "Número: profundidad de la caja",
+        "detailX": "Número: número opcional de subdivisiones triangulares en la dimensión x",
+        "detailY": "Número: número opcional de subdivisiones triangulares en la dimensión y"
+      },
+      "returns": "el objeto p5"
+    },
+    "sphere": {
+      "description": ["Dibuja una esfera de radio dado."],
+      "params": {
+        "radius": "Número: radio del círculo",
+        "detailX": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 24",
+        "detailY": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 16"
+      },
+      "returns": "el objeto p5"
+    },
+    "cylinder": {
+      "description": ["Dibuja un cilindro de radio y altura dados."],
+      "params": {
+        "radius": "Número: radio de la superficie",
+        "height": "Número: altura del cilindro",
+        "detailX": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 24",
+        "detailY": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 16"
+      },
+      "returns": "el objeto p5"
+    },
+    "cone": {
+      "description": ["Dibuja un cono de radio y altura dados."],
+      "params": {
+        "radius": "Número: radio de la superficie inferior",
+        "height": "Número: altura del cono",
+        "detailX": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 24",
+        "detailY": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 16"
+      },
+      "returns": "el objeto p5"
+    },
+    "ellipsoid": {
+      "description": ["Dibuja un elipsoide de radio dado."],
+      "params": {
+        "radiusx": "Número: radio x del círculo",
+        "radiusy": "Número: radio y del círculo",
+        "radiusz": "Número: radio z del círculo",
+        "detailX": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 24. Evita números mayores a 150 que podrían colapsar el navegador.",
+        "detailY": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 16. Evita números mayores a 150 que podrían colapsar el navegador."
+      },
+      "returns": "el objeto p5"
+    },
+    "torus": {
+      "description": ["Dibuja un toroide con radio y tubo dado."],
+      "params": {
+        "radius": "Número: radio del anillo completo",
+        "tubeRadius": "Número: radio del tubo",
+        "detailX": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 24.",
+        "detailY": "Número: opcional, número de segmentos, a mayor número de segmentos la geometría es más suave, por defecto es 16."
+      },
+      "returns": "el objeto p5"
     },
     "ARROW": {},
     "CROSS": {},
@@ -1215,7 +1284,8 @@
       "params": {
         "angle": "Ángulo: el ángulo de rotación, especificado en radianes o grados, dependiendo de angleMode()",
         "axis": "p5.Vector|Arreglo: eje sobre el que se rota"
-      }
+      },
+      "returns": "el objeto p5"
     },
     "rotateX": {
       "description": ["Rota en torno al eje X", ""],
@@ -1691,8 +1761,7 @@
     },
     "keyTyped": {
       "description": [
-        "la función keyTyped es llamada cava vez que una tecla es presionada, excepto cuando son presionadas la steclas de acción como Ctrl, Shift y Alt, que son ignoradas. La tecla presionada más reciente será almacenada en la variable key. Por la forma en que los sistemas operativos manejan la repetición de teclas, mantener presionada una tecla puede causar múltiples llamadas a keyTyped() (y también keyReleased()). La tasa de repetición es definida por el sistema operativo y según cómo cada computador está configurado. Los navegadores tienen distintos comportamientos por defecto asociados a distintos eventos gatillados por teclas. Para prevenir cualquier comportamiento por defecto para este evento, añade return false al final de este método.",
-        ""
+        "la función keyTyped es llamada cava vez que una tecla es presionada, excepto cuando son presionadas la steclas de acción como Ctrl, Shift y Alt, que son ignoradas. La tecla presionada más reciente será almacenada en la variable key. Por la forma en que los sistemas operativos manejan la repetición de teclas, mantener presionada una tecla puede causar múltiples llamadas a keyTyped() (y también keyReleased()). La tasa de repetición es definida por el sistema operativo y según cómo cada computador está configurado. Los navegadores tienen distintos comportamientos por defecto asociados a distintos eventos gatillados por teclas. Para prevenir cualquier comportamiento por defecto para este evento, añade return false al final de este método."
       ]
     },
     "keyIsDown": {
@@ -1929,7 +1998,8 @@
         "sy": "Número: la coordenada y de la esquina superior izquierda del subrectángulo de la imagen original a dibujar en el lienzo de destino",
         "sWidth": "Número: el ancho del subrectángulo de la imagen original a dibujar en el lienzo de destino",
         "sHeight": "Número: la altura del subrectángulo de la imagen original a dibujar en el lienzo de destino"
-      }
+      },
+      "returns": "el objeto p5"
     },
     "tint": {
       "description": [
@@ -2037,7 +2107,8 @@
         "y": "Número: coordenada y del pixel",
         "w": "Número: ancho",
         "h": "Número: altura"
-      }
+      },
+      "returns": "Arreglo|p5.Image: valores de pixel en la posición (x, y) en formato arreglo RGBAs o p5.Image"
     },
     "loadPixels": {
       "description": [
@@ -2193,7 +2264,8 @@
         "objectOrFilename": "Objeto|String: si se provee un nombre de archivo, se grabará el lienzo como una imagen con la extensión png o jpg, dependiendo del nombre del archivo. Si se provee un objeto, se grabará dependiendo del objeto y el nombre del archivo (ver los ejemplos anteriores)",
         "filename": "String: Si se provee un objeto como el primer parámetro, entonces el segundo parámetro indica el nombre del archivo, y debe incluir la extensión apropiada (ver los ejemplos anteriores).",
         "options": "Boolean|String: opciones adicionales depndiendo del tipo de archivo. Por ejemplo, cuando se graba un archivo JSON, true indica que la salida será optimizada según el tamaño del archivo, en vez de por legibilidad."
-      }
+      },
+      "returns": "el objeto p5"
     },
     "saveJSON": {
       "description": [
@@ -3204,12 +3276,11 @@
       ],
       "returns": "el objeto p5.Geometry3D",
       "params": {
-        "path": "String: ubicación del modelo a cargar",
-        "normalize": "Boolean:  Si es verdadero (true), escala el modelo a un tamaño estandarizado al momento de cargarlo.",
-        "successCallback": "Función(p5.Geometry3D): función a ser llamada cuando el modelo se cargue. Será pasada al modelo del objeto 3D.",
-        "failureCallback": "Función(evento): llamada con el error evento si la imagen no falla al cargar.",
-        "fileType": "String: (Optional) The file extension of the model  (<code>.stl</code>, <code>.obj</code>)."
-      }
+        "min": "Número: el límite inferior (inclusivo)",
+        "max": "Número: el límite superio (exclusivo)",
+        "choices": "Arreglo: el arreglo del cual se elige"
+      },
+      "returns": "Número: el número aleatorio o un elemento aleatorio de un conjunto de opciones"
     },
     "model": {
       "description": ["Hace el render de un modelo 3D en la pantalla."],
@@ -3363,7 +3434,41 @@
         "far": "Número: define el frustum del plano lejano de la cámara"
       }
     },
-    "frustum": {
+    "ambientLight": {
+      "description": ["Crea una luz ambiente con color"],
+      "params": {
+        "v1": "Número|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color actual), o arreglo de color o String de color CSS",
+        "v2": "Número: opcional, valor de verde o saturación",
+        "v3": "Número: opcional, valor de azul o brillo",
+        "alpha": "Número: opcional, valor de opacidad"
+      },
+      "returns": "el objeto p5"
+    },
+    "directionalLight": {
+      "description": ["Crea una luz direccional con color y dirección"],
+      "params": {
+        "v1": "Número|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color actual), o arreglo de color o String de color CSS",
+        "v2": "Número: opcional, valor de verde o saturación",
+        "v3": "Número: opcional, valor de azul o brillo",
+        "x": "Número|p5.Vector: dirección del eje x o un p5.Vector",
+        "y": "Número: opcional, dirección del eje y",
+        "z": "Número: opcional, dirección del eje z"
+      },
+      "returns": "el objeto p5"
+    },
+    "pointLight": {
+      "description": ["Crea una luz puntual con color y posición"],
+      "params": {
+        "v1": "Número|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color actual), o arreglo de color o String de color CSS",
+        "v2": "Número: opcional, valor de verde o saturación",
+        "v3": "Número: opcional, valor de azul o brillo",
+        "x": "Número|p5.Vector: dirección del eje x o un p5.Vector",
+        "y": "Número: opcional, dirección del eje y",
+        "z": "Número: opcional, dirección del eje z"
+      },
+      "returns": "p5: el objeto p5"
+    },
+    "normalMaterial": {
       "description": [
         "Sets a perspective matrix as defined by the parameters. ",
         "A frustum is a geometric form: a pyramid with its top cut off. With the viewer's eye at the imaginary top of the pyramid, the six planes of the frustum act as clipping planes when rendering a 3D view. Thus, any form inside the clipping planes is visible; anything outside those planes is not visible. ",
@@ -3389,119 +3494,23 @@
         "Sets rendererGL's current camera to a p5.Camera object. Allows switching between multiple cameras."
       ],
       "params": {
-        "cam": "p5.Camera: p5.Camera object"
-      }
+        "v1": "Número|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color), o arreglo de color, o String de color CSS",
+        "v2": "Número: opcional, valor de verde o saturación",
+        "v3": "Número: opcional, valor de azul o brillo"
+      },
+      "returns": "p5: el objeto p5"
     },
     "setAttributes": {
       "description": [
-        "Set attributes for the WebGL Drawing context. This is a way of adjusting how the WebGL renderer works to fine-tune the display and performance. ",
-        "Note that this will reinitialize the drawing context if called after the WebGL canvas is made. ",
-        "If an object is passed as the parameter, all attributes not declared in the object will be set to defaults. ",
-        "The available attributes are:  alpha - indicates if the canvas contains an alpha buffer default is true ",
-        "depth - indicates whether the drawing buffer has a depth buffer of at least 16 bits - default is true ",
-        "stencil - indicates whether the drawing buffer has a stencil buffer of at least 8 bits ",
-        "antialias - indicates whether or not to perform anti-aliasing default is false (true in Safari) ",
-        "premultipliedAlpha - indicates that the page compositor will assume the drawing buffer contains colors with pre-multiplied alpha default is false ",
-        "preserveDrawingBuffer - if true the buffers will not be cleared and and will preserve their values until cleared or overwritten by author (note that p5 clears automatically on draw loop) default is true ",
-        "perPixelLighting - if true, per-pixel lighting will be used in the lighting shader otherwise per-vertex lighting is used. default is true."
+        "Material espejo para geometría con un color dado. Puedes ver todos los posibles materiales en este ejemplo."
       ],
       "params": {
-        "key": "String: Name of attribute",
-        "value": "Boolean: New value of named attribute",
-        "obj": "Object: object with key-value pairs"
-      }
-    },
-    "sampleRate": {
-      "description": [
-        "Returns a number representing the sample rate, in samples per second, of all sound objects in this audio context. It is determined by the sampling rate of your operating system's sound card, and it is not currently possile to change. It is often 44100, or twice the range of human hearing."
-      ],
-      "returns": "Number: samplerate samples per second"
-    },
-    "freqToMidi": {
-      "description": [
-        "Returns the closest MIDI note value for a given frequency."
-      ],
-      "returns": "Number: MIDI note value",
-      "params": {
-        "frequency": "Number: A freqeuncy, for example, the \"A\"  above Middle C is 440Hz"
-      }
-    },
-    "midiToFreq": {
-      "description": [
-        "Returns the frequency value of a MIDI note value. General MIDI treats notes as integers where middle C is 60, C# is 61, D is 62 etc. Useful for generating musical frequencies with oscillators."
-      ],
-      "returns": "Number: Frequency value of the given MIDI note",
-      "params": {
-        "midiNote": "Number: The number of a MIDI note"
-      }
-    },
-    "soundFormats": {
-      "description": [
-        "List the SoundFile formats that you will include. LoadSound will search your directory for these extensions, and will pick a format that is compatable with the client's web browser. <a href=\"http://media.io/\">Here</a> is a free online file converter."
-      ],
-      "params": {
-        "formats": "String: (Optional) i.e. 'mp3', 'wav', 'ogg'"
-      }
-    },
-    "getAudioContext": {
-      "description": [
-        "Returns the Audio Context for this sketch. Useful for users who would like to dig deeper into the <a target='_blank' href= 'http://webaudio.github.io/web-audio-api/'>Web Audio API </a>.  ",
-        "Some browsers require users to startAudioContext with a user gesture, such as touchStarted in the example below."
-      ],
-      "returns": "Object: AudioContext for this sketch"
-    },
-    "userStartAudio": {
-      "description": [
-        "It is not only a good practice to give users control over starting audio. This policy is enforced by many web browsers, including iOS and <a href=\"https://goo.gl/7K7WLu\" title=\"Google Chrome's autoplay policy\">Google Chrome</a>, which create the Web Audio API's <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/AudioContext\" title=\"Audio Context @ MDN\">Audio Context</a> in a suspended state.  ",
-        "In these browser-specific policies, sound will not play until a user interaction event (i.e. <code>mousePressed()</code>) explicitly resumes the AudioContext, or starts an audio node. This can be accomplished by calling <code>start()</code> on a <code>p5.Oscillator</code>, <code> play()</code> on a <code>p5.SoundFile</code>, or simply <code>userStartAudio()</code>.  ",
-        "<code>userStartAudio()</code> starts the AudioContext on a user gesture. The default behavior will enable audio on any mouseUp or touchEnd event. It can also be placed in a specific interaction function, such as <code>mousePressed()</code> as in the example below. This method utilizes <a href=\"https://github.com/tambien/StartAudioContext\">StartAudioContext </a>, a library by Yotam Mann (MIT Licence, 2016)."
-      ],
-      "returns": "Promise: Returns a Promise that resolves when  the AudioContext state is 'running'",
-      "params": {
-        "element(s)": "Element|Array: (Optional) This argument can be an Element,  Selector String, NodeList, p5.Element,  jQuery Element, or an Array of any of those.",
-        "callback": "Function: (Optional) Callback to invoke when the AudioContext  has started"
-      }
-    },
-    "loadSound": {
-      "description": [
-        "loadSound() returns a new p5.SoundFile from a specified path. If called during preload(), the p5.SoundFile will be ready to play in time for setup() and draw(). If called outside of preload, the p5.SoundFile will not be ready immediately, so loadSound accepts a callback as the second parameter. Using a <a href=\"https://github.com/processing/p5.js/wiki/Local-server\"> local server</a> is recommended when loading external files."
-      ],
-      "returns": "SoundFile: Returns a p5.SoundFile",
-      "params": {
-        "path": "String|Array: Path to the sound file, or an array with  paths to soundfiles in multiple formats  i.e. ['sound.ogg', 'sound.mp3'].  Alternately, accepts an object: either  from the HTML5 File API, or a p5.File.",
-        "successCallback": "Function: (Optional) Name of a function to call once file loads",
-        "errorCallback": "Function: (Optional) Name of a function to call if there is  an error loading the file.",
-        "whileLoading": "Function: (Optional) Name of a function to call while file is loading.  This function will receive the percentage loaded  so far, from 0.0 to 1.0."
-      }
-    },
-    "createConvolver": {
-      "description": [
-        "Create a p5.Convolver. Accepts a path to a soundfile that will be used to generate an impulse response."
-      ],
-      "returns": "p5.Convolver: ",
-      "params": {
-        "path": "String: path to a sound file",
-        "callback": "Function: (Optional) function to call if loading is successful.  The object will be passed in as the argument  to the callback function.",
-        "errorCallback": "Function: (Optional) function to call if loading is not successful.  A custom error will be passed in as the argument  to the callback function."
-      }
-    },
-    "setBPM": {
-      "description": [
-        "Set the global tempo, in beats per minute, for all p5.Parts. This method will impact all active p5.Parts."
-      ],
-      "params": {
-        "BPM": "Number: Beats Per Minute",
-        "rampTime": "Number: Seconds from now"
-      }
-    },
-    "saveSound": {
-      "description": [
-        "Save a p5.SoundFile as a .wav file. The browser will prompt the user to download the file to their device. For uploading audio to a server, use <a href=\"/docs/reference/#/p5.SoundFile/saveBlob\"><code>p5.SoundFile.saveBlob</code></a>."
-      ],
-      "params": {
-        "soundFile": "p5.SoundFile: p5.SoundFile that you wish to save",
-        "fileName": "String: name of the resulting .wav file."
-      }
+        "v1": "Número|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color), o arreglo de color, o String de color CSS",
+        "v2": "Número: opcional, valor de verde o saturación",
+        "v3": "Número: opcional, valor de azul o brillo",
+        "alpha": "Número: opcional, valor de opacidad"
+      },
+      "returns": "p5: el objeto p5"
     }
   },
   "p5.Color": {
@@ -5388,112 +5397,7 @@
       "Creates a signal that oscillates between -1.0 and 1.0. By default, the oscillation takes the form of a sinusoidal shape ('sine'). Additional types include 'triangle', 'sawtooth' and 'square'. The frequency defaults to 440 oscillations per second (440Hz, equal to the pitch of an 'A' note).  ",
       "Set the type of oscillation with setType(), or by instantiating a specific oscillator: <a href=\"/reference/#/p5.SinOsc\">p5.SinOsc</a>, <a href=\"/reference/#/p5.TriOsc\">p5.TriOsc</a>, <a href=\"/reference/#/p5.SqrOsc\">p5.SqrOsc</a>, or <a href=\"/reference/#/p5.SawOsc\">p5.SawOsc</a>. "
     ],
-    "params": {
-      "freq": "Number: (Optional) frequency defaults to 440Hz",
-      "type": "String: (Optional) type of oscillator. Options:  'sine' (default), 'triangle',  'sawtooth', 'square'"
-    },
-    "start": {
-      "description": [
-        "Start an oscillator. ",
-        "Starting an oscillator on a user gesture will enable audio in browsers that have a strict autoplay policy, including Chrome and most mobile devices. See also: <code>userStartAudio()</code>."
-      ],
-      "params": {
-        "time": "Number: (Optional) startTime in seconds from now.",
-        "frequency": "Number: (Optional) frequency in Hz."
-      }
-    },
-    "stop": {
-      "description": [
-        "Stop an oscillator. Accepts an optional parameter to determine how long (in seconds from now) until the oscillator stops."
-      ],
-      "params": {
-        "secondsFromNow": "Number: Time, in seconds from now."
-      }
-    },
-    "amp": {
-      "description": [
-        "Set the amplitude between 0 and 1.0. Or, pass in an object such as an oscillator to modulate amplitude with an audio signal."
-      ],
-      "returns": "AudioParam: gain If no value is provided,  returns the Web Audio API  AudioParam that controls  this oscillator's  gain/amplitude/volume)",
-      "params": {
-        "vol": "Number|Object: between 0 and 1.0  or a modulating signal/oscillator",
-        "rampTime": "Number: (Optional) create a fade that lasts rampTime",
-        "timeFromNow": "Number: (Optional) schedule this event to happen  seconds from now"
-      }
-    },
-    "freq": {
-      "description": [
-        "Set frequency of an oscillator to a value. Or, pass in an object such as an oscillator to modulate the frequency with an audio signal."
-      ],
-      "returns": "AudioParam: Frequency If no value is provided,  returns the Web Audio API  AudioParam that controls  this oscillator's frequency",
-      "params": {
-        "Frequency": "Number|Object: Frequency in Hz  or modulating signal/oscillator",
-        "rampTime": "Number: (Optional) Ramp time (in seconds)",
-        "timeFromNow": "Number: (Optional) Schedule this event to happen  at x seconds from now"
-      }
-    },
-    "setType": {
-      "description": [
-        "Set type to 'sine', 'triangle', 'sawtooth' or 'square'."
-      ],
-      "params": {
-        "type": "String: 'sine', 'triangle', 'sawtooth' or 'square'."
-      }
-    },
-    "connect": {
-      "description": ["Connect to a p5.sound / Web Audio object."],
-      "params": {
-        "unit": "Object: A p5.sound or Web Audio object"
-      }
-    },
-    "disconnect": {
-      "description": ["Disconnect all outputs"]
-    },
-    "pan": {
-      "description": ["Pan between Left (-1) and Right (1)"],
-      "params": {
-        "panning": "Number: Number between -1 and 1",
-        "timeFromNow": "Number: schedule this event to happen  seconds from now"
-      }
-    },
-    "phase": {
-      "description": [
-        "Set the phase of an oscillator between 0.0 and 1.0. In this implementation, phase is a delay time based on the oscillator's current frequency."
-      ],
-      "params": {
-        "phase": "Number: float between 0.0 and 1.0"
-      }
-    },
-    "add": {
-      "description": [
-        "Add a value to the p5.Oscillator's output amplitude, and return the oscillator. Calling this method again will override the initial add() with a new value."
-      ],
-      "returns": "p5.Oscillator: Oscillator Returns this oscillator  with scaled output",
-      "params": {
-        "number": "Number: Constant number to add"
-      }
-    },
-    "mult": {
-      "description": [
-        "Multiply the p5.Oscillator's output amplitude by a fixed value (i.e. turn it up!). Calling this method again will override the initial mult() with a new value."
-      ],
-      "returns": "p5.Oscillator: Oscillator Returns this oscillator  with multiplied output",
-      "params": {
-        "number": "Number: Constant number to multiply"
-      }
-    },
-    "scale": {
-      "description": [
-        "Scale this oscillator's amplitude values to a given range, and return the oscillator. Calling this method again will override the initial scale() with new values."
-      ],
-      "returns": "p5.Oscillator: Oscillator Returns this oscillator  with scaled output",
-      "params": {
-        "inMin": "Number: input range minumum",
-        "inMax": "Number: input range maximum",
-        "outMin": "Number: input range minumum",
-        "outMax": "Number: input range maximum"
-      }
-    }
+    "returns": "p5.XML: el objeto p5.XML generado"
   },
   "p5.SinOsc": {
     "description": [
