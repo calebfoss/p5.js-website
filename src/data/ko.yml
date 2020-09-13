@@ -732,61 +732,82 @@ examples:
 reference:
   Reference: 레퍼런스
 showcase:
-  showcase-title: "쇼케이스"
-  showcase-intro1: "쇼케이스는 2019년 강예은 " 
-  showcase-intro2: "이 제작, 기획하였으며, 2020년에는 코니 리우 "
-  showcase-intro3: "가 새로운 기획을 선보입니다. 쇼케이스는 p5.js를 보다 흥미진진하고 포용적으로 만든 창작물, 학습물, 오픈 소스 사례들을 기쁘게 소개합니다. 이렇게 우리는 함께 커뮤니티를 만들어 나가는게 아닐까요?:) 2019년 여름, 우리는 p5.js 기반의 다양한 프로젝트들을 소개한 바 있습니다."
-  showcase-intro4: "현재 2020년 여름 쇼케이스를 모집중입니다. 아래의 버튼을 눌러 자신 또는 타인의 p5.js 작업을 추천해주세요!"
-  nominate-project: "프로젝트 추천하기"
-  showcase-featuring: "선정 프로젝트"
-  project-tag-art: "예술"
-  project-tag-design: "디자인"
-  project-tag-code: "코드"
-  project-tag-curriculum: "커리큘럼"
-  project-tag-documentation: "문서화"
-  project-tag-game: "게임"
-  project-tag-library: "라이브러리"
-  project-tag-organizing: "행사 또는 모임"
-  project-tag-tool: "툴"
-  project-tag-tutorial: "튜토리얼"
-  project-roni: "각도기 드로잉 프로그램(Programmed Plotter Drawings)"
-  credit-roni: "Roni Cantor"
-  description-roni: "p5.js로 제작한 싸인파(Sine wave)와 선형 보간(lerp)으로, 실물 각도기와 펜과 연결되어 드로잉하고, SVG 파일로 내보내기 가능."
-  project-phuong: "날아라 아이리(Airi Flies)"
-  credit-phuong: "Phuong Ngo"
-  description-phuong: "p5.play로 제작된 게임으로, PEW라고 말해 아이리(Airi)가 날 수 있도록 돕는다. 사용자들이 자신의 안전 지대를 벗어난 곳에서도 행동, 외모, 발언에 상관없이 자신감을 갖게하고자 하는 취지에서 제작."
-  project-daein: "Chillin'"
-  credit-daein: "정대인(Dae In Chung)"
-  description-daein: "모바일 기기의 모션 센서와 p5.js를 활용한 인터랙티브 타이포그래픽 포스터"
-  project-qianqian: "Qtv"
-  credit-qianqian: "치안치안 예(Qianqian Ye)"
-  description-qianqian: "입문자를 위한 p5.js 튜토리얼을 포함하여, 코딩, 예술, 그리고 기술에 대해 다루는 1분 길이의 중국어 영상 채널들. 유투브, 인스타그램, 비리비리(Bilibili), 틱톡(TikTok)에서 확인 가능."
-  project-casey-louise: "p5.js 셰이더(Shaders)"
-  credit-casey-louise: "캐시 콘치나(Casey Conchinha), 루이스 레셀(Louise Lessél)"
-  description-casey-louise: "셰이더(Shaders)란 무엇이고, 이를 p5.js에서 왜, 그리고 어떻게 사용하는지 배울 수 있는 자료."
-  project-moon-xin: "움직이는 반응형 포스터(Moving Responsive Posters)"
-  credit-moon-xin: "장문(Moon Jang), 씬 씬(Xin Xin), 그리고 학생들"
-  description-moon-xin: "브라우저 기반의 움직이는 포스터로, 그래픽 시스템과 변형 메소드, 그리고 p5.js를 사용하여 8자 미만 단어가 내포하는 바를 표현. 조지아 대학교(University of Georgia)의 그래픽 디자인 과정인 'Visual Narrative Systems'의 수강생들이 디자인."
-
-  created-by: "Created By"
-  pronouns-female: "(she/her)"
-  creator-from-roni-cantor: "From Toronto, Canada"
-  project-links: "Project Links"
-  project-links-text-1-roni-cantor: "Example sketch in p5.js Web Editor"
-  project-links-text-2-roni-cantor: "AxiDraw V3 demo video"
-  project-q-1-1: "What are you up to?"
-  project-q-1-2: "How did you get started with p5.js?"
-  project-a-1-1-roni-cantor: "I just graduated from Ryerson University's New Media program. Coming from 4 years of coding and making robots, I decided to take a break and play with some more traditional forms of art—while still coding and playing with robots."
-  project-a-1-2-roni-cantor: "I first started using p5.js at "
-  project-a-1-3-roni-cantor: "! After using "
-  project-a-1-4-roni-cantor: " for many years, I wanted to try something new."
-  project-q-2: "How did you use p5.js in this project?"
-  project-a-2-1-roni-cantor: "I used p5.js in this project to generate the sine wave and lerp (linear interpolation) formulas and display the visuals in the "
-  project-a-2-2-roni-cantor: ". I then used a feature in my code that exported my programmed graphic into an "
-  project-a-2-3-roni-cantor: " file. I needed an SVG file to give to the plotter—an "
-  project-a-2-4-roni-cantor: "—so that it understood where to draw the lines that I programmed. I sent this information to the plotter with a program called "
-  project-a-2-5-roni-cantor: "!"
-  project-q-3: "What's your favorite p5.js feature?"
+  showcase-title: 쇼케이스
+  showcase-intro1: '쇼케이스는 2019년 강예은 '
+  showcase-intro2: '이 제작, 기획하였으며, 2020년에는 코니 리우 '
+  showcase-intro3: >-
+    가 새로운 기획을 선보입니다. 쇼케이스는 p5.js를 보다 흥미진진하고 포용적으로 만든 창작물, 학습물, 오픈 소스 사례들을 기쁘게
+    소개합니다. 이렇게 우리는 함께 커뮤니티를 만들어 나가는게 아닐까요?:) 2019년 여름, 우리는 p5.js 기반의 다양한 프로젝트들을
+    소개한 바 있습니다.
+  showcase-intro4: 현재 2020년 여름 쇼케이스를 모집중입니다. 아래의 버튼을 눌러 자신 또는 타인의 p5.js 작업을 추천해주세요!
+  nominate-project: 프로젝트 추천하기
+  showcase-featuring: 선정 프로젝트
+  project-tag-art: 예술
+  project-tag-design: 디자인
+  project-tag-code: 코드
+  project-tag-curriculum: 커리큘럼
+  project-tag-documentation: 문서화
+  project-tag-game: 게임
+  project-tag-library: 라이브러리
+  project-tag-organizing: 행사 또는 모임
+  project-tag-tool: 툴
+  project-tag-tutorial: 튜토리얼
+  project-roni: 각도기 드로잉 프로그램(Programmed Plotter Drawings)
+  credit-roni: Roni Cantor
+  description-roni: >-
+    p5.js로 제작한 사인파(Sine wave)와 선형 보간(lerp)으로, 실물 각도기와 펜과 연결되어 드로잉하고, SVG 파일로
+    내보내기 가능.
+  project-phuong: 날아라 아이리(Airi Flies)
+  credit-phuong: Phuong Ngo
+  description-phuong: >-
+    p5.play로 제작된 게임으로, PEW라고 말해 아이리(Airi)가 날 수 있도록 돕는다. 사용자들이 자신의 안전 지대를 벗어난
+    곳에서도 행동, 외모, 발언에 상관없이 자신감을 갖게하고자 하는 취지에서 제작.
+  project-daein: Chillin'
+  credit-daein: 정대인(Dae In Chung)
+  description-daein: 모바일 기기의 모션 센서와 p5.js를 활용한 인터랙티브 타이포그래픽 포스터
+  project-qianqian: Qtv
+  credit-qianqian: 치안치안 예(Qianqian Ye)
+  description-qianqian: >-
+    입문자를 위한 p5.js 튜토리얼을 포함하여, 코딩, 예술, 그리고 기술에 대해 다루는 1분 길이의 중국어 영상 채널들. 유투브,
+    인스타그램, 비리비리(Bilibili), 틱톡(TikTok)에서 확인 가능.
+  project-casey-louise: p5.js 셰이더(Shaders)
+  credit-casey-louise: '캐시 콘치나(Casey Conchinha), 루이스 레셀(Louise Lessél)'
+  description-casey-louise: '셰이더(Shaders)란 무엇이고, 이를 p5.js에서 왜, 그리고 어떻게 사용하는지 배울 수 있는 자료.'
+  project-moon-xin: 움직이는 반응형 포스터(Moving Responsive Posters)
+  credit-moon-xin: '장문(Moon Jang), 씬 씬(Xin Xin), 그리고 학생들'
+  description-moon-xin: >-
+    브라우저 기반의 움직이는 포스터로, 그래픽 시스템과 변형 메소드, 그리고 p5.js를 사용하여 8자 미만 단어가 내포하는 바를 표현.
+    조지아 대학교(University of Georgia)의 그래픽 디자인 과정인 'Visual Narrative Systems'의
+    수강생들이 디자인.
+  created-by: Created By
+  pronouns-female: (she/her)
+  creator-from-roni-cantor: 'From Toronto, Canada'
+  project-links: Project Links
+  project-links-text-1-roni-cantor: Example sketch in p5.js Web Editor
+  project-links-text-2-roni-cantor: AxiDraw V3 demo video
+  project-q-1-1: What are you up to?
+  project-q-1-2: How did you get started with p5.js?
+  project-a-1-1-roni-cantor: >-
+    I just graduated from Ryerson University's New Media program. Coming from 4
+    years of coding and making robots, I decided to take a break and play with
+    some more traditional forms of art—while still coding and playing with
+    robots.
+  project-a-1-2-roni-cantor: 'I first started using p5.js at '
+  project-a-1-3-roni-cantor: '! After using '
+  project-a-1-4-roni-cantor: ' for many years, I wanted to try something new.'
+  project-q-2: How did you use p5.js in this project?
+  project-a-2-1-roni-cantor: >-
+    I used p5.js in this project to generate the sine wave and lerp (linear
+    interpolation) formulas and display the visuals in the 
+  project-a-2-2-roni-cantor: >-
+    . I then used a feature in my code that exported my programmed graphic into
+    an 
+  project-a-2-3-roni-cantor: ' file. I needed an SVG file to give to the plotter—an '
+  project-a-2-4-roni-cantor: >-
+    —so that it understood where to draw the lines that I programmed. I sent
+    this information to the plotter with a program called 
+  project-a-2-5-roni-cantor: '!'
+  project-q-3: What's your favorite p5.js feature?
   project-a-3-roni-cantor: ' because lines are fun and "lerp" is a fun word to say!'
   project-q-4: "Did you face any challenges working on this project? If so, how did you overcome them?"
   project-a-4-roni-cantor: "It was my first time using p5.js, Inkscape, and a plotter! I really benefited from the people around me who had used p5 before, as well as online guides and forums."
