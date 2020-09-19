@@ -2647,7 +2647,7 @@ footer {
   }
   #exampleDisplay,
   #exampleFrame,
-  #exampleEditor {
+  #exampleDisplay #exampleEditor {
     width: 100%;
   }
   #exampleDisplay .edit_button {
@@ -2661,7 +2661,6 @@ footer {
   }
   #exampleEditor {
     margin-top: 3em;
-    width: 100%;
   }
   small,
   .small,
