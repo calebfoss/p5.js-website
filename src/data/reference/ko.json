@@ -63,14 +63,14 @@
   "Material": "재질(Material)",
   "p5": {
     "description": [
-      "This is the p5 instance constructor. ",
-      "A p5 instance holds all the properties and methods related to a p5 sketch. It expects an incoming sketch closure and it can also take an optional node parameter for attaching the generated p5 canvas to a node. The sketch closure takes the newly created p5 instance as its sole argument and may optionally set <a href=\"#/p5/preload\">preload()</a>, <a href=\"#/p5/setup\">setup()</a>, and/or <a href=\"#/p5/draw\">draw()</a> properties on it for running a sketch. ",
-      "A p5 sketch can run in \"global\" or \"instance\" mode: \"global\" - all properties and methods are attached to the window \"instance\" - all properties and methods are bound to this p5 object"
+      "p5 인스턴스 생성자 입니다.",
+      "p5 인스턴스는 p5 스케치와 관련된 모든 속성과 메소드를 보유합니다. 도래할 스케치 클로저(closure)를 예상하고, 생성된 p5 캔버스를 노드에 연결하기 위해 선택적으로 노드 매개변수를 취할 수 있습니다. 스케치 클로저는 새로이 생성된 p5 인스턴스를 유일한 인수로 취하며, 또 선택적으로, 스케치 실행을 위해 <a href=\"#/p5/preload\">preload()</a>, <a href=\"#/p5/setup\">setup()</a>, 그리고/또는 <a href=\"#/p5/draw\">draw()</a> 속성을 담을 수 있습니다.",
+      "p5 스케치는 \"전역\" 또는 \"인스턴스\" 모드에서 실행됩니다: \"전역 모드\" - 모든 속성과 메소드가 윈도우에 속함 \"인스턴스 모드\" - 모든 속성과 메소드가 특정 p5 객체에 구속됨"
     ],
-    "returns": "P5: a p5 instance",
+    "returns": "P5: p5 인스턴스",
     "params": {
-      "sketch": "Function: a closure that can set optional <a href=\"#/p5/preload\">preload()</a>,  <a href=\"#/p5/setup\">setup()</a>, and/or <a href=\"#/p5/draw\">draw()</a> properties on the  given p5 instance",
-      "node": "HTMLElement: (Optional) element to attach canvas to"
+      "sketch": "함수: 주어진 p5 인스턴스에 선택적으로 <a href=\"#/p5/preload\">preload()</a>,  <a href=\"#/p5/setup\">setup()</a>, 그리고/또는 <a href=\"#/p5/draw\">draw()</a> 속성을 설정할 수 있는 클로저",
+      "node": "HTMLElement: (선택 사항) 캔버스에 속할 요소"
     },
     "alpha": {
       "description": [
@@ -242,12 +242,26 @@
         "v2": "숫자: 현재 지정된 색상 모드의 색상 범위에 따른 초록값 또는 채도값",
         "v3": "숫자:현재 지정된 색상 모드의 색상 범위에 따른 파랑값 또는 밝기값",
         "alpha": "숫자: (선택 사항)",
-        "UNKNOWN-PARAM-5": "문자열: 색상 문자열",
-        "UNKNOWN-PARAM-6": "숫자: 회색값",
-        "UNKNOWN-PARAM-7": "숫자 배열[]: 색상의 빨강값, 초록값, 파랑값, 그리고 알파값을 포함한 배열",
-        "UNKNOWN-PARAM-8": "p5.Color: 선의 색상"
-      },
-      "returns": "p5 객체"
+        "value": "문자열: 색상 문자열",
+        "gray": "숫자: 회색값",
+        "values": "숫자 배열[]: 색상의 빨강값, 초록값, 파랑값, 그리고 알파값을 포함한 배열",
+        "color": "p5.Color: 선의 색상"
+      }
+    },
+    "erase": {
+      "description": [
+        "<a href=\"#/p5/erase\">erase()</a> 함수의 영향을 받는 모든 드로잉을 캔버스로부터 지웁니다. 지워진 영역은 캔버스 이면의 웹 페이지 화면을 드러냅니다. 이러한 지우기 행위는 <a href=\"#/p5/noErase\">noErase()</a>로 취소할 수 있습니다. ",
+        "<a href=\"#/p5/erase\">erase()</a> 함수와 <a href=\"#/p5/noErase\">noErase()</a> 함수 사이에서 <a href=\"#/p5/image\">image()</a>나 <a href=\"#/p5/background\">background()</a>로 그려진 드로잉은 캔버스에서 지워지지 않습니다."
+      ],
+      "params": {
+        "strengthFill": "(선택 사항) 숫자: 도형의 면을 지우는 강도로서의 (0부터 255사이) 숫자. 별도 지정한 숫자가 없는 경우, 최고 강도인 255가 기본값으로 적용",
+        "strengthStroke": "(선택 사항) 숫자: (Optional) 도형의 테두리를 지우는 강도로서의 (0부터 255사이) 숫자. 별도 지정한 숫자가 없는 경우, 최고 강도인 255가 기본값으로 적용"
+      }
+    },
+    "noErase": {
+      "description": [
+        "<a href=\"#/p5/erase\">erase()</a>의 지우기 행위를 중단합니다. <a href=\"#/p5/fill\">fill()</a>, <a href=\"#/p5/stroke\">stroke()</a>, 그리고 <a href=\"#/p5/blendMode\">blendMode()</a> 함수로 설정된 사항들은 <a href=\"#/p5/erase\">erase()</a> 함수가 호출되기 전의 상태로 돌아갑니다."
+      ]
     },
     "arc": {
       "description": [
@@ -275,8 +289,17 @@
         "w": "숫자: 타원의 너비값",
         "h": "숫자: 타원의 높이값",
         "detail": "정수: 타원을 몇 개의 부분으로 나누어 그릴 것인지 지정 (WebGL 모드용)"
-      },
-      "returns": "p5 객체"
+      }
+    },
+    "circle": {
+      "description": [
+        "화면에 원을 그립니다. 원은 닫힌 도형으로, 중심점으로부터 주어진 거리에있는 모든 점들의 집합입니다.이 함수는 높이와 너비가 다른 타원을 그려내는 ellipse() 함수와는 달리, 너비와 높이가 모두 동일한 원을 그립니다. 이 경우, 높이와 너비는 원의 지름과 같습니다. 기본값으로, 처음 두 매개변수는 원의 중심 위치를 설정하고, 세 번째 매개 변수는 원의 지름을 설정합니다."
+      ],
+      "params": {
+        "x": "숫자: 원 중심점의 x좌표",
+        "y": "숫자: 원 중심점의 y좌표",
+        "d": "숫자: 원의 지름"
+      }
     },
     "line": {
       "description": [
@@ -1276,7 +1299,10 @@
     },
     "setAttributes": {
       "description": [
-        "WebGL 드로잉 컨텍스트의 속성을 설정하여 WebGL 렌더러가 화면과 성능을 미세 조정할 수 있도록 합니다.<br><br> WebGL 캔버스를 생성한 후에 이 함수를 호출하면 드로잉 컨텍스트가 다시 초기화되는 점에 유의하세요. <br><br>객체가 매개변수로 전달될 경우, 객체에 선언되지 않은 모든 속성은 기본값으로 처리됩니다.<br><br>사용한 가능한 속성은 다음과 같습니다:<br>alpha - 캔버스에 알파 버퍼가 있는지의 여부를 나타냅니다. 기본값은 참(true)입니다.<br>stencil - 드로잉 버퍼에 8비트 이상의 스텐실 버퍼가 있는지 여부를 나타냅니다.<br>antialias - 안티앨리어싱 기본값을 수행할지 여부를 나타냅니다. (Safari에서는 참)<br>premultipliedAlpha -   드로잉 버퍼에 포함된 색상이 미리 곱해진 알파 기본값을 포함하는 지의 여부에 대해, 페이지 컴포지터가 거짓(false)으로 가정하고 있음을 나타냅니다.<br>perPixelLighting - 참(true)이라면, 픽셀당 라이팅(per-pixel Lighting)이 라이팅 셰이더에 사용됩니다. 그렇지 않다면, 꼭지점당 라이팅(per-vertex lighting)이 사용됩니다. 기본값은 참입니다."
+        "p5() 생성자로 전역 모드 대신 인스턴스 모드를 활성화할 수 있습니다. 이는 고급 활용 사례에 해당합니다. 간단한 설명과 예제가 아래에 있습니다. 자세한 내용은 다니엘 쉬프만(Dan Shiffman)의 <a target=\"blank\" href=\"https://www.youtube.com/watch?v=Su792jEauZg&feature=youtu.be\">코딩 트레인(Coding Train) 비디오 튜토리얼</a> 또는 <a target=\"blank\" href=\"https://github.com/processing/p5.js/wiki/p5.js-overview#instantiation--namespace\">이 페이지</a>를 참조하세요. <br><br> 기본값으로, 모든 p5.js 함수들은 전역 네임스페이스에 속합니다. (즉, 화면창 객체에 구속됩니다.) 이는, p5.js 함수들을 ellipse(), fill()과 같은 이름으로 불러올 수 있음을 뜻합니다. 하지만, 이러한 방식은 자바스크립트의 여타 (동기식 또는 비동기식) 라이브러리를 사용하거나 긴 코딩을 작성할 때 다소 불편할 수 있습니다. 따라서, p5.js는 인스턴스 모드를 통해 이 문제를 해결할 수 있는 방법을 지원합니다. 인스턴스 모드에서는 모든 p5 함수의 전역 네임 스페이스를 오염시키는 대신, 이를 단일 변수에 구속되게 만듭니다.<br><br>선택적으로, 캔버스나 다른 요소에 추가할 두 번째 인수로서 기본 컨테이너를 지정할 수 있습니다. HTML상 요소의 id나 노드 자체를 추가(append)할 수 있습니다.<br><br>이처럼 인스턴스를 만들면, 단일 웹페이지에 두 개 이상의 p5 스케치를 사용할 수 있게 됩니다. 각각의 고유한 설정 변수에 의거하기 때문입니다. 물론, 전역 모드에서도 iframe 기능을 이용하면 복수의 스케치를 웹페이지에 사용할 수 있습니다.",
+        "",
+        "",
+        ""
       ],
       "params": {
         "key": "문자열: 속성명",
