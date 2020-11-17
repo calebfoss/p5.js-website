@@ -73,83 +73,140 @@ copyright:
   copyright3: 'La Referencia del lenguaje se encuentra bajo una licencia '
   copyright4: ' que permite reusar este contenido para propósitos no-comerciales si se otorga el crédito correspondiente.'
 get started:
-  get-started-title: "Empezar"
-  get-started1: "Esta página te guía para configurar un proyecto p5.js y crear tu primer bosquejo."
-  get-started2: "La forma más fácil de comenzar es usando el "
-  get-started3: "editor p5.js"
-  get-started4: ", puedes abrir el editor web y dirigirte a la sección "
-  get-started5: "tu primer bosquejo"
-  get-started6: ". Si deseas trabajar en la versión de escritorio de p5.js, puedes ir a las "
-  get-started7: "instrucciones de descarga"
-  settingUp-title: "Configura p5.js con un editor en tu computadora personal"
-  download-title: "Descarga una copia de la biblioteca p5.js"
-  hosted-title: "Utiliza una versión alojada de la biblioteca p5.js"
-  download1: "La manera más simple de empezar es usando el ejemplo en blanco incluido en"
-  download2: "p5.js completo"
-  download3: "disponible en el sitio."
-  download4: "Si revisas el archivo index.html, te darás cuenta que tiene un enlace al archivo p5.js. Si estás buscando usar la versión reducida (comprimida para que las páginas carguen más rápidamente), cambia el enlace a p5.min.js."
-  download5: "De forma alternativa, puedes enlazar a un archivo p5.js alojado en línea. Todas las versiones de p5.js están almacenadas en un CDN (Content Delivery Network). Puedes ver un historial de estas versiones aquí: "
-  download6: ". En este caso, puedes cambiar el enlace a: "
-  download7: "Una página HTML de ejemplo podría verse así:"
-  environment-title: "Ambiente"
-  environment1: "Puedes usar el "
-  environmentlink: "https://es.wikipedia.org/wiki/Editor_de_codigo_fuente"
-  environment2: " editor de código "
-  environment3: "que prefieras. Las instrucciones para usar y configurar  "
-  environment4: " están incluidas a continuación, otras buenas opciones de editores incluyen "
-  environment5: " y "
-  environment6: "Si estás utilizando un lector de pantalla y no usas el editor de p5, te recomendamos usar "
-  environment7: " o "
-  environment8: "Abre Sublime. Despliega el menú File (archivo) y elige Open (abrir) ... y selecciona el directorio donde se encuentran tus archivos html y js. En la barra lateral izquierda, podrás encontrar el nombre del directorio en la parte superior, y a continuación una lista con los archivos contenidos en el directorio."
-  environment9: "Haz click en tu archivo sketch.js y éste se abrirá a la derecha de tu pantalla, donde podrás editarlo. "
-  environment10: "el código de inicio de p5 en el editor sublime."
-  environment11: "Abre el archivo index.html en tu navegador haciendo doble click en él o escribiendo:"
-  environment12: "file:///la/ubicacion/de/tu/archivo/html"
-  environment13: " en la barra de direcciones de tu navegador para ver tu bosquejo."
-  your-first-sketch-title: "Tu primer bosquejo"
-  your-first-sketch-intro1: "En el "
-  your-first-sketch-intro2: "https://editor.p5js.org/"
-  your-first-sketch-intro3: "editor web p5.js"
-  your-first-sketch-intro4: " vas encontrar el siguiente código:"
-  your-first-sketch1: "Despúes de "
-  your-first-sketch2: " incluye esta línea de código: "
-  your-first-sketch3: "Ahora tu código debe estar así: "
-  your-first-sketch4: "La línea que acabas de agreagar dibuja una elipse, con su centro a 50 píxeles del borde izquierdo y 50 píxeles del borde superior del bosquejo, con un ancho y un alto de 80 píxeles."
-  your-first-sketch5: "¡En el editor presiona play para ejecutar el código!"
-  your-first-sketch6: "Si estas utilizando un lector de pantalla, tienes que activar las salidas accesibles en el editor, fuera del editor tienes que agregar la biblioteca de accesibilidad a tu html. Para aprender más visita el "
-  your-first-sketch7: " tutorial usando p5 con un lector de pantalla"
-  your-first-sketch8: "Si escribiste todo correctamente, esto aparecerá en tu ventana de visualización:"
-  your-first-sketch9: "canvas tiene un circulo de ancho y alto 50 en la posición 80 x y 80 ye"
-  your-first-sketch10: 'Si nada aparece, el editor puede estar teniendo problemas entendiendo lo que escribiste. Si esto sucede, asegúrate de haber copiado el ejemplo de código tal y como está: los números deben estar separados por comas y contenidos entre paréntesis, la línea debe terminar con punto y coma, y la palabra "ellipse" debe estar escrita como en inglés.'
-  your-first-sketch11: "Una de las cosas más difíciles de comenzar a programar es que debes ser muy específicx con la sintaxis. El navegador no siempre es lo suficientemente inteligente como para saber lo que quieres decir, y puede ser bastante exigente con respecto a la ubicación de la puntuación. Ya te acostrumbrarás, sólo toma un poco de práctica. En la parte inferior izquierda del editor vas encontrar la sección de consola. Aquí, encontrarás mensajes del editor con detalles de cualquier error que se encuentre."
-  your-first-sketch12: "Ahora, vamos a crear un bosquejo que es un poco más interesante. Modica el ejemplo anterior para probar lo siguiente:"
-  your-first-sketch13: "Este programa crea un canvas que es de 400 píxeles de ancho y 400 píxeles de alto, y luego empieza a dibujar círculos blancos en la posición del ratón. Cuando algún botón del ratón es presionado, el color del círculo cambia a negro. Ejecuta el código, mueve el cursor, y has click para experimentarlo."
-  your-first-sketch14: "canvas tiene múltiples círculos dibujados que siguen los movimientos del cursor"
-  first-sketch-heading1: "Bloque de código con elipse"
-  first-sketch-heading2: "Nota para usuarios de lectores de pantalla"
-  first-sketch-heading3: "Bloque de código con Interacción"
-  what-next-title: "¿Qué viene después?"
-  learn1: "Visita las páginas "
-  learn2: "aprender"
-  learn3: " y "
-  learn4: "ejemplos"
-  learn5: " para conocer la biblioteca."
-  learn6: "Mira los video tutoriales de "
-  learn7: "The Coding Train"
-  learn8: " y "
-  learn9: "Kadenze"
-  learn10: "."
-  reference1: "Visita la "
-  reference2: " referencia"
-  reference3: " para explorar la documentación completa."
-  learn11: "Si deseas utilizar p5 con un lector de pantalla, visita el "
-  learn12: "tutorial p5 con un lector de pantalla"
-  processing-transition1: "Si has usado Processing en el pasado, lee el "
-  processing-transition2: "https://github.com/processing/p5.js/wiki/Processing-transition"
-  processing-transition3: "tutorial de transición desde Processing"
-  processing-transition4: " para aprender cómo convertir programas de Processing a p5.js, y cuáles son las principales diferencias entre estos."
-  book1: 'Partes de este tutorial fueron adaptadas de "Getting Started with p5.js" por Lauren McCarthy, Casey Reas y Ben Fry, O''Reilly / Make 2015. Copyright © 2015. Todos los derechos reservados. Última modificación en la Conferencia de Contribuyentes p5.js 2019.'
-
+  get-started-title: Empezar
+  get-started1: >-
+    Esta página te guía para configurar un proyecto p5.js y crear tu primer
+    bosquejo.
+  get-started2: 'La forma más fácil de comenzar es usando el '
+  get-started3: editor p5.js
+  get-started4: ', puedes abrir el editor web y dirigirte a la sección '
+  get-started5: tu primer bosquejo
+  get-started6: '. Si deseas trabajar en la versión de escritorio de p5.js, puedes ir a las '
+  get-started7: instrucciones de descarga
+  settingUp-title: Configura p5.js con un editor en tu computadora personal
+  download-title: Descarga una copia de la biblioteca p5.js
+  hosted-title: Utiliza una versión alojada de la biblioteca p5.js
+  download1: La manera más simple de empezar es usando el ejemplo en blanco incluido en
+  download2: p5.js completo
+  download3: disponible en el sitio.
+  download8: 'After download, you need to set up a local server. See instructions '
+  download9: here
+  download10: '. Run your local server within the downloaded folder and on your browser, go to '
+  download11: 'http://localhost:{your-port-num}/empty-example'
+  download4: >-
+    Si revisas el archivo index.html, te darás cuenta que tiene un enlace al
+    archivo p5.js. Si estás buscando usar la versión reducida (comprimida para
+    que las páginas carguen más rápidamente), cambia el enlace a p5.min.js.
+  download5: >-
+    De forma alternativa, puedes enlazar a un archivo p5.js alojado en línea.
+    Todas las versiones de p5.js están almacenadas en un CDN (Content Delivery
+    Network). Puedes ver un historial de estas versiones aquí: 
+  download6: '. En este caso, puedes cambiar el enlace a: '
+  download7: 'Una página HTML de ejemplo podría verse así:'
+  environment-title: Ambiente
+  environment1: 'Puedes usar el '
+  environmentlink: 'https://es.wikipedia.org/wiki/Editor_de_codigo_fuente'
+  environment2: ' editor de código '
+  environment3: 'que prefieras. Las instrucciones para usar y configurar  '
+  environment4: ' están incluidas a continuación, otras buenas opciones de editores incluyen '
+  environment5: ' y '
+  environment6: >-
+    Si estás utilizando un lector de pantalla y no usas el editor de p5, te
+    recomendamos usar 
+  environment7: ' o '
+  environment8: >-
+    Abre Sublime. Despliega el menú File (archivo) y elige Open (abrir) ... y
+    selecciona el directorio donde se encuentran tus archivos html y js. En la
+    barra lateral izquierda, podrás encontrar el nombre del directorio en la
+    parte superior, y a continuación una lista con los archivos contenidos en el
+    directorio.
+  environment9: >-
+    Haz click en tu archivo sketch.js y éste se abrirá a la derecha de tu
+    pantalla, donde podrás editarlo. 
+  environment10: el código de inicio de p5 en el editor sublime.
+  environment11: >-
+    Abre el archivo index.html en tu navegador haciendo doble click en él o
+    escribiendo:
+  environment12: 'file:///la/ubicacion/de/tu/archivo/html'
+  environment14: ' (or '
+  environment15: 'http://localhost:{your-port-num}/empty-example'
+  environment16: ' if you are using a local server)'
+  environment13: ' en la barra de direcciones de tu navegador para ver tu bosquejo.'
+  your-first-sketch-title: Tu primer bosquejo
+  your-first-sketch-intro1: 'En el '
+  your-first-sketch-intro2: 'https://editor.p5js.org/'
+  your-first-sketch-intro3: editor web p5.js
+  your-first-sketch-intro4: ' vas encontrar el siguiente código:'
+  your-first-sketch1: 'Despúes de '
+  your-first-sketch2: ' incluye esta línea de código: '
+  your-first-sketch3: 'Ahora tu código debe estar así: '
+  your-first-sketch4: >-
+    La línea que acabas de agreagar dibuja una elipse, con su centro a 50
+    píxeles del borde izquierdo y 50 píxeles del borde superior del bosquejo,
+    con un ancho y un alto de 80 píxeles.
+  your-first-sketch5: ¡En el editor presiona play para ejecutar el código!
+  your-first-sketch6: >-
+    Si estas utilizando un lector de pantalla, tienes que activar las salidas
+    accesibles en el editor, fuera del editor tienes que agregar la biblioteca
+    de accesibilidad a tu html. Para aprender más visita el 
+  your-first-sketch7: ' tutorial usando p5 con un lector de pantalla'
+  your-first-sketch8: >-
+    Si escribiste todo correctamente, esto aparecerá en tu ventana de
+    visualización:
+  your-first-sketch9: canvas tiene un circulo de ancho y alto 50 en la posición 80 x y 80 ye
+  your-first-sketch10: >-
+    Si nada aparece, el editor puede estar teniendo problemas entendiendo lo que
+    escribiste. Si esto sucede, asegúrate de haber copiado el ejemplo de código
+    tal y como está: los números deben estar separados por comas y contenidos
+    entre paréntesis, la línea debe terminar con punto y coma, y la palabra
+    "ellipse" debe estar escrita como en inglés.
+  your-first-sketch11: >-
+    Una de las cosas más difíciles de comenzar a programar es que debes ser muy
+    específicx con la sintaxis. El navegador no siempre es lo suficientemente
+    inteligente como para saber lo que quieres decir, y puede ser bastante
+    exigente con respecto a la ubicación de la puntuación. Ya te acostrumbrarás,
+    sólo toma un poco de práctica. En la parte inferior izquierda del editor vas
+    encontrar la sección de consola. Aquí, encontrarás mensajes del editor con
+    detalles de cualquier error que se encuentre.
+  your-first-sketch12: >-
+    Ahora, vamos a crear un bosquejo que es un poco más interesante. Modica el
+    ejemplo anterior para probar lo siguiente:
+  your-first-sketch13: >-
+    Este programa crea un canvas que es de 400 píxeles de ancho y 400 píxeles de
+    alto, y luego empieza a dibujar círculos blancos en la posición del ratón.
+    Cuando algún botón del ratón es presionado, el color del círculo cambia a
+    negro. Ejecuta el código, mueve el cursor, y has click para experimentarlo.
+  your-first-sketch14: >-
+    canvas tiene múltiples círculos dibujados que siguen los movimientos del
+    cursor
+  first-sketch-heading1: Bloque de código con elipse
+  first-sketch-heading2: Nota para usuarios de lectores de pantalla
+  first-sketch-heading3: Bloque de código con Interacción
+  what-next-title: ¿Qué viene después?
+  learn1: 'Visita las páginas '
+  learn2: aprender
+  learn3: ' y '
+  learn4: ejemplos
+  learn5: ' para conocer la biblioteca.'
+  learn6: 'Mira los video tutoriales de '
+  learn7: The Coding Train
+  learn8: ' y '
+  learn9: Kadenze
+  learn10: .
+  reference1: 'Visita la '
+  reference2: ' referencia'
+  reference3: ' para explorar la documentación completa.'
+  learn11: 'Si deseas utilizar p5 con un lector de pantalla, visita el '
+  learn12: tutorial p5 con un lector de pantalla
+  processing-transition1: 'Si has usado Processing en el pasado, lee el '
+  processing-transition2: 'https://github.com/processing/p5.js/wiki/Processing-transition'
+  processing-transition3: tutorial de transición desde Processing
+  processing-transition4: ' para aprender cómo convertir programas de Processing a p5.js, y cuáles son las principales diferencias entre estos.'
+  book1: >-
+    Partes de este tutorial fueron adaptadas de "Getting Started with p5.js" por
+    Lauren McCarthy, Casey Reas y Ben Fry, O'Reilly / Make 2015. Copyright ©
+    2015. Todos los derechos reservados. Última modificación en la Conferencia
+    de Contribuyentes p5.js 2019.
 download:
   Download: Descargar
   download-intro: >-
