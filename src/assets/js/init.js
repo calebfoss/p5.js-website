@@ -219,14 +219,14 @@ window.onload = function() {
   }
 
   // =================================================
-  // disable i18n for now
-  // @TODO remove on i18n launch
-  var buttons = document.getElementById('i18n-btn');
-  if (window.location.hostname === 'p5js.org') {
-    buttons.parentNode.removeChild(buttons);
-  } else {
-    buttons.style.display = 'block';
-  }
+  // Checking hash in URL
+  // this function runs when the DOM is ready, i.e. when the document has been parsed
+  setTimeout(function() {
+    if (location.hash) {
+      location.href = location.hash;
+    }
+  }, 1000);
+  
 
   // =================================================
   // Chinese spacing
