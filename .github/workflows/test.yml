@@ -1,48 +1,29 @@
-name: Test, typecheck, and lint
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
-
-permissions:
-  contents: read
+    branches: [ main ]
 
 jobs:
   test:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install dependencies
-        run: npm ci
-      - name: Test
-        run: npm run test
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install dependencies
-        run: npm ci
-      - name: Lint
-        run: npm run lint
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install dependencies
-        run: npm ci
-      - name: Typecheck
-        run: npm run check
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        env:
-          SKIP_BUILD_COMPRESS: 1
-          NODE_OPTIONS: "--max_old_space_size=4096"
-        run: npm run build
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm test
