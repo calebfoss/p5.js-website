@@ -665,6 +665,11 @@
       },
       "returns": ""
     },
+    "VERSION": {
+      "description": [
+        "Version of this p5.js."
+      ]
+    },
     "P2D": {
       "description": [
         "The default, two-dimensional renderer."
@@ -1002,7 +1007,9 @@
       "description": [
         "windowResized() 函数将在每次浏览器窗口缩放时被调用。这是个适合缩放画布及或任何其他调整以符合新的窗口大小的地方。"
       ],
-      "returns": ""
+      "params": {
+        "event": "Object: (Optional) optional Event callback argument."
+      }
     },
     "width": {
       "description": [
@@ -1766,21 +1773,31 @@
     },
     "keyPressed": {
       "description": [
-        "keyPressed() 函数将会在每一次任何键被按下时被调用。被按下的键的 keyCode 将被储存在 keyCode 变量内。<br><br>对于非 ASCII 值的键，请使用 keyCode 变量。您能查看 keyCode 是否等于 BACKSPACE、DELETE、ENTER、RETURN、TAB、ESCAPE、SHIFT、CONTROL、OPTION、ALT、UP_ARROW、DOWN_ARROW、LEFT_ARROW、RIGHT_ARROW。<br><br>至于 ASCII 键值它们的值会被储存在 key 变量内。不过，它并不会分辨大小写。因此，建议使用 keyTyped() 以读取 key 变量，因为其大小写在这里会被分辨出来。<br><br>取决于操作系统如何处理按键重复，按住一个键可能使 keyTyped() （及 keyReleased()）被调用多过一次。重复的速度应操作系统及该电脑的设置而定。<br><br>不同浏览器可能会有不同附属于个别键盘事件的默认行为。以防止这些默认行为发生，只需在函数尾端加 “return false”。"
+        "keyPressed() 函数将会在每一次任何键被按下时被调用。被按下的键的 keyCode 将被储存在 keyCode 变量内。<br><br>对于非 ASCII 值的键，请使用 keyCode 变量。您能查看 keyCode 是否等于 BACKSPACE、DELETE、ENTER、RETURN、TAB、ESCAPE、SHIFT、CONTROL、OPTION、ALT、UP_ARROW、DOWN_ARROW、LEFT_ARROW、RIGHT_ARROW。<br><br>至于 ASCII 键值它们的值会被储存在 key 变量内。不过，它并不会分辨大小写。因此，建议使用 keyTyped() 以读取 key 变量，因为其大小写在这里会被分辨出来。<br><br>取决于操作系统如何处理按键重复，按住一个键可能使 keyTyped() （及 keyReleased()）被调用多过一次。重复的速度应操作系统及该电脑的设置而定。<br><br>不同浏览器可能会有不同附属于个别键盘事件的默认行为。以防止这些默认行为发生，只需在函数尾端加 “return false”。",
+        "",
+        "",
+        ""
       ],
-      "returns": ""
+      "params": {
+        "event": "Object: (Optional) optional KeyboardEvent callback argument."
+      }
     },
     "keyReleased": {
       "description": [
         "keyReleased() 函数将会在每一次任何键被释放时被调用。请查看 key 及 keyCode 以知更多详情。<br><br>不同浏览器可能会有不同附属于个别键盘事件的默认行为。以防止这些默认行为发生，只需在函数尾端加 “return false”。"
       ],
-      "returns": ""
+      "params": {
+        "event": "Object: (Optional) optional KeyboardEvent callback argument."
+      }
     },
     "keyTyped": {
       "description": [
-        "keyTyped() 函数将会在每一次任何键被按下时被调用，可是会忽略操作键如 Ctrl、Shift 及 Alt。被按下的键的 keyCode 将被储存在 keyCode 变量内。<br><br>取决于操作系统如何处理按键重复，按住一个键可能使 keyTyped() （及 keyReleased()）被调用多过一次。重复的速度应操作系统及该电脑的设置而定。<br><br>不同浏览器可能会有不同附属于个别键盘事件的默认行为。以防止这些默认行为发生，只需在函数尾端加 “return false”。"
+        "keyTyped() 函数将会在每一次任何键被按下时被调用，可是会忽略操作键如 Ctrl、Shift 及 Alt。被按下的键的 keyCode 将被储存在 keyCode 变量内。<br><br>取决于操作系统如何处理按键重复，按住一个键可能使 keyTyped() （及 keyReleased()）被调用多过一次。重复的速度应操作系统及该电脑的设置而定。<br><br>不同浏览器可能会有不同附属于个别键盘事件的默认行为。以防止这些默认行为发生，只需在函数尾端加 “return false”。",
+        ""
       ],
-      "returns": ""
+      "params": {
+        "event": "Object: (Optional) optional KeyboardEvent callback argument."
+      }
     },
     "keyIsDown": {
       "description": [
