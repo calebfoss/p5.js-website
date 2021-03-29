@@ -675,6 +675,11 @@
         "Version of this p5.js."
       ]
     },
+    "VERSION": {
+      "description": [
+        "Version of this p5.js."
+      ]
+    },
     "P2D": {
       "description": [
         "The default, two-dimensional renderer."
