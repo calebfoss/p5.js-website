@@ -1,36 +1,34 @@
-Skip-To-Content: "건너뛰기"
-Language-Settings: "언어 설정"
-Sidebar-Title: "사이트 둘러보기"
-Home: "홈"
-Editor: "에디터"
-Download: "다운로드"
-Donate: "후원하기"
-Start: "시작하기"
-Reference: "레퍼런스"
-Libraries: "라이브러리"
-Learn: "배우기"
-Examples: "예제"
-Books: "출판물"
-Community: "커뮤니티"
-Contribute: "기여하기"
-Forum: "포럼"
-Showcase: "쇼케이스"
-
-footerxh1: "스케치 크레딧"
-footer1: "p5.js는 현재 모이라 터너 "
-footer2: " 가 리드하며, 로렌 맥카시 "
-footer3: " 가 창안하고 협력자 커뮤니티와 함께 개발하였습니다. 지원: 프로세싱 재단 "
-footer4: "과 "
-footer5: " 아이덴티티 및 그래픽 디자인: "
-
-tagline1: "프로세싱의 즐거움에 자바스크립트의 매력을 곱하다*"
-tagline2: "프로세싱의 간편함에 자바스크립트의 유연성을 곱하다*"
-tagline3: "프로세싱의 직관성에 자바스크립트의 강력함을 곱하다*"
-tagline4: "프로세싱의 창조성에 자바스크립트의 역동성을 곱하다*"
-tagline5: "프로세싱 커뮤니티에 자바스크립트 커뮤니티를 곱하다*"
-tagline6: "프로세싱의 강력함에 자바스크립트의 범용성을 곱하다*"
-tagline7: "p5.js 커뮤니티는 Black Lives Matter와 연대합니다."
-
+Skip-To-Content: 건너뛰기
+Language-Settings: 언어 설정
+Sidebar-Title: 사이트 둘러보기
+Home: 홈
+Editor: 에디터
+Download: 다운로드
+Donate: 후원하기
+Start: 시작하기
+Reference: 레퍼런스
+Libraries: 라이브러리
+Learn: 배우기
+Teach: Teach
+Examples: 예제
+Books: 출판물
+Community: 커뮤니티
+Contribute: 기여하기
+Forum: 포럼
+Showcase: 쇼케이스
+footerxh1: 스케치 크레딧
+footer1: 'p5.js는 현재 모이라 터너 '
+footer2: ' 가 리드하며, 로렌 맥카시 '
+footer3: ' 가 창안하고 협력자 커뮤니티와 함께 개발하였습니다. 지원: 프로세싱 재단 '
+footer4: '과 '
+footer5: ' 아이덴티티 및 그래픽 디자인: '
+tagline1: 프로세싱의 즐거움에 자바스크립트의 매력을 곱하다*
+tagline2: 프로세싱의 간편함에 자바스크립트의 유연성을 곱하다*
+tagline3: 프로세싱의 직관성에 자바스크립트의 강력함을 곱하다*
+tagline4: 프로세싱의 창조성에 자바스크립트의 역동성을 곱하다*
+tagline5: 프로세싱 커뮤니티에 자바스크립트 커뮤니티를 곱하다*
+tagline6: 프로세싱의 강력함에 자바스크립트의 범용성을 곱하다*
+tagline7: p5.js 커뮤니티는 Black Lives Matter와 연대합니다.
 home:
   start-creating: p5 에디터로 프로젝트 시작하기
   p1xh1: 안녕하세요!

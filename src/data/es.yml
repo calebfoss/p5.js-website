@@ -1,36 +1,34 @@
-Skip-To-Content: "Ir al contenido"
-Language-Settings: "Preferencias de idioma"
-Sidebar-Title: "Navegación del sitio"
-Home: "Inicio"
-Editor: "Editor"
-Download: "Descargar"
-Donate: "Donar"
-Start: "Empezar"
-Reference: "Referencia"
-Libraries: "Bibliotecas"
-Learn: "Aprender"
-Examples: "Ejemplos"
-Books: "Libros"
-Community: "Comunidad"
-Contribute: "Contribuir"
-Forum: "Foro"
-Showcase: "Showcase"
-
-footerxh1: "Créditos"
-footer1: "p5.js actualmente está dirigido por "
-footer2: "y fue creado por"
-footer3: " p5.js es desarrollado por una comunidad de colaboradores, con apoyo de "
-footer4: " y "
-footer5: "Identidad y diseño gráfico por "
-
-tagline1: "la diversión de Processing x la excentricidad de JavaScript"
-tagline2: "la simplicidad de Processing x la flexibilidad de JavaScript"
-tagline3: "la intuición de Processing x el poder de JavaScript"
-tagline4: "la creatividad de Processing x el dinamismo de JavaScript"
-tagline5: "la comunidad de Processing x la comunidad de JavaScript"
-tagline6: "la comunidad de Processing x la comunidad de JavaScript"
-tagline7: "La comunidad de p5.jS se solidariza con Black Lives Matter."
-
+Skip-To-Content: Ir al contenido
+Language-Settings: Preferencias de idioma
+Sidebar-Title: Navegación del sitio
+Home: Inicio
+Editor: Editor
+Download: Descargar
+Donate: Donar
+Start: Empezar
+Reference: Referencia
+Libraries: Bibliotecas
+Learn: Aprender
+Teach: Teach
+Examples: Ejemplos
+Books: Libros
+Community: Comunidad
+Contribute: Contribuir
+Forum: Foro
+Showcase: Showcase
+footerxh1: Créditos
+footer1: 'p5.js actualmente está dirigido por '
+footer2: y fue creado por
+footer3: ' p5.js es desarrollado por una comunidad de colaboradores, con apoyo de '
+footer4: ' y '
+footer5: 'Identidad y diseño gráfico por '
+tagline1: la diversión de Processing x la excentricidad de JavaScript
+tagline2: la simplicidad de Processing x la flexibilidad de JavaScript
+tagline3: la intuición de Processing x el poder de JavaScript
+tagline4: la creatividad de Processing x el dinamismo de JavaScript
+tagline5: la comunidad de Processing x la comunidad de JavaScript
+tagline6: la comunidad de Processing x la comunidad de JavaScript
+tagline7: La comunidad de p5.jS se solidariza con Black Lives Matter.
 home:
   start-creating: "¡Empieza a crear con el Editor de p5!"
   p1xh1: "¡Hola!"
