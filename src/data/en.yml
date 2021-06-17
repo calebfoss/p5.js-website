@@ -1,36 +1,34 @@
-Skip-To-Content: "Skip to content"
-Language-Settings: "Language Settings"
-Sidebar-Title: "Site Navigation"
-Home: "Home"
-Editor: "Editor"
-Download: "Download"
-Donate: "Donate"
-Start: "Get Started"
-Reference: "Reference"
-Libraries: "Libraries"
-Learn: "Learn"
-Examples: "Examples"
-Books: "Books"
-Community: "Community"
-Contribute: "Contribute"
-Forum: "Forum"
-Showcase: "Showcase"
-
-footerxh1: "Credits"
-footer1: "p5.js is currently led by "
-footer2: " and was created by "
-footer3: ". p5.js is developed by a community of collaborators, with support from the "
-footer4: " and "
-footer5: "Identity and graphic design by "
-
-tagline1: "Processing fun times JavaScript quirkiness"
-tagline2: "Processing simplicity times JavaScript flexibility"
-tagline3: "Processing intuition times JavaScript power"
-tagline4: "Processing creativity times JavaScript dynamism"
-tagline5: "Processing community times JavaScript community"
-tagline6: "the power of Processing times the reach of JavaScript"
-tagline7: "The p5.js community stands in solidarity with Black Lives Matter."
-
+Skip-To-Content: Skip to content
+Language-Settings: Language Settings
+Sidebar-Title: Site Navigation
+Home: Home
+Editor: Editor
+Download: Download
+Donate: Donate
+Start: Get Started
+Reference: Reference
+Libraries: Libraries
+Learn: Learn
+Teach: Teach
+Examples: Examples
+Books: Books
+Community: Community
+Contribute: Contribute
+Forum: Forum
+Showcase: Showcase
+footerxh1: Credits
+footer1: 'p5.js is currently led by '
+footer2: ' and was created by '
+footer3: '. p5.js is developed by a community of collaborators, with support from the '
+footer4: ' and '
+footer5: 'Identity and graphic design by '
+tagline1: Processing fun times JavaScript quirkiness
+tagline2: Processing simplicity times JavaScript flexibility
+tagline3: Processing intuition times JavaScript power
+tagline4: Processing creativity times JavaScript dynamism
+tagline5: Processing community times JavaScript community
+tagline6: the power of Processing times the reach of JavaScript
+tagline7: The p5.js community stands in solidarity with Black Lives Matter.
 home:
   start-creating: "Start creating with the p5 Editor!"
   p1xh1: "Hello!"
