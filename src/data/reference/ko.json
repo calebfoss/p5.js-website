@@ -4893,10 +4893,10 @@
         "If this image is an animated GIF then the pixels will be updated in the frame that is currently displayed."
       ],
       "params": {
-        "x": "숫자: (선택 사항) 업데이트할 영역의 좌측 상단 모퉁이 x좌표값",
-        "y": "숫자: (선택 사항) 업데이트할 영역의 좌측 상단 모퉁이 y좌표값",
-        "w": "숫자: (선택 사항) 업데이트할 영역의 너비값",
-        "h": "숫자: (선택 사항) 업데이트할 영역의 높이값"
+        "x": "Integer: x-offset of the target update area for the  underlying canvas",
+        "y": "Integer: y-offset of the target update area for the  underlying canvas",
+        "w": "Integer: width of the target update area for the  underlying canvas",
+        "h": "Integer: height of the target update area for the  underlying canvas"
       }
     },
     "get": {
