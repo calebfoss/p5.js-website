@@ -1693,7 +1693,7 @@
     },
     "concat": {
       "description": [
-        "주어진 내부 HTML을 사용하여 DOM에 <code>&lt;div&gt;&lt;/div&gt;</code> 요소를 생성합니다."
+        "주어진 내부 HTML을 사용하여 DOM에 <div></div> 요소를 생성합니다."
       ],
       "params": {
         "html": "문자열: (선택 사항) 요소를 생성한 내부 HTML"
@@ -1701,7 +1701,7 @@
     },
     "reverse": {
       "description": [
-        "주어진 내부 HTML을 사용하여 DOM에 <code>&lt;p&gt;&lt;/p&gt;</code> 요소를 생성합니다. 문단형 텍스트 작성시 사용됩니다."
+        "주어진 내부 HTML을 사용하여 DOM에 <p></p> 요소를 생성합니다. 문단형 텍스트 작성시 사용됩니다."
       ],
       "params": {
         "html": "문자열: (선택 사항) 요소를 생성한 내부 HTML"
@@ -1709,7 +1709,7 @@
     },
     "shorten": {
       "description": [
-        "주어진 내부 HTML을 사용하여 DOM에 <code>&lt;span&gt;&lt;/span&gt;</code> 요소를 생성합니다."
+        "주어진 내부 HTML을 사용하여 DOM에 <span></span> 요소를 생성합니다."
       ],
       "params": {
         "html": "문자열: (선택 사항) 요소를 생성한 내부 HTML"
@@ -1717,7 +1717,7 @@
     },
     "shuffle": {
       "description": [
-        "주어진 src와 대체 텍스트(alt text)를 사용하여 DOM에 <code>&lt;img&gt;</code> 요소를 생성합니다."
+        "주어진 src와 대체 텍스트(alt text)를 사용하여 DOM에 <img> 요소를 생성합니다."
       ],
       "params": {
         "src": "문자열: 이미지의 src 또는 url 경로",
@@ -1728,7 +1728,7 @@
     },
     "createA": {
       "description": [
-        "DOM에 하이퍼링크를 포함한 <code>&lt;a&gt;&lt;/a&gt;</code> 요소를 생성합니다."
+        "DOM에 하이퍼링크를 포함한 <a></a> 요소를 생성합니다."
       ],
       "returns": "p5.Element: 생성된 노드를 담고있는 p5.Element에 대한 포인터",
       "params": {
@@ -1739,7 +1739,7 @@
     },
     "createSlider": {
       "description": [
-        "DOM에 슬라이더 <code>&lt;input&gt;&lt;/input&gt;</code> 요소를 생성합니다. .size() 함수로 슬라이더의 길이를 설정합니다."
+        "DOM에 슬라이더<input></input> 요소를 생성합니다. .size() 함수로 슬라이더의 길이를 설정합니다."
       ],
       "params": {
         "min": "숫자: 슬라이더의 최소값",
@@ -1750,7 +1750,7 @@
     },
     "splice": {
       "description": [
-        "DOM에 <code>&lt;button&gt;&lt;/button&gt;</code> 요소를 생성합니다. .size() 함수로 버튼의 크기를 설정합니다. .mousePressed() 함수로 버튼이 클릭됐을 때의 행동을 지정합니다."
+        "DOM에 <button></button> 요소를 생성합니다. .size() 함수로 버튼의 크기를 설정합니다. .mousePressed() 함수로 버튼이 클릭됐을 때의 행동을 지정합니다."
       ],
       "params": {
         "label": "문자열: 버튼 위에 나타나는 레이블",
@@ -1759,7 +1759,7 @@
     },
     "subset": {
       "description": [
-        "DOM에 체크박스 <code>&lt;input&gt;&lt;/input&gt;</code> 요소를 생성합니다. .checked() 함수를 통해 체크되었는지의 여부를 반환합니다."
+        "DOM에 체크박스<input></input> 요소를 생성합니다. .checked() 함수를 통해 체크되었는지의 여부를 반환합니다."
       ],
       "params": {
         "label": "문자열: (선택 사항) 체크박스 위에 나타나는 레이블",
@@ -1768,7 +1768,7 @@
     },
     "float": {
       "description": [
-        "DOM에 드롭다운 메뉴<code>&lt;select&gt;&lt;/select&gt;</code> 요소를 생성합니다. 이미 생성된 셀렉트 박스(select box)를 선택할 경우, p5.Element에 select-box 메소드를 지정하는 데에도 쓰입니다. 셀렉트 박스 생성 후, .option() 메소드로 선택지(option)를 설정할 수 있습니다. .selected() 메소드는 p5.Element 인스턴스인 현재 드롭다운 요소를 반환합니다. .selected() 메소드는 특정 선택지를 최초 페이지 로드시의 기본값으로서 설정할 수 있습니다. .disable() 메소드는 특정 선택지를 비활성화하고, 별도로 지정된 인수가 없는 경우엔 전체 드롭다운 요소를 비활성화 상태로 표시합니다."
+        "DOM에 드롭다운 메뉴<select></select> 요소를 생성합니다. 이미 생성된 셀렉트 박스(select box)를 선택할 경우, p5.Element에 select-box 메소드를 지정하는 데에도 쓰입니다. 셀렉트 박스 생성 후, .option() 메소드로 선택지(option)를 설정할 수 있습니다. .selected() 메소드는 p5.Element 인스턴스인 현재 드롭다운 요소를 반환합니다. .selected() 메소드는 특정 선택지를 최초 페이지 로드시의 기본값으로서 설정할 수 있습니다. .disable() 메소드는 특정 선택지를 비활성화하고, 별도로 지정된 인수가 없는 경우엔 전체 드롭다운 요소를 비활성화 상태로 표시합니다."
       ],
       "params": {
         "multiple": "불리언: (선택 사항) 드롭다운이 여러 개의 선택지를 제공할 경우 참(true) ",
@@ -1777,7 +1777,7 @@
     },
     "int": {
       "description": [
-        "DOM에 라디오 버튼 <code>&lt;input&gt;&lt;/input&gt;</code> 요소를 생성합니다. 라디오 버튼 생성 후, .option() 메소드로 옵션을 설정할 수 있습니다. .value() 메소드는 현재 선택된 옵션을 반환합니다."
+        "DOM에 라디오 버튼<input></input> 요소를 생성합니다. 라디오 버튼 생성 후, .option() 메소드로 옵션을 설정할 수 있습니다. .value() 메소드는 현재 선택된 옵션을 반환합니다."
       ],
       "params": {
         "containerElement": "객체: 옵션으로 설정 될 모든 라디오 입력소들이 있는 div 또는 span의 HTML 컨테인어.",
@@ -1794,7 +1794,7 @@
     },
     "boolean": {
       "description": [
-        "DOM에 텍스트 입력을 위한 <code>&lt;input&gt;&lt;/input&gt;</code> 요소를 생성합니다. .size() 함수로 상자의 크기를 설정합니다."
+        "DOM에 텍스트 입력을 위한 <input></input> 요소를 생성합니다. .size() 함수로 상자의 크기를 설정합니다."
       ],
       "params": {
         "value": "문자열: (선택 사항) 입력 상자의 기본값",
@@ -1803,7 +1803,7 @@
     },
     "byte": {
       "description": [
-        "'파일(file)' 유형의 DOM에 <code>&lt;input&gt;&lt;/input&gt;</code> 요소를 생성합니다. 스케치에 사용할 로컬 파일을 선택할 수 있게 됩니다."
+        "'파일(file)' 유형의 DOM에 <input></input> 요소를 생성합니다. 스케치에 사용할 로컬 파일을 선택할 수 있게 됩니다."
       ],
       "params": {
         "callback": "함수: (선택 사항) 파일이 로드될 때의 콜백 함수",
