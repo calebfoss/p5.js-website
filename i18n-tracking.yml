@@ -1,5 +1,13 @@
 es:
   src/data/en.yml:
+    line 25: footer2
+    line 26: footer3
+    line 27: footer4
+    line 31: footer8
+    line 32: footer9
+    line 28: footer5
+    line 29: footer6
+    line 30: footer7
     line 1174: '    The Summer 2021 Showcase'
     line 288: '    to the index.html containing your p5.js sketch.'
     line 297: '    file and the embed.html file for the sketch.'
@@ -203,25 +211,10 @@ es:
     line 70: '  color-rgb-p1x1'
     line 87: '  color-custom-ranges-p2x1'
     line 24: footer1
-    line 25: footer2
-    line 26: footer3
-    line 27: footer4
     line 77: '  color-rgb-p2x1'
     line 82: '  color-transparency-p2x1'
     line 139: '  project-a-2-7-phuong'
     line 76: '  color-transparency-p1x1'
-    line 31: tagline7
-    line 34: '  blmnamelistending'
-    line 35: '  blmstatement1'
-    line 36: '  blmstatement2'
-    line 38: '  blacklivesmatter'
-    line 39: '  naacp'
-    line 40: '  equaljustice'
-    line 42: '  floydmemorial'
-    line 43: ''
-    line 56: '  get-started4'
-    line 60: '  get-started7'
-    line 61: '  settingUp-title'
     line 63: '  hosted-title'
     line 75: '  download9'
     line 111: '  your-first-sketch-intro2'
@@ -367,20 +360,9 @@ es:
     line 245: ''
     line 22: footer1
     line 23: footer2
-    line 32: '  download-intro'
-    line 50: '  color-p1x1'
     line 65: '  color-rgb-p1x1'
     line 72: '  color-rgb-p2x1'
     line 85: '  color-custom-ranges-p4x1'
-    line 97: '  coordinate-system-description-p2x1'
-    line 98: '  coordinate-system-description-p3x1'
-    line 99: '  coordinate-system-description-p4x1'
-    line 100: '  coordinate-system-description-p5x1'
-    line 109: ''
-    line 129: '  project-a-1-4-phuong'
-    line 148: '  project-a-4-7-casey-louise'
-    line 28: footer5
-    line 46: '  writing-a-tutorial-iframe-4'
     line 81: '  color-transparency-p1x1'
     line 90: '  color-custom-ranges-p4x1'
     line 102: '  coordinate-system-description-p2x1'
@@ -1918,8 +1900,26 @@ es:
     line 604: '  color-custom-ranges-li3x2'
     line 424: '    with p5.js.'
     line 433: '    presentations. I used'
+hi:
+  src/data/en.yml:
+    line 25: footer2
+    line 26: footer3
+    line 27: footer4
+    line 28: footer5
+    line 29: footer6
+    line 30: footer7
+    line 31: footer8
+    line 32: footer9
 ko:
   src/data/en.yml:
+    line 25: footer2
+    line 26: footer3
+    line 27: footer4
+    line 31: footer8
+    line 32: footer9
+    line 28: footer5
+    line 29: footer6
+    line 30: footer7
     line 1174: '    The Summer 2021 Showcase'
     line 270: '    particular topics. Check out the'
     line 288: '    to the index.html containing your p5.js sketch.'
@@ -2123,25 +2123,10 @@ ko:
     line 70: '  color-rgb-p1x1'
     line 87: '  color-custom-ranges-p2x1'
     line 24: footer1
-    line 25: footer2
-    line 26: footer3
-    line 27: footer4
     line 77: '  color-rgb-p2x1'
     line 82: '  color-transparency-p2x1'
     line 139: '  project-a-2-7-phuong'
     line 76: '  color-transparency-p1x1'
-    line 31: tagline7
-    line 34: '  blmnamelistending'
-    line 35: '  blmstatement1'
-    line 36: '  blmstatement2'
-    line 38: '  blacklivesmatter'
-    line 39: '  naacp'
-    line 40: '  equaljustice'
-    line 42: '  floydmemorial'
-    line 43: ''
-    line 56: '  get-started4'
-    line 60: '  get-started7'
-    line 61: '  settingUp-title'
     line 63: '  hosted-title'
     line 75: '  download9'
     line 111: '  your-first-sketch-intro2'
@@ -2287,20 +2272,9 @@ ko:
     line 245: ''
     line 22: footer1
     line 23: footer2
-    line 32: '  download-intro'
-    line 50: '  color-p1x1'
     line 65: '  color-rgb-p1x1'
     line 72: '  color-rgb-p2x1'
     line 85: '  color-custom-ranges-p4x1'
-    line 97: '  coordinate-system-description-p2x1'
-    line 98: '  coordinate-system-description-p3x1'
-    line 99: '  coordinate-system-description-p4x1'
-    line 100: '  coordinate-system-description-p5x1'
-    line 109: ''
-    line 129: '  project-a-1-4-phuong'
-    line 148: '  project-a-4-7-casey-louise'
-    line 28: footer5
-    line 46: '  writing-a-tutorial-iframe-4'
     line 81: '  color-transparency-p1x1'
     line 90: '  color-custom-ranges-p4x1'
     line 102: '  coordinate-system-description-p2x1'
@@ -3840,6 +3814,14 @@ ko:
     line 433: '    presentations. I used'
 zh-Hans:
   src/data/en.yml:
+    line 25: footer2
+    line 26: footer3
+    line 27: footer4
+    line 31: footer8
+    line 32: footer9
+    line 28: footer5
+    line 29: footer6
+    line 30: footer7
     line 1174: '    The Summer 2021 Showcase'
     line 270: '    particular topics. Check out the'
     line 288: '    to the index.html containing your p5.js sketch.'
@@ -4042,25 +4024,10 @@ zh-Hans:
     line 70: '  color-rgb-p1x1'
     line 87: '  color-custom-ranges-p2x1'
     line 24: footer1
-    line 25: footer2
-    line 26: footer3
-    line 27: footer4
     line 77: '  color-rgb-p2x1'
     line 82: '  color-transparency-p2x1'
     line 139: '  project-a-2-7-phuong'
     line 76: '  color-transparency-p1x1'
-    line 31: tagline7
-    line 34: '  blmnamelistending'
-    line 35: '  blmstatement1'
-    line 36: '  blmstatement2'
-    line 38: '  blacklivesmatter'
-    line 39: '  naacp'
-    line 40: '  equaljustice'
-    line 42: '  floydmemorial'
-    line 43: ''
-    line 56: '  get-started4'
-    line 60: '  get-started7'
-    line 61: '  settingUp-title'
     line 63: '  hosted-title'
     line 75: '  download9'
     line 111: '  your-first-sketch-intro2'
@@ -4188,20 +4155,9 @@ zh-Hans:
     line 245: ''
     line 22: footer1
     line 23: footer2
-    line 32: '  download-intro'
-    line 50: '  color-p1x1'
     line 65: '  color-rgb-p1x1'
     line 72: '  color-rgb-p2x1'
     line 85: '  color-custom-ranges-p4x1'
-    line 97: '  coordinate-system-description-p2x1'
-    line 98: '  coordinate-system-description-p3x1'
-    line 99: '  coordinate-system-description-p4x1'
-    line 100: '  coordinate-system-description-p5x1'
-    line 109: ''
-    line 129: '  project-a-1-4-phuong'
-    line 148: '  project-a-4-7-casey-louise'
-    line 28: footer5
-    line 46: '  writing-a-tutorial-iframe-4'
     line 81: '  color-transparency-p1x1'
     line 90: '  color-custom-ranges-p4x1'
     line 102: '  coordinate-system-description-p2x1'
