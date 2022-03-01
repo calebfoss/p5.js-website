@@ -1,5 +1,6 @@
 es:
   src/data/en.yml:
+    line 85: '    under the terms of the '
     line 26: footer6
     line 25: footer2
     line 27: footer4
@@ -362,7 +363,6 @@ es:
     line 23: footer2
     line 65: '  color-rgb-p1x1'
     line 72: '  color-rgb-p2x1'
-    line 85: '  color-custom-ranges-p4x1'
     line 81: '  color-transparency-p1x1'
     line 90: '  color-custom-ranges-p4x1'
     line 102: '  coordinate-system-description-p2x1'
@@ -1910,8 +1910,10 @@ hi:
     line 30: footer7
     line 31: footer8
     line 32: footer9
+    line 85: '    under the terms of the '
 ko:
   src/data/en.yml:
+    line 85: '    under the terms of the '
     line 26: footer6
     line 25: footer2
     line 27: footer4
@@ -2274,7 +2276,6 @@ ko:
     line 23: footer2
     line 65: '  color-rgb-p1x1'
     line 72: '  color-rgb-p2x1'
-    line 85: '  color-custom-ranges-p4x1'
     line 81: '  color-transparency-p1x1'
     line 90: '  color-custom-ranges-p4x1'
     line 102: '  coordinate-system-description-p2x1'
@@ -3814,6 +3815,7 @@ ko:
     line 433: '    presentations. I used'
 zh-Hans:
   src/data/en.yml:
+    line 85: '    under the terms of the '
     line 26: footer6
     line 25: footer2
     line 27: footer4
@@ -4157,7 +4159,6 @@ zh-Hans:
     line 23: footer2
     line 65: '  color-rgb-p1x1'
     line 72: '  color-rgb-p2x1'
-    line 85: '  color-custom-ranges-p4x1'
     line 81: '  color-transparency-p1x1'
     line 90: '  color-custom-ranges-p4x1'
     line 102: '  coordinate-system-description-p2x1'
