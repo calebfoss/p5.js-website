@@ -1900,6 +1900,7 @@ es:
     line 604: '  color-custom-ranges-li3x2'
     line 424: '    with p5.js.'
     line 433: '    presentations. I used'
+    line 84: '  copyright1'
 hi:
   src/data/en.yml:
     line 26: footer6
@@ -1911,6 +1912,7 @@ hi:
     line 31: footer8
     line 32: footer9
     line 85: '    under the terms of the '
+    line 84: '  copyright1'
 ko:
   src/data/en.yml:
     line 85: '    under the terms of the '
@@ -3813,6 +3815,7 @@ ko:
     line 604: '  color-custom-ranges-li3x2'
     line 424: '    with p5.js.'
     line 433: '    presentations. I used'
+    line 84: '  copyright1'
 zh-Hans:
   src/data/en.yml:
     line 85: '    under the terms of the '
@@ -5697,3 +5700,4 @@ zh-Hans:
     line 604: '  color-custom-ranges-li3x2'
     line 424: '    with p5.js.'
     line 433: '    presentations. I used'
+    line 84: '  copyright1'
