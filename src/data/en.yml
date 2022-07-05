@@ -774,8 +774,8 @@ libraries:
   p5.screenPosition: Adds the screenX and screenY functionality from Processing to P5js.
   p5.scribble: >-
     Draw 2D primitives in a sketchy look. Created by Janneck Wullschleger, based
-    on a port of the original Processing library 
-  p5.serial: >-
+    on a port of the original Processing library
+  p5.serialport: >-
     p5.serial enables serial communication between devices that support serial
     (RS-232) and p5 sketches running in the browser.
   Shape5: >-
