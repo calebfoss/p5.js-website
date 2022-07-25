@@ -887,156 +887,285 @@ libraries:
     If you have created a library and would like to have it included on this
     page, submit this form!
 community:
-  community-title: "Community"
-  community-statement-title: "p5.js Community Statement"
-  community-statement1: "p5.js is a community interested in exploring the creation of art and design with technology."
-  community-statement2: "We are a community of, and in solidarity with, people from every gender identity and expression, sexual orientation, race, ethnicity, language, neuro-type, size, ability, class, religion, culture, subculture, political opinion, age, skill level, occupation, and background. We acknowledge that not everyone has the time, financial means, or capacity to actively participate, but we recognize and encourage involvement of all kinds. We facilitate and foster access and empowerment. We are all learners."
-  community-statement3: "We like these hashtags: #noCodeSnobs (because we value community over efficiency), #newKidLove (because we all started somewhere), #unassumeCore (because we don't assume knowledge), and #BlackLivesMatter (because of course)."
-  in-practice-title: "In practice:"
-  in-practice1: " We are not code snobs. We do not assume knowledge or imply there are things that somebody should know. "
-  in-practice2: "We insist on actively engaging with requests for feedback regardless of their complexity."
-  in-practice3: "We welcome newcomers and prioritize the education of others. We strive to approach all tasks with the enthusiasm of a newcomer. Because we believe that newcomers are just as valuable in this effort as experts."
-  in-practice4: "We consistently make the effort to actively recognize and validate multiple types of contributions."
-  in-practice5: "We are always willing to offer help or guidance."
-  in-times-conflict-title: "In times of conflict:"
-  in-times-conflict1: "We listen."
-  in-times-conflict2: "We clearly communicate while acknowledging other's feelings."
-  in-times-conflict3: "We admit when we're wrong, apologize, and accept responsibility for our actions."
-  in-times-conflict4: "We are continuously seeking to improve ourselves and our community."
-  in-times-conflict5: "We keep our community respectful and open."
-  in-times-conflict6: "We make everyone feel heard."
-  in-times-conflict7: "We are mindful and kind in our interactions."
-  in-the-future-title: "In the future:"
-  in-the-future1: "The future is now."
-
-  notes-title: "Notes"
-  notes1: "Please also visit our "
-  notes2: "p5.js Code of Conduct"
-  notes3: ". The p5.js Community Statement is licensed under a "
-  notes4: "Creative Commons license"
-  notes5: ". Please feel free to share and remix with attribution."
-
-  contribute-title: "Contribute"
-  contribute1: "Our community is always looking for enthusiasts to help in all different ways."
-  develop-title: "Develop."
-  develop1: "GitHub"
-  develop2: " is the main place where code is collected, issues are documented, and discussions about code are had. Check out the "
-  develop3: " development tutorial"
-  develop4: " to get started, or "
-  develop5: "create your own library."
-  document-title: "Document."
-  document1: " Everyone loves documentation. Help is needed "
-  document2: "porting examples"
-  document3: ", and"
-  document4: " adding documentation"
-  document5: ", and creating tutorials."
-  teach-title: "Teach."
-  teach1: " Teach a workshop, a class, a friend, a collaborator! Tag @p5xjs on Twitter and we will do our best to share what you're doing."
-  create-title: "Create."
-  create1: " p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show on the front page and inspire other people. Submit your work to "
-  create2: "hello@p5js.org"
-  create3: "."
-  donate-title: "Donate."
-  donate1: " p5.js is free and open source and made by artists. Help support the development of p5.js through a donation to the "
-  donate2: "Processing Foundation"
-  donate3: "."
-  contributors-conference-title: "p5.js Contributors Conference"
-  contributors-conference1: "While most work happens online, we also convene IRL. We've had two contributors conferences held at the "
-  contributors-conference2: "at Carnegie Mellon University in Pittsburgh, PA. Artists, designers, developers, educators, and got together to advance the p5.js project."
-  participants-title: "Participants"
-  support-title: "Support"
-  support1: "Our contributor conference took place at the"
-  support2: "at Carnegie Mellon University, an academic laboratory for atypical, anti-disciplinary, and inter-institutional research at the intersections of arts, science, technology, and culture."
-  support3: "This event was made possible by a grant from the"
-  support4: "and generous support from the"
-  support5: "and"
-  support6: "Thank you!"
-  mailing-list-title: "Mailing list"
-  mailing-list-1: "Enter your email address to receive occasional updates from the Processing Foundation."
-
-  2015contributors-conference-title: "Contributors Conference 2015"
-  2015contributors-conference-date: "May 25-31"
-  2015contributors-conference1: "A group of approximately 30 participants gathered spent a week at the "
-  2015contributors-conference2: ", advancing the code, documentation, and community outreach tools of the p5.js programming environment. Participants came from as far away as Hong Kong, Seattle, Los Angeles, Boston and New York. Most were working professionals in the fields of creative technology, interaction design, and new-media arts, but the group also included a half-dozen undergraduate and graduate students from Carnegie Mellon’s Schools of Art and Architecture."
-  2015contributors-conference3: "Photos by Taeyoon Choi"
-  2015contributors-conference-diversity-title: "Diversity"
-  2015contributors-conference-diversity1: "Alongside technical development, one of the main focuses of this conference was outreach, community, and diversity. The conference began with a panel"
-  2015contributors-conference-diversity2: "Diversity: Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and the Internet"
-  2015contributors-conference-diversity3: ". "
-  2015contributors-conference-diversity4: "Organized by"
-  2015contributors-conference-diversity5: "and"
-  2015contributors-conference-diversity6: ", "
-  2015contributors-conference-diversity7: "the panel took place Tuesday, 25 May 2015 in Kresge Auditorium at Carnegie Mellon University. Speakers included"
-  2015contributors-conference-diversity8: "and"
-  2015contributors-conference-diversity9: "."
-  2015cc_1: "Diverse group of participants smile and make a p5 sign with their hands"
-  2015cc_2: "Participants jump, smile and throw their hands in the air on a green lawn"
-  2015cc_3: "Woman presenting the p5.js community statement from her laptop"
-  2015cc_4: "Woman expressively speaks into a microphone while two male collaborators look on"
-  2015cc_5: "Participants attentively smile and listen to a presentation"
-  2015cc_6: "Woman reads about p5.js into a microphone to three female students"
-  2015cc_7: "Participants sit in a circle around a white board with sticky notes on it while a female student speaks into a microphone"
-  2015cc_8: "Participants sit around a table looking at each others laptops and compare code "
-  2015cc_9: "Whiteboard with different colored sticky and written notes about programming "
-  2015cc_10: "Woman speaking into a microphone about valuing different skill sets while a group of participants with laptops look at her powerpoint in a classroom"
-  2015cc_11: "Woman speaks at a podium in an auditorium while three participants sit on the stage and another three are skyping in on the stage screen"
-  2015cc_12: "Overhead view of a classroom with participants working on their laptops"
-  2015cc_13: "Five people having a discussion in a circle"
-  2015cc_14: "Five people in a circle with their laptops sharing their notes"
-  2015cc_15: "Man in a classroom with a microphone speaking out to a group of participants"
-  2019contributors-conference-title: "Contributors Conference 2019"
-  2019contributors-conference-date: "August 13-18"
-  2019contributors-conference1: "An interdisciplinary group of 35 participants gathered at the "
-  2019contributors-conference2: ", advancing the code, documentation, and community outreach tools and exploring the current landscape of the p5.js programming environment. Comprising a diverse range of participants within the fields of creative technology, interaction design, and new media arts, the conference was aimed at fostering dialogue through a multidisciplinary lens. Working groups focused on several topic areas: Access; Music and Code in Performance; Landscape of Creative Tech; and Internationalization."
-  2019contributors-conference3: "Videos by Qianqian Ye"
-  2019contributors-conference4: "Photos by Jacquelyn Johnson"
-  outputs: "Outputs"
-  output1: ". An implementation of highly flexible triangle, square, hexagon, and octagon girds for p5.js. Created by Aren Davey."
-  output2: ". A set of template files for building a multi-device, multiplayer game where multiple clients can connect to a specified host page. Created by L05."
-  output3: "Experiments using"
-  output3-1: ", testing early implementations of softCompile, OSC interfacing and added connectivity with demo for MIDI setup. A p5.js collaborative live-coding vj environment! Created by Ted Davis."
-  output4: "A panel on Blackness and Gender in Virtual Space led by American Artist, with shawné michaelain holloway and LaJuné McMillian."
-  output5: "Workshops led by Everest Pipkin and Jon Chambers."
-  output6: "A prototype of a "
-  output6-1: "notebook interface for p5.js."
-  output6-2: "Created by Allison Parrish."
-  output7: "New art installations by Stalgia Grigg, LaJuné McMillian, Aatish Bhatia, and Jon Chambers."
-  output8: "p5.js Global Contributor's Toolkit."
-  output8-1: "Created by Aarón Montoya-Moraga, Kenneth Lim, Guillermo Montecinos, Qianqian Ye,  Dorothy R. Santos, and Yasheng She."
-  output9: "How to write non-violent creative code."
-  output9-1: " A zine led by Olivia Ross."
-  output10: "An overhaul of the p5.js website for accessibility. Including updates for screen reader accessibility, and improvements to the home, download, getting started, and reference pages. With contributions from Claire Kearney-Volpe, Sina Bahram, Kate Hollenbach, Olivia Ross, Luis Morales-Navarro, Lauren McCarthy, and Evelyn Masso."
-  output11: "Collaborative performances by Luisa Pereira, Jun Shern Chan, Shefali Nayak, Sona Lee, Ted Davis, and Carlos Garcia."
-  output12: "A performance by Natalie Braginsky."
-  output13: "A design of the p5.js library system for the p5 Editor. Created by Cassie Tarakajian and Luca Damasco."
-  output14: "Prototypes connecting p5 to other libraries. Created by Alex Yixuan Xu and Lauren Valley."
-  output15: "A closing campfire circle led by Golan Levin."
-  2019cc_1: "Man at a podium giving a presentation to the group"
-  2019cc_2: "Participants sitting at a long table having lunch and a discussion"
-  2019cc_3: "Participants in a classroom, some working on their laptops, others talking "
-  2019cc_4: "Classroom of participants working on their laptops"
-  2019cc_5: "Participants in a meeting in a dark classroom"
-  2019cc_6: "Woman giving presentation in a classroom of diverse participants"
-  2019cc_7: "Participants conversing in a busy classroom"
-  2019cc_8: "Woman with microphone speaking to fellow participants in a classroom"
-  2019cc_9: "Participant speaks at a podium in front of projected text about the problem with anonymyzing data"
-  2019cc_10: "Person with a microphone speaking to fellow participants in front of text that reads p5.js will not add any new features except those that increase access"
-  2019cc_11: "Woman speaking into a microphone talking to fellow participants "
-  2019cc_12: "A man with a microphone speaking to fellow participants"
-  2019cc_13: "Participants sit in a classroom towards the speakers listening intently"
-  2019cc_14: "Classroom of participants facing a speaker listen intently "
-  2019cc_15: "Woman with microphone speaking to fellow participants with the text sacred boundaries in the projection behind her"
-  2019cc_16: "Overhead view of participants listening to a panel of people with an image of a 3d rendered man on it "
-  2019cc_17: "Participants sit around a table with their laptops and observe code on a screen"
-  2019cc_18: "Woman sitting next to a lifesize teddy bear works on her laptop"
-  2019cc_19: "Participants standing outside smiling"
-  2019cc_20: "Four participants standing in a circle conversing"
-  2019cc_21: "Participants sitting outside eating lunch together"
-  2019cc_22: "Participants sitting around a large U shaped table looking towards the front of the classroom"
-  2019cc_23: "Man sitting in front of the classroom speaking energetically into a microphone"
-  2019cc_24: "Group photo of participants smiling enthusiastically with their hands in the air"
-  2019cc_25: "Group of people sit around campfire made from four LCD monitors."
-
+  community-title: Community
+  community-statement-title: p5.js Community Statement
+  community-statement1: >-
+    p5.js is a community interested in exploring the creation of art and design
+    with technology.
+  community-statement2: >-
+    We are a community of, and in solidarity with, people from every gender
+    identity and expression, sexual orientation, race, ethnicity, language,
+    neuro-type, size, ability, class, religion, culture, subculture, political
+    opinion, age, skill level, occupation, and background. We acknowledge that
+    not everyone has the time, financial means, or capacity to actively
+    participate, but we recognize and encourage involvement of all kinds. We
+    facilitate and foster access and empowerment. We are all learners.
+  community-statement3: >-
+    We like these hashtags: #noCodeSnobs (because we value community over
+    efficiency), #newKidLove (because we all started somewhere), #unassumeCore
+    (because we don't assume knowledge), and #BlackLivesMatter (because of
+    course).
+  in-practice-title: 'In practice:'
+  in-practice1: ' We are not code snobs. We do not assume knowledge or imply there are things that somebody should know. '
+  in-practice2: >-
+    We insist on actively engaging with requests for feedback regardless of
+    their complexity.
+  in-practice3: >-
+    We welcome newcomers and prioritize the education of others. We strive to
+    approach all tasks with the enthusiasm of a newcomer. Because we believe
+    that newcomers are just as valuable in this effort as experts.
+  in-practice4: >-
+    We consistently make the effort to actively recognize and validate multiple
+    types of contributions.
+  in-practice5: We are always willing to offer help or guidance.
+  in-times-conflict-title: 'In times of conflict:'
+  in-times-conflict1: We listen.
+  in-times-conflict2: We clearly communicate while acknowledging other's feelings.
+  in-times-conflict3: >-
+    We admit when we're wrong, apologize, and accept responsibility for our
+    actions.
+  in-times-conflict4: We are continuously seeking to improve ourselves and our community.
+  in-times-conflict5: We keep our community respectful and open.
+  in-times-conflict6: We make everyone feel heard.
+  in-times-conflict7: We are mindful and kind in our interactions.
+  in-the-future-title: 'In the future:'
+  in-the-future1: The future is now.
+  notes-title: Notes
+  notes1: 'Please also visit our '
+  notes2: p5.js Code of Conduct
+  notes3: '. The p5.js Community Statement is licensed under a '
+  notes4: Creative Commons license
+  notes5: . Please feel free to share and remix with attribution.
+  contribute-title: Contribute
+  contribute1: >-
+    Our community is always looking for enthusiasts to help in all different
+    ways.
+  develop-title: Develop.
+  develop1: GitHub
+  develop2: ' is the main place where code is collected, issues are documented, and discussions about code are had. Check out the '
+  develop3: ' development tutorial'
+  develop4: ' to get started, or '
+  develop5: create your own library.
+  document-title: Document.
+  document1: ' Everyone loves documentation. Help is needed '
+  document2: porting examples
+  document3: ', and'
+  document4: ' adding documentation'
+  document5: ', and creating tutorials.'
+  teach-title: Teach.
+  teach1: ' Teach a workshop, a class, a friend, a collaborator! Tag @p5xjs on Twitter and we will do our best to share what you''re doing.'
+  create-title: Create.
+  create1: ' p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show on the front page and inspire other people. Submit your work to '
+  create2: hello@p5js.org
+  create3: .
+  donate-title: Donate.
+  donate1: ' p5.js is free and open source and made by artists. Help support the development of p5.js through a donation to the '
+  donate2: Processing Foundation
+  donate3: .
+  contributors-conference-title: p5.js Contributors Conference
+  contributors-conference1: >-
+    While most work happens online, we also convene IRL. We've had two
+    contributors conferences held at the
+  contributors-conference2: >-
+    at Carnegie Mellon University in Pittsburgh, PA. Artists, designers,
+    developers, educators, and got together to advance the p5.js project.
+  participants-title: Participants
+  support-title: Support
+  support1: Our contributor conference took place at the
+  support2: >-
+    at Carnegie Mellon University, an academic laboratory for atypical,
+    anti-disciplinary, and inter-institutional research at the intersections of
+    arts, science, technology, and culture.
+  support3: This event was made possible by a grant from the
+  support4: and generous support from the
+  support5: and
+  support6: Thank you!
+  mailing-list-title: Mailing list
+  mailing-list-1: >-
+    Enter your email address to receive occasional updates from the Processing
+    Foundation.
+  2015contributors-conference-title: Contributors Conference 2015
+  2015contributors-conference-date: May 25-31
+  2015contributors-conference1: 'A group of approximately 30 participants gathered spent a week at the '
+  2015contributors-conference2: >-
+    , advancing the code, documentation, and community outreach tools of the
+    p5.js programming environment. Participants came from as far away as Hong
+    Kong, Seattle, Los Angeles, Boston and New York. Most were working
+    professionals in the fields of creative technology, interaction design, and
+    new-media arts, but the group also included a half-dozen undergraduate and
+    graduate students from Carnegie Mellon’s Schools of Art and Architecture.
+  2015contributors-conference3: Photos by Taeyoon Choi
+  2015contributors-conference-diversity-title: Diversity
+  2015contributors-conference-diversity1: >-
+    Alongside technical development, one of the main focuses of this conference
+    was outreach, community, and diversity. The conference began with a panel
+  2015contributors-conference-diversity2: >-
+    Diversity: Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and
+    the Internet
+  2015contributors-conference-diversity3: '. '
+  2015contributors-conference-diversity4: Organized by
+  2015contributors-conference-diversity5: and
+  2015contributors-conference-diversity6: ', '
+  2015contributors-conference-diversity7: >-
+    the panel took place Tuesday, 25 May 2015 in Kresge Auditorium at Carnegie
+    Mellon University. Speakers included
+  2015contributors-conference-diversity8: and
+  2015contributors-conference-diversity9: .
+  2015cc_1: Diverse group of participants smile and make a p5 sign with their hands
+  2015cc_2: 'Participants jump, smile and throw their hands in the air on a green lawn'
+  2015cc_3: Woman presenting the p5.js community statement from her laptop
+  2015cc_4: >-
+    Woman expressively speaks into a microphone while two male collaborators
+    look on
+  2015cc_5: Participants attentively smile and listen to a presentation
+  2015cc_6: Woman reads about p5.js into a microphone to three female students
+  2015cc_7: >-
+    Participants sit in a circle around a white board with sticky notes on it
+    while a female student speaks into a microphone
+  2015cc_8: >-
+    Participants sit around a table looking at each others laptops and compare
+    code
+  2015cc_9: Whiteboard with different colored sticky and written notes about programming
+  2015cc_10: >-
+    Woman speaking into a microphone about valuing different skill sets while a
+    group of participants with laptops look at her powerpoint in a classroom
+  2015cc_11: >-
+    Woman speaks at a podium in an auditorium while three participants sit on
+    the stage and another three are skyping in on the stage screen
+  2015cc_12: Overhead view of a classroom with participants working on their laptops
+  2015cc_13: Five people having a discussion in a circle
+  2015cc_14: Five people in a circle with their laptops sharing their notes
+  2015cc_15: Man in a classroom with a microphone speaking out to a group of participants
+  2019contributors-conference-title: Contributors Conference 2019
+  2019contributors-conference-date: August 13-18
+  2019contributors-conference1: 'An interdisciplinary group of 35 participants gathered at the '
+  2019contributors-conference2: >-
+    , advancing the code, documentation, and community outreach tools and
+    exploring the current landscape of the p5.js programming environment.
+    Comprising a diverse range of participants within the fields of creative
+    technology, interaction design, and new media arts, the conference was aimed
+    at fostering dialogue through a multidisciplinary lens. Working groups
+    focused on several topic areas: Access; Music and Code in Performance;
+    Landscape of Creative Tech; and Internationalization.
+  2019contributors-conference3: Videos by Qianqian Ye
+  2019contributors-conference4: Photos by Jacquelyn Johnson
+  outputs: Outputs
+  output1: >-
+    . An implementation of highly flexible triangle, square, hexagon, and
+    octagon girds for p5.js. Created by Aren Davey.
+  output2: >-
+    . A set of template files for building a multi-device, multiplayer game
+    where multiple clients can connect to a specified host page. Created by L05.
+  output3: Experiments using
+  output3-1: >-
+    , testing early implementations of softCompile, OSC interfacing and added
+    connectivity with demo for MIDI setup. A p5.js collaborative live-coding vj
+    environment! Created by Ted Davis.
+  output4: >-
+    A panel on Blackness and Gender in Virtual Space led by American Artist,
+    with shawné michaelain holloway and LaJuné McMillian.
+  output5: Workshops led by Everest Pipkin and Jon Chambers.
+  output6: 'A prototype of a '
+  output6-1: notebook interface for p5.js.
+  output6-2: Created by Allison Parrish.
+  output7: >-
+    New art installations by Stalgia Grigg, LaJuné McMillian, Aatish Bhatia, and
+    Jon Chambers.
+  output8: p5.js Global Contributor's Toolkit.
+  output8-1: >-
+    Created by Aarón Montoya-Moraga, Kenneth Lim, Guillermo Montecinos, Qianqian
+    Ye,  Dorothy R. Santos, and Yasheng She.
+  output9: How to write non-violent creative code.
+  output9-1: ' A zine led by Olivia Ross.'
+  output10: >-
+    An overhaul of the p5.js website for accessibility. Including updates for
+    screen reader accessibility, and improvements to the home, download, getting
+    started, and reference pages. With contributions from Claire Kearney-Volpe,
+    Sina Bahram, Kate Hollenbach, Olivia Ross, Luis Morales-Navarro, Lauren
+    McCarthy, and Evelyn Masso.
+  output11: >-
+    Collaborative performances by Luisa Pereira, Jun Shern Chan, Shefali Nayak,
+    Sona Lee, Ted Davis, and Carlos Garcia.
+  output12: A performance by Natalie Braginsky.
+  output13: >-
+    A design of the p5.js library system for the p5 Editor. Created by Cassie
+    Tarakajian and Luca Damasco.
+  output14: >-
+    Prototypes connecting p5 to other libraries. Created by Alex Yixuan Xu and
+    Lauren Valley.
+  output15: A closing campfire circle led by Golan Levin.
+  2019cc_1: Man at a podium giving a presentation to the group
+  2019cc_2: Participants sitting at a long table having lunch and a discussion
+  2019cc_3: 'Participants in a classroom, some working on their laptops, others talking '
+  2019cc_4: Classroom of participants working on their laptops
+  2019cc_5: Participants in a meeting in a dark classroom
+  2019cc_6: Woman giving presentation in a classroom of diverse participants
+  2019cc_7: Participants conversing in a busy classroom
+  2019cc_8: Woman with microphone speaking to fellow participants in a classroom
+  2019cc_9: >-
+    Participant speaks at a podium in front of projected text about the problem
+    with anonymyzing data
+  2019cc_10: >-
+    Person with a microphone speaking to fellow participants in front of text
+    that reads p5.js will not add any new features except those that increase
+    access
+  2019cc_11: 'Woman speaking into a microphone talking to fellow participants '
+  2019cc_12: A man with a microphone speaking to fellow participants
+  2019cc_13: Participants sit in a classroom towards the speakers listening intently
+  2019cc_14: 'Classroom of participants facing a speaker listen intently '
+  2019cc_15: >-
+    Woman with microphone speaking to fellow participants with the text sacred
+    boundaries in the projection behind her
+  2019cc_16: >-
+    Overhead view of participants listening to a panel of people with an image
+    of a 3d rendered man on it
+  2019cc_17: >-
+    Participants sit around a table with their laptops and observe code on a
+    screen
+  2019cc_18: Woman sitting next to a lifesize teddy bear works on her laptop
+  2019cc_19: Participants standing outside smiling
+  2019cc_20: Four participants standing in a circle conversing
+  2019cc_21: Participants sitting outside eating lunch together
+  2019cc_22: >-
+    Participants sitting around a large U shaped table looking towards the front
+    of the classroom
+  2019cc_23: >-
+    Man sitting in front of the classroom speaking energetically into a
+    microphone
+  2019cc_24: >-
+    Group photo of participants smiling enthusiastically with their hands in the
+    air
+  2019cc_25: Group of people sit around campfire made from four LCD monitors.
+  p5js-community-event-title: p5.js Community Events
+  2022-p5js-access-day-title: p5.js Access Day 2022
+  2022-p5js-access-day-date: May 21
+  2022-p5js-access-day-organizer: Organizer and curator 
+  2022-p5js-access-day-coordinator: Event Coordinator and Video Producer 
+  2022-p5js-access-day-description: >-
+    The p5.js Access Day is a virtual conference to talk about access in 
+    open-source software for the arts (OSSTA) and greater issues beyond the software. 
+    The day-long online event features four themed-sessions — Critical Web 
+    Accessibility, Disability Arts, Access & Community Building, and Access 
+    via Translation. It provides space for contributors of p5.js and experienced 
+    practitioners from outside OSSTA projects to share their knowledge, perspectives, 
+    and dreams for building greater access to technical and arts spaces.  
+  2022-p5js-access-day-recap-video: p5.js Access Day 2022 Recap Video
+  2022-p5js-access-day-recap-video-asl: p5.js Access Day 2022 Recap Video with ASL Interpretation
+  2022-p5js-access-day-moderator: Moderator
+  2022-p5js-access-day-speakers: Speakers
+  2022-p5js-access-day-session-0: Event Opening
+  2022-p5js-access-day-session-1: Critical Web Accessibility
+  2022-p5js-access-day-session-2: Disability Arts
+  2022-p5js-access-day-session-3: Access & Community Building
+  2022-p5js-access-day-session-4: Access via Translation
+  2022-p5js-access-day-session-5: Event Closing
+  2022-p5js-access-day-production: Event Production
+  2022-p5js-access-day-advisor: Event Advisor
+  2022-p5js-access-day-asl: Live ASL Interpretation
+  2022-p5js-access-day-designer: Graphic Designer
+  2022-p5js-access-day-tech-support: Live Event Tech Support
+  2022-p5js-access-day-transcriber: Closed Captioning Transcription Support
+  2022-p5js-access-day-asl-support: Live ASL Support
 books:
   books-title: Books
   book-1-title: Getting Started with p5.js
