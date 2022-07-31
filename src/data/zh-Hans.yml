@@ -74,28 +74,25 @@ copyright:
 get started:
   get-started-title: 入门
   get-started1: >-
-    This page walks you through setting up a p5.js project and making your first
-    sketch.
-  get-started2: 'The easiest way to start is using the '
-  get-started3: p5.js editor
-  get-started4: ', you can open the web editor and can scroll down to '
-  get-started5: Your First Sketch
+    这个页面将会引导你创建一个 p5.js 项目然后制作你的第一个绘图。
+  get-started2: '最快捷的上手方法便是使用 '
+  get-started3: p5.js 编辑器
+  get-started4: '，你可以打开这个网页编辑器然后滚动到 '
+  get-started5: 你的第一个绘图
   get-started6: >-
-    . If you would like to work on the the desktop version of p5.js you can
-    scroll down to
-  get-started7: downloading instructions
-  get-started-button: Copy
-  settingUp-title: Setting up p5.js with an editor on your own computer
-  download-title: Downloading a copy of the p5.js library
-  hosted-title: Using a hosted version of the p5.js library
+    。如果你想创建桌面版的 p5.js 项目，则可以滚动到
+  get-started7: 下载说明
+  get-started-button: 复制
+  settingUp-title: 在你自己电脑的编辑器上创建 p5.js 项目
+  download-title: 本地下载一份 p5.js 库
+  hosted-title: 使用线上版本的 p5.js 库
   download1: 最简易的起点是使用
   download2: p5.js 完整版
   download3: 下载所提供的空白范例。
-  download8: 'After download, you need to set up a local server. See instructions '
-  download9: here
+  download8: '下载之后，你需要启动一个本地服务器。方法请参考 '
+  download9: 这里
   download10: >-
-    . Run your local server within the downloaded folder and on your browser, go
-    to
+    。在下载的文件夹目录下运行你的本地服务器，然后打开浏览器访问
   download11: 'http://localhost:{your-port-num}/empty-example'
   download4: >-
     查看 index.html 您可以发现其中有个 p5.js 的链接。如果您想要使用极简化的档案（以加速网页加载的速度），将链接档案名改为
@@ -126,14 +123,14 @@ get started:
   environment15: 'http://localhost:{your-port-num}/empty-example'
   environment16: ' if you are using a local server)'
   environment13: 以查看您的绘图。
-  your-first-sketch-title: Your First Sketch
-  your-first-sketch-intro1: 'In the '
+  your-first-sketch-title: 你的第一个绘图
+  your-first-sketch-intro1: '在 '
   your-first-sketch-intro2: 'https://editor.p5js.org/'
-  your-first-sketch-intro3: p5.js web editor
-  your-first-sketch-intro4: ' you should find the following code:'
-  your-first-sketch1: 'After the '
-  your-first-sketch2: ' include this line of code: '
-  your-first-sketch3: 'Now your code should be like this: '
+  your-first-sketch-intro3: p5.js 网页编辑器里
+  your-first-sketch-intro4: ' 你可以看到如下代码：'
+  your-first-sketch1: '在 '
+  your-first-sketch2: ' 之后添加这一行代码： '
+  your-first-sketch3: '更新后的代码如下： '
   your-first-sketch4: >-
     The line you just added draws an ellipse, with its center 50 pixels over
     from the left and 50 pixels down from the top, with a width and height of 80
@@ -619,7 +616,7 @@ libraries:
   p5.timer: >-
     This library performs asynchronous timing functions like countdowns, 
     one-shot timers, % time elapsed and encapsulates the millis() function and 
-    other related calculations that often clog up your code. 
+    other related calculations that often clog up your code.
   c2.js: >-
     c2.js is a JavaScript library for creative coding based on computational 
     geometry, physics simulation, evolutionary algorithm and other modules.
@@ -1039,37 +1036,76 @@ showcase:
   project-a-2-5-roni-cantor: '!'
   project-q-3: What's your favorite p5.js feature?
   project-a-3-roni-cantor: ' because lines are fun and "lerp" is a fun word to say!'
-  project-q-4: "Did you face any challenges working on this project? If so, how did you overcome them?"
-  project-a-4-roni-cantor: "It was my first time using p5.js, Inkscape, and a plotter! I really benefited from the people around me who had used p5 before, as well as online guides and forums."
-  project-q-5: "What's a cool thing we should check out?"
-  project-a-5-roni-cantor: " on Instagram—super cool analog plotter stuff."
-  project-q-6: "Where can people learn more about you?"
-  project-a-6-roni-cantor: " (Instagram)"
-
-  project-resources: "Project Resources"
-  creator-from-qianqian: "Los Angeles, California"
-  interview-link-qianqian: "Processing Foundation interview with Qianqian Ye"
-  project-a-1-1-qianqian: "I am a Chinese artist and designer based in Los Angeles."
-  project-a-1-2-qianqian: "My partner introduced me to p5.js, which I learned mainly by watching free online video tutorials. My first p5.js project was drawing some shapes with different colors."
-  project-a-2-1-qianqian: "This project started with an idea of teaching my mom, who lives in China and doesn’t speak English, to code with p5.js. This project was difficult on multiple levels, and I wanted to start by identifying the main reasons why it’s more challenging for someone like my mother to learn to code—primarily due to the lack of free creative coding education resources. Most of the free resources to learn creative coding are unavailable in China. The p5.js tutorials on YouTube as well as the p5.js Twitter and Instagram accounts are inaccessible in China because of internet censorship."
-  project-a-2-2-qianqian: "I learned a lot from YouTube videos such as the "
-  project-a-2-3-qianqian: ", but the more I watched coding tutorials online, the more I realized how difficult it is to find other womxn and people of color teaching coding, especially in Mandarin. I wanted to help other Chinese womxn relate to creative coding."
-  project-a-2-4-qianqian: "I am working on opening up the video channels to other Chinese creatives who want to contribute to the educational resource together, like interviews and guest tutorials. If you are interested in teaching/talking about creative coding in Mandarin, HMU!"
-  project-a-3-1-qianqian: "The "
-  project-a-3-2-qianqian: " is my favorite feature. It makes web-based creative coding seamless."
-  project-a-4-1-qianqian: "Learning to code in a second language was difficult and the lack of community made this process even harder. I hope to speak from my experience as a beginner and someone who once felt like an outsider to the creative coding and video tutorial world."
-  project-a-4-2-qianqian: "I spend a lot of time researching the latest technology for my videos. In the end, I decided on using my phone to record and iMovie to edit. I hope to encourage others that it doesn’t take a lot of expensive gears to get started making instructional videos."
-  project-a-4-3-qianqian: "Another issue I came across was my own fear of putting myself online. I first had to get over my anxiety of making mistakes in the videos or receiving negative comments online. Often womxn and people of color are targets for online harassment. I’m hoping to help set an example for other womxn and people of color that it’s ok to put yourselves online and strengthen your communities by sharing your knowledge. Eventually, we will be able to stop online harassment by creating strong diverse communities."
-  project-a-5-1-qianqian: "I am very excited about "
-  project-a-5-2-qianqian: " in LA."
-
-  creator-from-phuong: "From Kyiv, Ukraine"
+  project-q-4: >-
+    Did you face any challenges working on this project? If so, how did you
+    overcome them?
+  project-a-4-roni-cantor: >-
+    It was my first time using p5.js, Inkscape, and a plotter! I really
+    benefited from the people around me who had used p5 before, as well as
+    online guides and forums.
+  project-q-5: What's a cool thing we should check out?
+  project-a-5-roni-cantor: ' on Instagram—super cool analog plotter stuff.'
+  project-q-6: Where can people learn more about you?
+  project-a-6-roni-cantor: ' (Instagram)'
+  project-resources: Project Resources
+  creator-from-qianqian: 'Los Angeles, California'
+  interview-link-qianqian: Processing Foundation interview with Qianqian Ye
+  project-a-1-1-qianqian: I am a Chinese artist and designer based in Los Angeles.
+  project-a-1-2-qianqian: >-
+    My partner introduced me to p5.js, which I learned mainly by watching free
+    online video tutorials. My first p5.js project was drawing some shapes with
+    different colors.
+  project-a-2-1-qianqian: >-
+    This project started with an idea of teaching my mom, who lives in China and
+    doesn’t speak English, to code with p5.js. This project was difficult on
+    multiple levels, and I wanted to start by identifying the main reasons why
+    it’s more challenging for someone like my mother to learn to code—primarily
+    due to the lack of free creative coding education resources. Most of the
+    free resources to learn creative coding are unavailable in China. The p5.js
+    tutorials on YouTube as well as the p5.js Twitter and Instagram accounts are
+    inaccessible in China because of internet censorship.
+  project-a-2-2-qianqian: 'I learned a lot from YouTube videos such as the '
+  project-a-2-3-qianqian: >-
+    , but the more I watched coding tutorials online, the more I realized how
+    difficult it is to find other womxn and people of color teaching coding,
+    especially in Mandarin. I wanted to help other Chinese womxn relate to
+    creative coding.
+  project-a-2-4-qianqian: >-
+    I am working on opening up the video channels to other Chinese creatives who
+    want to contribute to the educational resource together, like interviews and
+    guest tutorials. If you are interested in teaching/talking about creative
+    coding in Mandarin, HMU!
+  project-a-3-1-qianqian: 'The '
+  project-a-3-2-qianqian: ' is my favorite feature. It makes web-based creative coding seamless.'
+  project-a-4-1-qianqian: >-
+    Learning to code in a second language was difficult and the lack of
+    community made this process even harder. I hope to speak from my experience
+    as a beginner and someone who once felt like an outsider to the creative
+    coding and video tutorial world.
+  project-a-4-2-qianqian: >-
+    I spend a lot of time researching the latest technology for my videos. In
+    the end, I decided on using my phone to record and iMovie to edit. I hope to
+    encourage others that it doesn’t take a lot of expensive gears to get
+    started making instructional videos.
+  project-a-4-3-qianqian: >-
+    Another issue I came across was my own fear of putting myself online. I
+    first had to get over my anxiety of making mistakes in the videos or
+    receiving negative comments online. Often womxn and people of color are
+    targets for online harassment. I’m hoping to help set an example for other
+    womxn and people of color that it’s ok to put yourselves online and
+    strengthen your communities by sharing your knowledge. Eventually, we will
+    be able to stop online harassment by creating strong diverse communities.
+  project-a-5-1-qianqian: 'I am very excited about '
+  project-a-5-2-qianqian: ' in LA.'
+  creator-from-phuong: 'From Kyiv, Ukraine'
   project-a-1-1-phuong: "I'm a creative coder and designer, a "
-  link-1-phuong: "Play Airi Flies!"
-  link-2-phuong: "Code for AiriFlies on GitHub"
-  link-3-phuong: "More info in Phuong Ngo's portfolio"
-  project-a-1-2-phuong: " diversity scholarship recipient, and just a curious creature."
-  project-a-1-3-phuong: 'I was taking a course at the School of Machines in Berlin this summer called! "'
+  link-1-phuong: Play Airi Flies!
+  link-2-phuong: Code for AiriFlies on GitHub
+  link-3-phuong: More info in Phuong Ngo's portfolio
+  project-a-1-2-phuong: ' diversity scholarship recipient, and just a curious creature.'
+  project-a-1-3-phuong: >-
+    I was taking a course at the School of Machines in Berlin this summer
+    called! "
   project-a-1-4-phuong: '," mainly taught by '
   project-a-2-1-phuong: >-
     I used p5.js to work on the visual part of the game. The animation sprites
@@ -1161,7 +1197,7 @@ showcase:
     great about making sure the project is a learning resource and not just a
     collection of examples.
   project-a-3-1-casey-louise: 'Casey: Does '
-  project-a-3-2-casey-louise: ' count as a feature? I also love having the ability to share my programs on the web so that people don''t have to install special software or come to NYC to see my work.'
+  project-a-3-2-casey-louise: " count as a feature? I also love having the ability to share my programs on the web so that people don't have to install special software or come to NYC to see my work."
   project-a-3-3-casey-louise: 'Louise: My favorite feature is '
   project-a-3-4-casey-louise: ' and '
   project-a-3-5-casey-louise: ' for transformation of the coordinate system to make generative visuals.'
@@ -1184,31 +1220,42 @@ showcase:
     inspiration from the way the
   openframeworks-book-casey-louise: openFrameworks book
   project-a-4-7-casey-louise: ' is written. A fun "hey, it’s not hard and you can do it too" approach is what we believe in.'
-  project-a-5-1-casey-louise: "Check out the "
+  project-a-5-1-casey-louise: 'Check out the '
   project-a-5-2-casey-louise: " to see our peers' amazing grant projects!"
-
-  pronouns-nonbinary: "(they/them)"
-  creator-from-moon: "From Athens, Georgia"
-  posters-by: "Posters By"
-  project-a-1-1-moon: "Moon: I'm a graphic designer, visual artist, and design educator. This summer, I taught a graphic design course in the University of Georgia Cortona program in Italy, introducing some basics of p5.js. This fall, I am planning to teach and to study digital platforms at UGA."
-  project-a-1-2-moon: "My former colleague, "
-  project-a-1-3-moon: ", invited me to "
-  project-a-1-4-moon: " in "
-  pcd-la-moon: "LA in January 2019"
-  project-a-1-5-moon: ". They helped me with the tools and logics of p5.js. It was an excellent teaching and learning experience."
-  project-a-2-1-moon: "We followed basic tutorials, "
-  codetrain-moon: "Daniel's videos on YouTube"
-  project-a-2-2-moon: ", and "
-  p5-reference-moon: "Reference on the p5.js website"
-  project-a-2-3-moon: "."
-  project-a-3-1-moon: "My favorite function is related to "
-  project-a-3-2-moon: " and "
-  project-a-3-3-moon: ": "
-  project-a-3-4-moon: ". I was able to use and to teach this tool to visualize various ideas about time in motion."
-  project-a-4-1-moon: "It was challenging for me, a beginner, to understand the overall structure of p5.js and how code works in general. I had to repeat the p5.js basics a couple of times, and then I drew a chart to memorize and to teach the way I understood the p5.js structure and code with strong constraints I set up. It was an excellent teaching and learning experience."
-  project-a-5-1-moon: "Check out the "
-  project-a-5-2-moon: " in Milan, Italy."
-
+  pronouns-nonbinary: (they/them)
+  creator-from-moon: 'From Athens, Georgia'
+  posters-by: Posters By
+  project-a-1-1-moon: >-
+    Moon: I'm a graphic designer, visual artist, and design educator. This
+    summer, I taught a graphic design course in the University of Georgia
+    Cortona program in Italy, introducing some basics of p5.js. This fall, I am
+    planning to teach and to study digital platforms at UGA.
+  project-a-1-2-moon: 'My former colleague, '
+  project-a-1-3-moon: ', invited me to '
+  project-a-1-4-moon: ' in '
+  pcd-la-moon: LA in January 2019
+  project-a-1-5-moon: >-
+    . They helped me with the tools and logics of p5.js. It was an excellent
+    teaching and learning experience.
+  project-a-2-1-moon: 'We followed basic tutorials, '
+  codetrain-moon: Daniel's videos on YouTube
+  project-a-2-2-moon: ', and '
+  p5-reference-moon: Reference on the p5.js website
+  project-a-2-3-moon: .
+  project-a-3-1-moon: 'My favorite function is related to '
+  project-a-3-2-moon: ' and '
+  project-a-3-3-moon: ': '
+  project-a-3-4-moon: >-
+    . I was able to use and to teach this tool to visualize various ideas about
+    time in motion.
+  project-a-4-1-moon: >-
+    It was challenging for me, a beginner, to understand the overall structure
+    of p5.js and how code works in general. I had to repeat the p5.js basics a
+    couple of times, and then I drew a chart to memorize and to teach the way I
+    understood the p5.js structure and code with strong constraints I set up. It
+    was an excellent teaching and learning experience.
+  project-a-5-1-moon: 'Check out the '
+  project-a-5-2-moon: ' in Milan, Italy.'
 teach:
   teach-title2: Teach
   teach-intro1: >-
@@ -1259,7 +1306,7 @@ teach:
   teach-case1-title: p5.js à l'Ubuntu Party!
   teach-case1-lead-name: Basile Pesin
   teach-case1-content1: '2020 Ubuntu Party, '
-  teach-case1-content1-1: 'Cité des Sciences et de l''Industrie, Paris, France'
+  teach-case1-content1-1: "Cité des Sciences et de l'Industrie, Paris, France"
   teach-case1-content2: 'Any age, including children and parents, young and older adults.'
   teach-case1-content3: Advanced
   teach-case1-content4: >-
