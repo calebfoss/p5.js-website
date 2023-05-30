@@ -42,15 +42,22 @@ slug: reference/
       var langs = ['es', 'ko', 'zh-Hans'];
       var routes = window.location.pathname.split('/');
       var lang = routes[1];
+      if (langs.indexOf(lang) != -1) {
 
-      if (langs.indexOf(lang) !== -1) {
-      console.log('inside')
+        var didReferenceRendered = false
+        window.addEventListener('reference-rendered', function() {
+          console.log("rendered");
+          didReferenceRendered = true
+          if (translations) {
+            updateLanguage();
+          }
+        }, false);
+
         $.getJSON('/assets/reference/'+lang+'.json', function(data) {
           translations = data;
-          window.addEventListener('reference-rendered', function() {
-            console.log("rendered");
+          if (didReferenceRendered) {
             updateLanguage();
-          }, false);
+          }
         });
       }
     });
