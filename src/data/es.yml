@@ -33,38 +33,53 @@ tagline5: la comunidad de Processing x la comunidad de JavaScript
 tagline6: el poder de procesamiento de Processing x el alcance de JavaScript
 tagline7: La comunidad de p5.jS se solidariza con Black Lives Matter.
 home:
-  start-creating: "¡Empieza a crear con el Editor de p5!"
-  p1xh1: "¡Hola!"
-  p1x1: "¡p5.js es una biblioteca de JavaScript para la programación creativa, que busca hacer que programar sea accesible e inclusivo para artistas, diseñadores, educadores, principiantes y cualquier otra persona! p5.js es gratuito y de código abierto porque creemos que el software y las herramientas para aprenderlo deben ser accesibles para todos."
-  p1x2: "Usando la metáfora de bosquejear, p5.js tiene un conjunto completo de funcionalidades para dibujar. Sin embargo, no estás limitado solo a dibujar en tu lienzo. Puedes tomar toda la página del navegador como tu bosquejo, incluyendo los objetos HTML5 para texto, entrada, video, cámara web y sonido."
-  p2xh2: "Comunidad"
-  p2x1: "Somos una comunidad de, y en solidaridad con, personas de todas las identidades y expresiones de género, orientación sexual, raza, etnia, idioma, tipo neurológico, tamaño, competencia, clase, religión, cultura, subcultura, opinión política, edad, nivel de habilidad, ocupación y antecedentes. Sabemos que no todas las personas tienen el tiempo, los medios financieros o la capacidad para participar activamente, pero reconocemos y alentamos cualquier tipo participación. Facilitamos y fomentamos el acceso y el empoderamiento. Todos estamos aprendiendo."
-  p2x2: "p5.js es una interpretación "
-  p2x3: " para la web. Realizamos eventos y operamos con el apoyo de "
-  p2x4: "."
-  p2x5: "Conoce más sobre "
-  p2x6: "nuestra comunidad"
-  p2x7: "."
-
-  p3xh2: "Empezar"
-  p3xp1: "Crea tu primer bosquejo en el "
-  p3xp2: ". Aprende más sobre cómo dibujar con p5.js en la "
-  p3xp3: "página de empezar"
-  p3xp4: " y sobre todo lo que puedes hacer en la "
-  p3xp5: "referencia"
-  p3xp6: "."
-
-  p4xh2: "Participa"
-  p4xp1: "Existen muchas formas de contribuir a p5.js:"
-  p4xp2: "Opciones para participar"
-  p4xp3: "¡Comparte algo que hayas creado!"
-  p4xp4: "Imparte un taller o una clase."
-  p4xp5: "Organiza una reunión."
-  p4xp6: "Contribuye al código fuente."
-  
-  sketch_credits: "Sketch Credits"
-  sketch_info: "Hunminjeongeum2020 created by Seonghyeon Kim"
-
+  search-bar: Buscar en p5js.org
+  start-creating: ¡Empieza a crear con el Editor de p5!
+  p1xh1: ¡Hola!
+  p1x1: >-
+    ¡p5.js es una biblioteca de JavaScript para la programación creativa, que
+    busca hacer que programar sea accesible e inclusivo para artistas,
+    diseñadores, educadores, principiantes y cualquier otra persona! p5.js es
+    gratuito y de código abierto porque creemos que el software y las
+    herramientas para aprenderlo deben ser accesibles para todos.
+  p1x2: >-
+    Usando la metáfora de bosquejear, p5.js tiene un conjunto completo de
+    funcionalidades para dibujar. Sin embargo, no estás limitado solo a dibujar
+    en tu lienzo. Puedes tomar toda la página del navegador como tu bosquejo,
+    incluyendo los objetos HTML5 para texto, entrada, video, cámara web y
+    sonido.
+  p2xh2: Comunidad
+  p2x1: >-
+    Somos una comunidad de, y en solidaridad con, personas de todas las
+    identidades y expresiones de género, orientación sexual, raza, etnia,
+    idioma, tipo neurológico, tamaño, competencia, clase, religión, cultura,
+    subcultura, opinión política, edad, nivel de habilidad, ocupación y
+    antecedentes. Sabemos que no todas las personas tienen el tiempo, los medios
+    financieros o la capacidad para participar activamente, pero reconocemos y
+    alentamos cualquier tipo participación. Facilitamos y fomentamos el acceso y
+    el empoderamiento. Todos estamos aprendiendo.
+  p2x2: 'p5.js es una interpretación '
+  p2x3: ' para la web. Realizamos eventos y operamos con el apoyo de '
+  p2x4: .
+  p2x5: 'Conoce más sobre '
+  p2x6: nuestra comunidad
+  p2x7: .
+  p3xh2: Empezar
+  p3xp1: 'Crea tu primer bosquejo en el '
+  p3xp2: '. Aprende más sobre cómo dibujar con p5.js en la '
+  p3xp3: página de empezar
+  p3xp4: ' y sobre todo lo que puedes hacer en la '
+  p3xp5: referencia
+  p3xp6: .
+  p4xh2: Participa
+  p4xp1: 'Existen muchas formas de contribuir a p5.js:'
+  p4xp2: Opciones para participar
+  p4xp3: ¡Comparte algo que hayas creado!
+  p4xp4: Imparte un taller o una clase.
+  p4xp5: Organiza una reunión.
+  p4xp6: Contribuye al código fuente.
+  sketch_credits: Sketch Credits
+  sketch_info: Hunminjeongeum2020 created by Seonghyeon Kim
 copyright:
   copyright-title: Información de Copyright
   copyright1: >-
