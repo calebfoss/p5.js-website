@@ -33,7 +33,6 @@ tagline5: la comunidad de Processing x la comunidad de JavaScript
 tagline6: el poder de procesamiento de Processing x el alcance de JavaScript
 tagline7: La comunidad de p5.jS se solidariza con Black Lives Matter.
 home:
-  search-bar: Buscar en p5js.org
   start-creating: ¡Empieza a crear con el Editor de p5!
   p1xh1: ¡Hola!
   p1x1: >-
@@ -324,33 +323,21 @@ download:
   support-31: Junta bicostal de p5.js entre UCLA DMA y NYU ITP
   support-32: The Processing Foundation
   support-33: ' fue fundada en 2012 después de más de de una década de trabajo con el software original de Processing. La misión de la fundación es promover la alfabetización de software dentro de las artes visuales, y la alfabetización visual dentro de las disciplinas relacionadas a la tecnología - y hacer estas disciplinas accesibles a comunidades más diversas. Nuestra meta es empoderar a gente de diversos intereses para que aprenda a programar y que realice trabajo creativo con código, especialmente aquellos que de otra forma no hubieran tenido acceso a estas herramientas y recursos.'
-  support-17-alt: >-
-    p5.js Contributors Conference at CMU STUDIO for Creative Inquiry in
-    Pittsburgh
-  support-18-alt: >-
-    Processing Fellow Saskia Freeke organizing Code Liberation x Processing
-    workshops in London
-  support-19-alt: 'Learning to Teach, Teaching to Learn conference with SFPC'
-  support-20-alt: Processing Foundation Fellow Cassie Tarakajian's workshop at Code Art Miami
-  support-21-alt: Taeyoon Choi and ASL interpretor at Signing Coders p5.js workshop
-  support-22-alt: Google Summer of Code kickoff participants
-  support-23-alt: Processing Foundation Fellow Cassie Tarakajian's workshop at Code Art Miami
-  support-24-alt: >-
-    Luisa Pereira and Yeseul Song facilitate a sign language based p5.js
-    workshop
-  support-25-alt: >-
-    p5.js Contributors Conference at CMU STUDIO for Creative Inquiry in
-    Pittsburgh
-  support-26-alt: >-
-    Processing Fellow Digital Citizens Lab panel on STEM teaching at the
-    International Center of Photography
-  support-27-alt: 'Participants at p5.js workshop in Santiago, Chile'
-  support-28-alt: Claire Kearney-Volpe helping facilitate a sign language based p5.js workshop
-  support-29-alt: >-
-    Processing Foundation Fellow DIY Girls run a creative coding program in Los
-    Angeles
-  support-30-alt: Processing Fellow Digital Citizens Lab
-  support-31-alt: Bicoastal p5.js meetup at UCLA DMA and NYU ITP
+  support-17-alt: ''
+  support-18-alt: ''
+  support-19-alt: ''
+  support-20-alt: ''
+  support-21-alt: ''
+  support-22-alt: ''
+  support-23-alt: ''
+  support-24-alt: ''
+  support-25-alt: ''
+  support-26-alt: ''
+  support-27-alt: ''
+  support-28-alt: ''
+  support-29-alt: ''
+  support-30-alt: ''
+  support-31-alt: ''
 learn:
   learn-title: Aprender
   teach-title2: Enseñar
@@ -509,10 +496,11 @@ learn:
     <a class = "code"
     href="https://p5js.org/reference/#/p5/gridOutput">gridOutput()</a>, or <a
     class = "code"
-    href="https://p5js.org/reference/#/p5/textOutput">textOutput()</a> functions
-    to label the canvas’ visual content. However, keep in mind that <a class =
-    "code" href="https://p5js.org/reference/#/p5/gridOutput">gridOutput()</a>
-    and <a class = "code"
+    href="https://p5js.org/reference/#/p5/textOutput">textOutput()</a> 
+    functions to label the canvas’ visual content. However, keep in mind that <a
+    class = "code"
+    href="https://p5js.org/reference/#/p5/gridOutput">gridOutput()</a> and <a
+    class = "code"
     href="https://p5js.org/reference/#/p5/textOutput">textOutput()</a> generate
     their information based on  the rudimentary code of the visual element, such
     as its size, color, and shape. These functions won’t be able to interpret
@@ -1190,7 +1178,7 @@ learn:
     missing semicolon for example is not allowed and will result in an error
     message. You can't use different types of numbers, like floats or integers
     interchangeably.
-  getting-started-in-webgl-shaders-p6x1: 'First let''s look at a basic vertex shader:'
+  getting-started-in-webgl-shaders-p6x1: "First let's look at a basic vertex shader:"
   getting-started-in-webgl-shaders-p7x1: >-
     This vertex shader begins with an <em>attribute</em>, which p5.js uses to
     share vertex position information with the shader. This attribute is a <a
@@ -1376,18 +1364,13 @@ learn:
     tutorial.
   writing-a-tutorial-how-start-title: 'Cómo empezar:'
   writing-a-tutorial-how-start-1: >-
-    Comprueba que el tema que hayas propuesto no haya sido cubierto antes.
-    Puedes encontrar 
-  writing-a-tutorial-how-start-2: una lista aquí
+    Asegúrese de que el tema elegido no haya sido cubierto previamente.
+  writing-a-tutorial-how-start-2: Revisar los recursos disponibles.
   writing-a-tutorial-how-start-3: >-
-    con los tutoriales que están en progreso. Si tu tema está marcado en esta
-    lista como en progreso, tal vez puedes añadir al trabajo que se está
-    llevando a cabo y cooperar preparando el trabajo ya existente para su
-    publicación así que por favor contáctate con nosotros.
+    Si su tema ya está en progreso, considere contribuir al trabajo existente y ayudar a prepararlo para su publicación. No dude en comunicarse con nosotros para obtener orientación.
   writing-a-tutorial-how-start-4: >-
-    Si tu tema no está cubierto y no está enlistado como en progreso, por favor
-    escribe unas líneas sobre lo que propones cubrir y mándanos un email con
-    esta descripción a education@p5js.org.
+    Si su tema no ha sido cubierto y no está actualmente en progreso, proporcione una breve descripción del tema propuesto. Puede enviarnos esta descripción a education@p5js.org.
+
   writing-a-tutorial-how-prepare-title: 'Cómo preparar un tutorial de p5js para su publicación en línea:'
   writing-a-tutorial-how-prepare-1: >-
     Cuando tu tutorial esté listo para ser publicado, por favor sigue los
@@ -1467,7 +1450,9 @@ learn:
     provienen de la página con extensión .eps con todo el contenido del
     tutorial. En su lugar, van a estar localizados en la página html que está
     procesando tu bosquejo (en este caso se llama embed.html).
-  writing-a-tutorial-iframe-11: Más información sobre cómo incorporar bosquejos de p5.js se pueden encontrar
+  writing-a-tutorial-iframe-11: >-
+    Más información sobre cómo incorporar bosquejos de p5.js se pueden
+    encontrar
   writing-a-tutorial-embed-iframe-12: aquí.
   writing-a-tutorial-finishing-title: Los últimos detalles
   writing-a-tutorial-finishing-1: >-
@@ -2232,8 +2217,12 @@ community:
     access
   2019cc_11: Mujer al micrófono habla con participantes en un aula
   2019cc_12: Hombre al micrófono habla con participantes
-  2019cc_13: Participantes sentados en un aula escuchando atentamente a quienes presentan
-  2019cc_14: Participantes sentados en un aula escuchando atentamente a quienes presentan
+  2019cc_13: >-
+    Participantes sentados en un aula escuchando atentamente a quienes
+    presentan
+  2019cc_14: >-
+    Participantes sentados en un aula escuchando atentamente a quienes
+    presentan
   2019cc_15: >-
     Mujer al micrófono habla con participantes sobre los límites sagrados del en
     proyecto detrás suyo 
@@ -2365,34 +2354,32 @@ books:
   book-6-order-a: Descarga en PDF (gratis)
   book-6-order-b: Comprar en Barnes & Noble
 examples:
-  Examples: "Ejemplos"
-  back-examples: "Volver a Ejemplos"
-  Structure: "Estructura"
-  Form: "Forma"
-  Data: "Datos"
-  Arrays: "Arreglos"
-  Control: "Control"
-  Image: "Imagen"
-  Image_Processing: "Procesamiento de imagen"
-  Color: "Color"
-  Math: "Matemática"
-  Simulate: "Simulación"
-  Interaction: "Interacción"
-  Objects: "Objetos"
-  Lights: "Luces"
-  Motion: "Movimiento"
-  Instance_Mode: "Modo Instancia"
-  Dom: "DOM"
-  Drawing: "Dibujo"
-  Transform: "Transformar"
-  Typography: "Tipografía"
-  3D: "3D"
-  Input: "Input"
-  Sound: "Sonido"
-  Advanced_Data: "Avanzado Datos"
-  Mobile: "Móvil"
-  Hello_P5: "Hola p5"
-
+  Examples: Ejemplos
+  back-examples: Volver a Ejemplos
+  Structure: Estructura
+  Form: Forma
+  Data: Datos
+  Arrays: Arreglos
+  Control: Control
+  Image: Imagen
+  Color: Color
+  Math: Matemática
+  Simulate: Simulación
+  Interaction: Interacción
+  Objects: Objetos
+  Lights: Luces
+  Motion: Movimiento
+  Instance_Mode: Modo Instancia
+  Dom: DOM
+  Drawing: Dibujo
+  Transform: Transformar
+  Typography: Tipografía
+  3D: 3D
+  Input: Input
+  Advanced_Data: Avanzado Datos
+  Sound: Sonido
+  Mobile: Móvil
+  Hello_P5: Hola p5
 reference:
   Reference: Referencia
 showcase:
@@ -2883,7 +2870,7 @@ teach:
   teach-case13-title: p5.js à l'Ubuntu Party!
   teach-case13-lead-name: Basile Pesin
   teach-case13-content1: '2020 Ubuntu Party '
-  teach-case13-content1-1: 'Cité des Sciences et de l''''Industrie, Paris, France'
+  teach-case13-content1-1: "Cité des Sciences et de l''Industrie, Paris, France"
   teach-case13-content2: 'Any age, including children and parents, young and older adults.'
   teach-case13-content3: Advanced
   teach-case13-content4: >-
