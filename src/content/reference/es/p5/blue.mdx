@@ -1,33 +1,26 @@
 ---
 title: blue
 module: Color
-submodule: Crear y leer
+submodule: Creating & Reading
 file: src/color/creating_reading.js
-description: |2-
+description: >
+  <p>Gets the blue value of a color.</p>
 
-  <p>Obtiene el valor azul de un color.</p>
+  <p><code>blue()</code> extracts the blue value from a
 
+  <a href="/reference/p5/p5.Color">p5.Color</a> object, an array of color
+  components, or
 
-  <p><code>blue()</code> extrae el valor azul de un
+  a CSS color string.</p>
 
+  <p>By default, <code>blue()</code> returns a color's blue value in the range 0
 
-  Objeto <a href="/reference/p5/p5.Color">p5.Color</a>, un array de componentes
-  de color, o
+  to 255. If the <a href="/reference/colorMode">colorMode()</a> is set to RGB,
+  it
 
-
-  palabra clave de color de CSS.</p>
-
-
-  <p>De forma predeterminada, <code>blue()</code> devuelve el valor azul de un color en el rango 0
-
-
-  a 255. Si <a href="/reference/colorMode">colorMode()</a> está configurado en RGB,
-  este
-
-
-  devuelve el valor azul en el rango dado.</p>
-line: '117'
-isConstructor: 'false'
+  returns the blue value in the given range.</p>
+line: 117
+isConstructor: false
 itemtype: method
 example:
   - |-
@@ -148,16 +141,15 @@ example:
 class: p5
 params:
   - name: color
-    description: |2-
-  
-      <p><a href="#/p5.Color">p5.Color</a> objeto, arreglo de
-  
-                                              componentes de color, o cadena de palabras clave de color de CSS.</p>
-    type: p5.Color|Number[]|String
+    description: |
+      <p><a href="#/p5.Color">p5.Color</a> object, array of
+                                              color components, or CSS color string.</p>
+    type: 'p5.Color|Number[]|String'
 return:
-  description: el valor azul.
+  description: the blue value.
   type: Number
 chainable: false
 ---
+
 
 # blue

@@ -1,23 +1,19 @@
 ---
 title: alpha
 module: Color
-submodule: Crear y leer
+submodule: Creating & Reading
 file: src/color/creating_reading.js
-description: |2-
+description: >
+  <p>Gets the alpha (transparency) value of a color.</p>
 
-  <p>Obtiene el valor alfa (transparencia) de un color.</p>
+  <p><code>alpha()</code> extracts the alpha value from a
 
+  <a href="/reference/p5/p5.Color">p5.Color</a> object, an array of color
+  components, or
 
-  <p><code>alpha()</code> extrae el valor alfa de un
-
-
-  Objeto <a href="/reference/p5/p5.Color">p5.Color</a>, un array de colores
-  componentes, o
-
-
-  palabras clave de color de CSS.</p>
-line: '16'
-isConstructor: 'false'
+  a CSS color string.</p>
+line: 16
+isConstructor: false
 itemtype: method
 example:
   - |-
@@ -107,16 +103,15 @@ example:
 class: p5
 params:
   - name: color
-    description: |2-
-  
-       <p><a href="#/p5.Color">p5.Color</a> objeto, arreglo de
-  
-                                              componentes de color o palabras clave de color de CSS.</p>
-    type: p5.Color|Number[]String
+    description: |
+      <p><a href="#/p5.Color">p5.Color</a> object, array of
+                                              color components, or CSS color string.</p>
+    type: 'p5.Color|Number[]|String'
 return:
-  description: el valor alfa.
+  description: the alpha value.
   type: Number
 chainable: false
 ---
+
 
 # alpha
