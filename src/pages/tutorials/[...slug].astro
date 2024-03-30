@@ -14,4 +14,20 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<TutorialLayout entry={entry} />
+<BaseLayout title={entry.data.title}>
+  {entry.data.authors && <h6>By {entry.data.authors.join(", ")}</h6>}
+  {entry.data.authorsNote && <h7>{entry.data.authorsNote}</h7>}
+  <Content />
+
+  <h2>Related examples</h2>
+  <ul>
+    {/* revise when schema for examples exists */}
+    {entry.data.relatedContent?.examples?.map((relEx) => <li>{relEx}</li>)}
+  </ul>
+
+  <h2>Related references</h2>
+  <ul>
+    {/* revise when schema for reference exists */}
+    {entry.data.relatedContent?.references?.map((relRef) => <li>{relRef}</li>)}
+  </ul>
+</BaseLayout>
