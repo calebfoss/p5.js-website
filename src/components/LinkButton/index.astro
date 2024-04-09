@@ -3,16 +3,14 @@ import { Icon } from "../Icon";
 interface Props {
   variant?: "link" | "code" | "bare";
   url: string;
-  class?: string;
+  className?: string;
 }
 
-const { variant = "bare", url } = Astro.props;
+const { variant = "bare", url, className = "" } = Astro.props;
 ---
 
 <a
-  class={"outline py-2 px-4 flex flex-nowrap w-fit items-center rounded-full" +
-    " " +
-    Astro.props.class}
+  class={`outline py-2 px-4 flex flex-nowrap w-fit items-center rounded-full ${className}`}
   href={url}
 >
   <slot />
