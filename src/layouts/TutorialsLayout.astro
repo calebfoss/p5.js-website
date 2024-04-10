@@ -1,49 +1,60 @@
 ---
 import { type CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
-import { Image } from "astro:assets";
-import { categories, categoryNames } from '../content/tutorials/config';
+import Image from "@components/Image/index.astro";
+import { setJumpToState, type JumpToLink } from "../globals/state";
 
 type TutorialEntry = CollectionEntry<"tutorials">;
 
 const { entries } = Astro.props;
 
-const sections = categories.map((slug) => {
-  const name = categoryNames[slug];
-  const sectionEntries = entries
-    .filter((e: TutorialEntry) => e.data.category === slug)
-    .sort((a: TutorialEntry, b: TutorialEntry) =>
-      (a.data.categoryIndex ?? 1000) - (b.data.categoryIndex ?? 1000)
-    );
+const categories = entries.map((entry: TutorialEntry) => entry.data.category);
+const uniqueCategories = Array.from(new Set(categories));
+const entriesByCategory = uniqueCategories.map((category) => ({
+  name: category,
+  entries: entries.filter(
+    (entry: TutorialEntry) => entry.data.category === category
+  ),
+}));
 
-  return { slug, name, sectionEntries };
-})
+const pageJumpToLinks = uniqueCategories.map((category) => ({
+  url: `#${category}`,
+  label: category,
+}));
+
+setJumpToState({
+  heading: "Jump to",
+  links: pageJumpToLinks as JumpToLink[],
+});
 ---
 
 <BaseLayout title="Tutorials">
-  {sections.map(({ slug, name, sectionEntries }) => (
-    <>
-      <h3 id={slug}>{name}</h3>
-      <ul>
-        {
-          sectionEntries.map((entry: TutorialEntry) => (
-            <li>
-              <a href={`/tutorials/${entry.slug}`}>
-                {" "}
-                {entry.data.featuredImageAlt && entry.data.featuredImage && (
-                  <Image
-                    src={entry.data.featuredImage}
-                    alt={entry.data.featuredImageAlt}
-                    width={200}
-                    height={200}
-                  />
-                )}
-                {entry.data.title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </>
-  ))}
+  <ul>
+    {
+      entriesByCategory.map((category) => (
+        <li>
+          <h2>
+            {category.name} <a id={category.name as string} />
+          </h2>
+          <ul>
+            {category.entries.map((entry: TutorialEntry) => (
+              <li>
+                <a href={`/tutorials/${entry.slug}`}>
+                  {entry.data.featuredImageAlt && entry.data.featuredImage && (
+                    <Image
+                      src={entry.data.featuredImage}
+                      alt={entry.data.featuredImageAlt}
+                      width={200}
+                      height={200}
+                    />
+                  )}
+                  {entry.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
 </BaseLayout>
