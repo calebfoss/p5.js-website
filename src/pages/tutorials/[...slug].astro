@@ -7,26 +7,16 @@ export async function getStaticPaths() {
   const tutorials = await getCollectionInDefaultLocale("tutorials");
   return tutorials.map((entry) => ({
     params: { slug: removeLocalePrefix(entry.slug) },
-    props: { entry },
+    props: {
+      entry,
+      relatedEntries: tutorials.filter(
+        (e) => e.data.category === entry.data.category
+      ),
+    },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry, relatedEntries } = Astro.props;
 ---
 
-<BaseLayout title={entry.data.title}>
-  {entry.data.authors && <h6>By {entry.data.authors.join(", ")}</h6>}
-  <Content />
-
-  <h2>Related examples</h2>
-  <ul>
-    {/* revise when schema for examples exists */}
-    {entry.data.relatedContent?.examples?.map((relEx) => <li>{relEx}</li>)}
-  </ul>
-
-  <h2>Related references</h2>
-  <ul>
-    {/* revise when schema for reference exists */}
-    {entry.data.relatedContent?.references?.map((relRef) => <li>{relRef}</li>)}
-  </ul>
-</BaseLayout>
+<TutorialLayout entry={entry} relatedEntries={relatedEntries} />
