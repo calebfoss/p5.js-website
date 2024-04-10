@@ -1,6 +1,9 @@
 ---
-import ContributorDocLayout from "@/src/layouts/ContributorDocLayout.astro";
-import { getCollectionInDefaultLocale } from "@pages/_utils";
+import ContributeItemLayout from "@/src/layouts/ContributeItemLayout.astro";
+import {
+  convertContributorDocIndexSlugIfNeeded,
+  getCollectionInDefaultLocale,
+} from "@pages/_utils";
 import { removeLocalePrefix } from "@i18n/utils";
 
 export async function getStaticPaths() {
@@ -20,4 +23,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<ContributorDocLayout entry={entry} />
+<ContributeItemLayout entry={entry} />
