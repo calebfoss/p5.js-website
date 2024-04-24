@@ -4,7 +4,7 @@ import BaseLayout from "./BaseLayout.astro";
 import Image from "@components/Image/index.astro";
 import { setJumpToState, type JumpToLink } from "../globals/state";
 import { getCurrentLocale, getUiTranslator } from "../i18n/utils";
-import { categories, categoryNames } from "../content/tutorials/config";
+import { categories } from "../content/tutorials/config";
 
 type TutorialEntry = CollectionEntry<"tutorials">;
 
@@ -13,18 +13,18 @@ const t = await getUiTranslator(currentLocale);
 
 const { entries } = Astro.props;
 
-const categories = entries.map((entry: TutorialEntry) => entry.data.category);
-const uniqueCategories = Array.from(new Set(categories));
-const entriesByCategory = uniqueCategories.map((category) => ({
-  name: category,
-  entries: entries.filter(
-    (entry: TutorialEntry) => entry.data.category === category
-  ),
-}));
+const sections = categories.map((slug) => {
+  const name = t("tutorialCategories", slug);
+  const sectionEntries = entries
+    .filter((e: TutorialEntry) => e.data.category === slug)
+    .sort(
+      (a: TutorialEntry, b: TutorialEntry) =>
+        (a.data.categoryIndex ?? 1000) - (b.data.categoryIndex ?? 1000)
+    );
 
 const pageJumpToLinks = uniqueCategories.map((category) => ({
   url: `#${category}`,
-  label: categoryNames[category],
+  label: t("tutorialCategories", category),
 }));
 
 setJumpToState({
