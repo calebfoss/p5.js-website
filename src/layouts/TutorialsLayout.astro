@@ -24,7 +24,7 @@ const entriesByCategory = uniqueCategories.map((category) => ({
 
 const pageJumpToLinks = uniqueCategories.map((category) => ({
   url: `#${category}`,
-  label: category,
+  label: categoryNames[category],
 }));
 
 setJumpToState({
