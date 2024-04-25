@@ -12,7 +12,7 @@ import { setJumpToState } from "../globals/state";
 interface Props {
   sketches: OpenProcessingCurationResponse;
   libraries: CollectionEntry<"libraries">[];
-  pastEvents: CollectionEntry<"past-events">[];
+  pastEvents: CollectionEntry<"events">[];
 }
 
 // Max number of sketches we will show on this page
@@ -103,7 +103,7 @@ setJumpToState({
         ))
       }
     </ul>
-    <LinkButton url="/past-events" variant="link" class="mt-lg"
+    <LinkButton url="/events" variant="link" class="mt-lg"
       >{t("All Events")}</LinkButton
     >
   </section>
