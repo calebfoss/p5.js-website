@@ -10,6 +10,7 @@ type MainNavLinksProps = {
   }[];
   editorButtonLabel: string;
   donateButtonLabel: string;
+  mobileMenuLabel: string;
   isHomepage: boolean;
 };
 
@@ -17,6 +18,7 @@ export const MainNavLinks = ({
   links,
   donateButtonLabel,
   editorButtonLabel,
+  mobileMenuLabel,
   isHomepage = false,
 }: MainNavLinksProps) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -46,13 +48,21 @@ export const MainNavLinks = ({
       >
         <Logo />
       </a>
-      <button
-        class={styles.toggle}
-        onClick={handleClick}
-        aria-hidden="true"
-        tabIndex={-1}
-      >
-        <Icon kind={open ? "chevron-up" : "chevron-down"} />
+      <button class={styles.toggle} onClick={handleClick}>
+        {isMobile ? (
+          <div class={styles.mobileMenuLabel}>
+            {open ? (
+              <Icon kind="close" />
+            ) : (
+              <>
+                <span>{mobileMenuLabel}</span>
+                <Icon kind="hamburger" />
+              </>
+            )}
+          </div>
+        ) : (
+          <Icon kind={open ? "chevron-up" : "chevron-down"} />
+        )}
       </button>
     </div>
   );
