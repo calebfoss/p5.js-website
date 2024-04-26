@@ -1,170 +1,90 @@
 ---
 title: torus
-module: Shape
-submodule: 3D Primitives
+module: आकार
+submodule: 3D आदिम
 file: src/webgl/3d_primitives.js
 description: >
-  <p>Draws a torus.</p>
+  <p>दी गई रेडियस और ट्यूब रेडियस के साथ एक टोरस बनाएं ।</p>
 
-  <p>A torus is a 3D shape with triangular faces that connect to form a ring.
+  <p>DetailX और DetailY टोरस के एक्स-आयाम और वाई-आयाम में उपविभाजनों की संख्या निर्धारित करते हैं।
 
-  Toruses with few faces look flattened. Toruses with many faces have smooth
+  अधिक उपविभाजन टोरस को अधिक चिकना बनाते हैं।
 
-  surfaces.</p>
+  DetailX और DetailY के लिए डिफ़ॉल्ट और अधिकतम मान क्रमशः 24 और 16 हैं।
 
-  <p>The first parameter, <code>radius</code>, is optional. If a
-  <code>Number</code> is passed, as in
-
-  <code>torus(30)</code>, it sets the radius of the ring. By default,
-  <code>radius</code> is 50.</p>
-
-  <p>The second parameter, <code>tubeRadius</code>, is also optional. If a
-  <code>Number</code> is
-
-  passed, as in <code>torus(30, 15)</code>, it sets the radius of the tube. By
-  default,
-
-  <code>tubeRadius</code> is 10.</p>
-
-  <p>The third parameter, <code>detailX</code>, is also optional. If a
-  <code>Number</code> is passed,
-
-  as in <code>torus(30, 15, 5)</code>, it sets the number of edges used to draw
-  the hole
-
-  of the torus. Using more edges makes the hole look more like a circle. By
-
-  default, <code>detailX</code> is 24.</p>
-
-  <p>The fourth parameter, <code>detailY</code>, is also optional. If a
-  <code>Number</code> is passed,
-
-  as in <code>torus(30, 15, 5, 7)</code>, it sets the number of triangle
-  subdivisions to
-
-  use while filling in the torus’ height. By default, <code>detailY</code> is
-  16.</p>
-
-  <p>Note: <code>torus()</code> can only be used in WebGL mode.</p>
-line: 2183
+  उन्हें 4 और 6 जैसे अपेक्षाकृत छोटे मानों पर सेट करने से आप टोरस के अलावा नई आकृतियाँ बना सकते हैं।</p>
+line: 952
 isConstructor: false
-itemtype: method
+itemtype: तरीका
 example:
   - |-
 
     <div>
     <code>
-    // Click and drag the mouse to view the scene from different angles.
-
+    // draw a spinning torus
+    // with ring radius 30 and tube radius 15
     function setup() {
       createCanvas(100, 100, WEBGL);
-
-      describe('A white torus on a gray background.');
+      camera(0, 0, 50*sqrt(3), 0, 0, 0, 0, 1, 0);
+      perspective(PI/3, 1, 5*sqrt(3), 500*sqrt(3));
+      describe('a rotating white torus');
     }
 
     function draw() {
-      background(200);
-
-      // Enable orbiting with the mouse.
-      orbitControl();
-
-      // Draw the torus.
-      torus();
-    }
-    </code>
-    </div>
-
-    <div>
-    <code>
-    // Click and drag the mouse to view the scene from different angles.
-
-    function setup() {
-      createCanvas(100, 100, WEBGL);
-
-      describe('A white torus on a gray background.');
-    }
-
-    function draw() {
-      background(200);
-
-      // Enable orbiting with the mouse.
-      orbitControl();
-
-      // Draw the torus.
-      // Set its radius to 30.
-      torus(30);
-    }
-    </code>
-    </div>
-
-    <div>
-    <code>
-    // Click and drag the mouse to view the scene from different angles.
-
-    function setup() {
-      createCanvas(100, 100, WEBGL);
-
-      describe('A white torus on a gray background.');
-    }
-
-    function draw() {
-      background(200);
-
-      // Enable orbiting with the mouse.
-      orbitControl();
-
-      // Draw the torus.
-      // Set its radius to 30 and tubeRadius to 15.
+      background(205, 102, 94);
+      rotateX(frameCount * 0.01);
+      rotateY(frameCount * 0.01);
       torus(30, 15);
     }
     </code>
     </div>
+  - |-
 
     <div>
     <code>
-    // Click and drag the mouse to view the scene from different angles.
-
+    // slide to see how detailX works
+    let detailX;
     function setup() {
       createCanvas(100, 100, WEBGL);
-
-      describe('A white torus on a gray background.');
+      camera(0, 0, 50*sqrt(3), 0, 0, 0, 0, 1, 0);
+      perspective(PI/3, 1, 5*sqrt(3), 500*sqrt(3));
+      detailX = createSlider(3, 24, 3);
+      detailX.position(10, height + 5);
+      detailX.style('width', '80px');
+      describe(
+        'a rotating white torus with limited X detail, with a slider that adjusts detailX'
+      );
     }
 
     function draw() {
-      background(200);
-
-      // Enable orbiting with the mouse.
-      orbitControl();
-
-      // Draw the torus.
-      // Set its radius to 30 and tubeRadius to 15.
-      // Set its detailX to 5.
-      torus(30, 15, 5);
+      background(205, 102, 94);
+      rotateY(millis() / 1000);
+      torus(30, 15, detailX.value(), 12);
     }
     </code>
     </div>
+  - |-
 
     <div>
     <code>
-    // Click and drag the mouse to view the scene from different angles.
-
+    // slide to see how detailY works
+    let detailY;
     function setup() {
       createCanvas(100, 100, WEBGL);
-
-      describe('A white torus on a gray background.');
+      camera(0, 0, 50*sqrt(3), 0, 0, 0, 0, 1, 0);
+      perspective(PI/3, 1, 5*sqrt(3), 500*sqrt(3));
+      detailY = createSlider(3, 16, 3);
+      detailY.position(10, height + 5);
+      detailY.style('width', '80px');
+      describe(
+        'a rotating white torus with limited Y detail, with a slider that adjusts detailY'
+      );
     }
 
     function draw() {
-      background(200);
-
-      // Enable orbiting with the mouse.
-      orbitControl();
-
-      // Draw the torus.
-      // Set its radius to 30 and tubeRadius to 15.
-      // Set its detailX to 5.
-      // Set its detailY to 3.
-      torus(30, 15, 5, 3);
+      background(205, 102, 94);
+      rotateY(millis() / 1000);
+      torus(30, 15, 16, detailY.value());
     }
     </code>
     </div>
@@ -172,26 +92,25 @@ class: p5
 params:
   - name: radius
     description: |
-      <p>radius of the torus. Defaults to 50.</p>
-    type: Number
+      <p>पूरी रिंग की रेडियस</p>
+    type: संख्या
     optional: true
   - name: tubeRadius
     description: |
-      <p>radius of the tube. Defaults to 10.</p>
-    type: Number
+      <p>ट्यूब की रेडियस</p>
+    type: संख्या
     optional: true
   - name: detailX
     description: |
-      <p>number of edges that form the hole. Defaults to 24.</p>
-    type: Integer
+      <p>एक्स-आयाम में खंडों की संख्या। जितने अधिक खंड उतनी चिकनी ज्यामिति। डिफ़ॉल्ट 24 है| </p>
+    type: पूर्णांक
     optional: true
   - name: detailY
     description: |
-      <p>number of triangle subdivisions along the y-axis. Defaults to 16.</p>
-    type: Integer
+      <p>y-आयाम में खंडों की संख्या। जितने अधिक खंड उतनी चिकनी ज्यामिति। डिफ़ॉल्ट 16 है|</p>
+    type: पूर्णांक
     optional: true
 chainable: true
 ---
-
 
 # torus
