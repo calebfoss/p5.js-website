@@ -4,14 +4,38 @@ module: आकार
 submodule: 3D आदिम
 file: src/webgl/3d_primitives.js
 description: >
-  <p>दी गई त्रिज्या के साथ एक दीर्घवृत्त बनाएं</p>
+  <p>एक दीर्घवृत्ताभ बनाता है।</p>
 
-  <p>DetailX और DetailY एक शंकु के x-डायमेंशन और y-डायमेंशन में उपविभाजनों की संख्या निर्धारित करते हैं।
+  <p>दीर्घवृत्त त्रिकोणीय चेहरों वाला एक 3D आकार है जो एक गोल सतह बनाने के लिए जुड़ता है। कुछ चेहरों वाले दीर्घवृत्ताभ क्रिस्टल की तरह दिखते हैं।
+  
+  कई फलकों वाले दीर्घवृत्ताभों की सतह चिकनी होती है और वे अंडे की तरह दिखते हैं।
 
-  अधिक उपविभाजन से दीर्घवृत्त अधिक चिकना दिखाई देता है।
+  <code>ellipsoid()</code> किसी आकृति को उसकी त्रिज्या से परिभाषित करता है। यह <a href="/reference/p5/ellipse">ellipse()</a> से भिन्न है जो व्यास (चौड़ाई और ऊंचाई) का उपयोग करता है।</p>
 
-  150 से ऊपर विवरण संख्या से बचें, इससे ब्राउज़र क्रैश हो सकता है।</p>
-line: 820
+  <p>पहला पैरामीटर, <code>radiusX</code>, वैकल्पिक है। यदि एक <code>Number</code> पारित किया जाता है, जैसे कि <code>ellipsoid(20)</code>, तो यह x-अक्ष के साथ दीर्घवृत्ताभ की त्रिज्या निर्धारित करता है।
+  
+  डिफ़ॉल्ट रूप से, <code>radiusX</code> 50 है।</p>
+
+  <p>दूसरा पैरामीटर, <code>radiusY</code>, भी वैकल्पिक है। यदि एक <code>Number</code> पारित किया जाता है, जैसे कि <code>ellipsoid(20, 30)</code>, तो यह दीर्घवृत्त की त्रिज्या को y-अक्ष के साथ सेट करता है।
+
+  डिफ़ॉल्ट रूप से, <code>radiusY</code> दीर्घवृत्त के <code>radiusX</code> पर सेट होता है।</p>
+
+  <p>तीसरा पैरामीटर, <code>radiusZ</code>, भी वैकल्पिक है। यदि एक <code>Number</code> पारित किया जाता है, जैसे कि <code>ellipsoid(20, 30, 40)</code>, तो यह दीर्घवृत्त की त्रिज्या को z-अक्ष के साथ सेट करता है।
+  
+  डिफ़ॉल्ट रूप से, <code>radiusZ</code> दीर्घवृत्त के <code>radiusY</code> पर सेट होता है।</p>
+
+  <p>चौथा पैरामीटर, <code>detailX</code>, भी वैकल्पिक है। यदि एक <code>Number</code> पारित किया जाता है, जैसे कि <code>ellipsoid(20, 30, 40, 5)</code>, तो यह x-अक्ष के साथ उपयोग करने के लिए त्रिकोण उपविभाजनों की संख्या निर्धारित करता है।
+  
+  सभी 3D आकृतियाँ त्रिभुजों को जोड़कर उनकी सतहें बनाकर बनाई जाती हैं। डिफ़ॉल्ट रूप से, <code>detailX</code> 24 है।</p>
+
+  <p>पांचवां पैरामीटर, <code>detailY</code>, भी वैकल्पिक है। यदि कोई <code>Number</code> पारित किया जाता है, जैसे कि <code>ellipsoid(20, 30, 40, 5, 7)</code>, तो यह y-अक्ष के साथ उपयोग करने के लिए त्रिभुज उपविभाजनों की संख्या निर्धारित करता है।
+  
+  सभी 3D आकृतियाँ त्रिभुजों को जोड़कर उनकी सतहें बनाकर बनाई जाती हैं।
+  
+  डिफ़ॉल्ट रूप से, <code>detailY</code> 16 है।</p>
+
+  <p>ध्यान दें: <code>ellipsoid()</code> का उपयोग केवल WebGL मोड में किया जा सकता है।</p>
+line: 1965
 isConstructor: false
 itemtype: तरीका
 example:
@@ -19,90 +43,153 @@ example:
 
     <div>
     <code>
-    // draw an ellipsoid
-    // with radius 30, 40 and 40.
+    // Click and drag the mouse to view the scene from different angles.
+
     function setup() {
       createCanvas(100, 100, WEBGL);
-      describe('a white 3d ellipsoid');
+
+      describe('A white sphere on a gray background.');
     }
 
     function draw() {
-      background(205, 105, 94);
-      ellipsoid(30, 40, 40);
+      background(200);
+
+      // Enable orbiting with the mouse.
+      orbitControl();
+
+      // Draw the ellipsoid.
+      // Set its radiusX to 30.
+      ellipsoid(30);
     }
     </code>
     </div>
-  - |-
 
     <div>
     <code>
-    // slide to see how detailX works
-    let detailX;
+    // Click and drag the mouse to view the scene from different angles.
+
     function setup() {
       createCanvas(100, 100, WEBGL);
-      detailX = createSlider(2, 24, 12);
-      detailX.position(10, height + 5);
-      detailX.style('width', '80px');
-      describe(
-        'a rotating white ellipsoid with limited X detail, with a slider that adjusts detailX'
-      );
+
+      describe('A white ellipsoid on a gray background.');
     }
 
     function draw() {
-      background(205, 105, 94);
-      rotateY(millis() / 1000);
-      ellipsoid(30, 40, 40, detailX.value(), 8);
+      background(200);
+
+      // Enable orbiting with the mouse.
+      orbitControl();
+
+      // Draw the ellipsoid.
+      // Set its radiusX to 30.
+      // Set its radiusY to 40.
+      ellipsoid(30, 40);
     }
     </code>
     </div>
-  - |-
 
     <div>
     <code>
-    // slide to see how detailY works
-    let detailY;
+    // Click and drag the mouse to view the scene from different angles.
+
     function setup() {
       createCanvas(100, 100, WEBGL);
-      detailY = createSlider(2, 24, 6);
-      detailY.position(10, height + 5);
-      detailY.style('width', '80px');
-      describe(
-        'a rotating white ellipsoid with limited Y detail, with a slider that adjusts detailY'
-      );
+
+      describe('A white ellipsoid on a gray background.');
     }
 
     function draw() {
-      background(205, 105, 9);
-      rotateY(millis() / 1000);
-      ellipsoid(30, 40, 40, 12, detailY.value());
+      background(200);
+
+      // Enable orbiting with the mouse.
+      orbitControl();
+
+      // Draw the ellipsoid.
+      // Set its radiusX to 30.
+      // Set its radiusY to 40.
+      // Set its radiusZ to 50.
+      ellipsoid(30, 40, 50);
+    }
+    </code>
+    </div>
+
+    <div>
+    <code>
+    // Click and drag the mouse to view the scene from different angles.
+
+    function setup() {
+      createCanvas(100, 100, WEBGL);
+
+      describe('A white ellipsoid on a gray background.');
+    }
+
+    function draw() {
+      background(200);
+
+      // Enable orbiting with the mouse.
+      orbitControl();
+
+      // Draw the ellipsoid.
+      // Set its radiusX to 30.
+      // Set its radiusY to 40.
+      // Set its radiusZ to 50.
+      // Set its detailX to 4.
+      ellipsoid(30, 40, 50, 4);
+    }
+    </code>
+    </div>
+
+    <div>
+    <code>
+    // Click and drag the mouse to view the scene from different angles.
+
+    function setup() {
+      createCanvas(100, 100, WEBGL);
+
+      describe('A white ellipsoid on a gray background.');
+    }
+
+    function draw() {
+      background(200);
+
+      // Enable orbiting with the mouse.
+      orbitControl();
+
+      // Draw the ellipsoid.
+      // Set its radiusX to 30.
+      // Set its radiusY to 40.
+      // Set its radiusZ to 50.
+      // Set its detailX to 4.
+      // Set its detailY to 3.
+      ellipsoid(30, 40, 50, 4, 3);
     }
     </code>
     </div>
 class: p5
 params:
-  - name: radiusx
+  - name: radiusX
     description: |
-      <p>दीर्घवृत्त का x-रेडियस</p>
+      <p>x-अक्ष के अनुदिश दीर्घवृत्ताभ की त्रिज्या। डिफ़ॉल्ट 50।</p>
     type: संख्या
     optional: true
-  - name: radiusy
-    description: |
-      <p>दीर्घवृत्त का y-रेडियस</p>
+  - name: radiusY
+    description: >
+      <p>y-अक्ष के अनुदिश दीर्घवृत्ताभ की त्रिज्या। डिफ़ॉल्ट <code>radiusX</code>।</p>
     type: संख्या
     optional: true
-  - name: radiusz
-    description: |
-      <p>दीर्घवृत्त का z-रेडियस</p>
+  - name: radiusZ
+    description: >
+      <p>z-अक्ष के अनुदिश दीर्घवृत्ताभ की त्रिज्या। डिफ़ॉल्ट <code>radiusY</code>।</p>
     type: संख्या
     optional: true
   - name: detailX
     description: |
-      <p>खंडों की संख्या। जितने अधिक खंड, उतनी चिकनी ज्यामिति। डिफ़ॉल्ट 24 है। 150 से ऊपर विवरण संख्या से बचें क्योंकि यह ब्राउज़र को क्रैश कर सकता है।</p>
+      <p>x-अक्ष के अनुदिश त्रिभुज उपखंडों की संख्या। डिफ़ॉल्ट 24।</p>
     type: पूर्णांक
     optional: true
   - name: detailY
     description: |
-      <p>खंडों की संख्या। जितने अधिक खंड, उतनी चिकनी ज्यामिति। डिफ़ॉल्ट 16 है। 150 से ऊपर विवरण संख्या से बचें क्योंकि यह ब्राउज़र को क्रैश कर सकता है।</p>
+      <p>y-अक्ष के अनुदिश त्रिभुज उपखंडों की संख्या। डिफ़ॉल्ट 16।</p>
     type: पूर्णांक
     optional: true
 chainable: true

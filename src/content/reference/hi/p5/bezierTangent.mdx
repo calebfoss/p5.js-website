@@ -3,63 +3,96 @@ title: bezierTangent
 module: आकार
 submodule: वक्र
 file: src/core/shape/curves.js
-description: |
-  <p>बिंदु a, b, c, d के लिए स्थिति t पर बेज़ियर के कोआर्डिनेट का मूल्यांकन करता है।
-  पैरामीटर a और d वक्र पर पहले और आखिरी बिंदु हैं, और b और c नियंत्रण बिंदु हैं।
-  अंतिम पैरामीटर t 0 और 1 के बीच भिन्न होता है।</p>
-line: 186
+description: >
+  <p>बेज़ियर वक्र की स्पर्शरेखा वाली रेखा के कोआर्डिनेट की गणना करता है।</p>
+
+  <p>स्पर्शरेखा रेखाएं वक्र की सतह को छूती हैं। एक स्पर्शरेखा रेखा का ढलान उस बिंदु पर वक्र के ढलान के बराबर होता है जहां वह प्रतिच्छेद करती है।</p>
+
+  <p><code>bezierTangent()</code> बेज़ियर वक्र के एंकर और नियंत्रण बिंदुओं का उपयोग करके स्पर्शरेखा रेखा के साथ कोआर्डिनेट की गणना करता है। यह <a href="/reference/p5/bezier">bezier()</a> फ़ंक्शन के समान क्रम में बिंदुओं की अपेक्षा करता है।
+  
+  <code>bezierTangent()</code> एक समय में एक अक्ष पर काम करता है। एंकर और नियंत्रण बिंदुओं के x-कोआर्डिनेट को पार करने से स्पर्शरेखा रेखा पर एक बिंदु के x-कोआर्डिनेट की गणना की जाएगी। एंकर और नियंत्रण बिंदुओं के y-कोआर्डिनेट को पार करने से स्पर्शरेखा रेखा पर एक बिंदु के y-कोआर्डिनेट की गणना की जाएगी।</p>
+
+  <p>पहला पैरामीटर, <code>a</code>, पहले एंकर बिंदु का समन्वय है।</p>
+
+  <p>दूसरा और तीसरा पैरामीटर, <code>b</code> और <code>c</code>, नियंत्रण बिंदुओं के कोआर्डिनेट हैं।</p>
+
+  <p>चौथा पैरामीटर, <code>d</code>, अंतिम एंकर बिंदु का समन्वय है।</p>
+
+  <p>पांचवां पैरामीटर, <code>t</code>, वक्र के साथ प्रक्षेपित होने वाली मात्रा है। 0 पहला एंकर पॉइंट है, 1 दूसरा एंकर पॉइंट है, और 0.5 उनके बीच का आधा रास्ता है।</p>
+line: 450
 isConstructor: false
 itemtype: तरीका
-alt: >-
-  उन बिंदुओं पर स्पर्शरेखा दिखाने वाली 6 छोटी नारंगी रेखाओं वाली एस-आकार की रेखा।
-
-  6 छोटी नारंगी रेखाओं वाली एस-आकार की रेखा, जो बेज़ियर के नीचे से निकलने वाली रेखाओं को दर्शाती है।
 example:
   - |-
 
     <div>
     <code>
-    noFill();
-    bezier(85, 20, 10, 10, 90, 90, 15, 80);
-    let steps = 6;
-    fill(255);
-    for (let i = 0; i <= steps; i++) {
-      let t = i / steps;
-      // Get the location of the point
-      let x = bezierPoint(85, 10, 90, 15, t);
-      let y = bezierPoint(20, 10, 90, 80, t);
-      // Get the tangent points
-      let tx = bezierTangent(85, 10, 90, 15, t);
-      let ty = bezierTangent(20, 10, 90, 80, t);
-      // Calculate an angle from the tangent points
-      let a = atan2(ty, tx);
-      a += PI;
-      stroke(255, 102, 0);
-      line(x, y, cos(a) * 30 + x, sin(a) * 30 + y);
-      // The following line of code makes a line
-      // inverse of the above line
-      //line(x, y, cos(a)*-30 + x, sin(a)*-30 + y);
-      stroke(0);
-      ellipse(x, y, 5, 5);
-    }
-    </code>
-    </div>
+    function setup() {
+      createCanvas(100, 100);
 
-    <div>
-    <code>
-    noFill();
-    bezier(85, 20, 10, 10, 90, 90, 15, 80);
-    stroke(255, 102, 0);
-    let steps = 16;
-    for (let i = 0; i <= steps; i++) {
-      let t = i / steps;
-      let x = bezierPoint(85, 10, 90, 15, t);
-      let y = bezierPoint(20, 10, 90, 80, t);
-      let tx = bezierTangent(85, 10, 90, 15, t);
-      let ty = bezierTangent(20, 10, 90, 80, t);
-      let a = atan2(ty, tx);
-      a -= HALF_PI;
-      line(x, y, cos(a) * 8 + x, sin(a) * 8 + y);
+      background(200);
+
+      // Set the coordinates for the curve's anchor and control points.
+      let x1 = 85;
+      let x2 = 10;
+      let x3 = 90;
+      let x4 = 15;
+      let y1 = 20;
+      let y2 = 10;
+      let y3 = 90;
+      let y4 = 80;
+
+      // Style the curve.
+      noFill();
+
+      // Draw the curve.
+      bezier(x1, y1, x2, y2, x3, y3, x4, y4);
+
+      // Draw tangents along the curve's path.
+      fill(255);
+
+      // Top-right circle.
+      stroke(0);
+      let x = bezierPoint(x1, x2, x3, x4, 0);
+      let y = bezierPoint(y1, y2, y3, y4, 0);
+      circle(x, y, 5);
+
+      // Top-right tangent line.
+      // Scale the tangent point to draw a shorter line.
+      stroke(255, 0, 0);
+      let tx = 0.1 * bezierTangent(x1, x2, x3, x4, 0);
+      let ty = 0.1 * bezierTangent(y1, y2, y3, y4, 0);
+      line(x + tx, y + ty, x - tx, y - ty);
+
+      // Center circle.
+      stroke(0);
+      x = bezierPoint(x1, x2, x3, x4, 0.5);
+      y = bezierPoint(y1, y2, y3, y4, 0.5);
+      circle(x, y, 5);
+
+      // Center tangent line.
+      // Scale the tangent point to draw a shorter line.
+      stroke(255, 0, 0);
+      tx = 0.1 * bezierTangent(x1, x2, x3, x4, 0.5);
+      ty = 0.1 * bezierTangent(y1, y2, y3, y4, 0.5);
+      line(x + tx, y + ty, x - tx, y - ty);
+
+      // Bottom-left circle.
+      stroke(0);
+      x = bezierPoint(x1, x2, x3, x4, 1);
+      y = bezierPoint(y1, y2, y3, y4, 1);
+      circle(x, y, 5);
+
+      // Bottom-left tangent.
+      // Scale the tangent point to draw a shorter line.
+      stroke(255, 0, 0);
+      tx = 0.1 * bezierTangent(x1, x2, x3, x4, 1);
+      ty = 0.1 * bezierTangent(y1, y2, y3, y4, 1);
+      line(x + tx, y + ty, x - tx, y - ty);
+
+      describe(
+        'A black s-curve on a gray square. The endpoints and center of the curve are marked with white circles. Red tangent lines extend from the white circles.'
+      );
     }
     </code>
     </div>
@@ -83,12 +116,13 @@ params:
     type: संख्या
   - name: t
     description: |
-      <p>मान 0 और 1 के बीच</p>
+      <p>0 और 1 के बीच अंतर्वेशित होने वाली राशि</p>
     type: संख्या
 return:
-  description: स्थिति t पर स्पर्शरेखा
+  description: स्पर्शरेखा रेखा पर बिंदु के कोआर्डिनेट
   type: संख्या
 chainable: false
 ---
+
 
 # bezierTangent

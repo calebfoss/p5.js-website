@@ -3,31 +3,98 @@ title: curveTangent
 module: आकार
 submodule: वक्र
 file: src/core/shape/curves.js
-description: |
-  <p>बिंदु a, b, c, d के लिए स्थिति t पर वक्र की स्पर्शरेखा का मूल्यांकन करता है।
-  पैरामीटर t 0 और 1 के बीच भिन्न होता है, a और d वक्र पर बिंदु हैं, और b और c नियंत्रण बिंदु हैं।</p>
-line: 494
+description: >
+  <p>एक रेखा के साथ निर्देशांक की गणना करता है जो एक तख़्ता वक्र की स्पर्शरेखा है।</p>
+
+  <p>स्पर्शरेखा रेखाएं वक्र की सतह को छूती हैं। एक स्पर्शरेखा रेखा का ढलान उस बिंदु पर वक्र के ढलान के बराबर होता है जहां वह प्रतिच्छेद करती है।</p>
+
+  <p><code>curveTangent()</code> स्पलाइन कर्व के एंकर और नियंत्रण बिंदुओं का उपयोग करके स्पर्शरेखा रेखा के साथ निर्देशांक की गणना करता है।
+  
+  यह <a href="/reference/p5/curve">curve()</a> फ़ंक्शन के समान क्रम में बिंदुओं की अपेक्षा करता है।
+
+  <code>curveTangent()</code> एक समय में एक अक्ष पर काम करता है। एंकर और नियंत्रण बिंदुओं के x-निर्देशांक को पार करने से स्पर्शरेखा रेखा पर एक बिंदु के x-निर्देशांक की गणना की जाएगी।
+  
+  एंकर और नियंत्रण बिंदुओं के y-निर्देशांक को पार करने से स्पर्शरेखा रेखा पर एक बिंदु के y-निर्देशांक की गणना की जाएगी।</p>
+
+  <p>पहला पैरामीटर, <code>a</code>, पहले नियंत्रण बिंदु का समन्वय है।</p>
+
+  <p>दूसरा और तीसरा पैरामीटर, <code>b</code> और <code>c</code>, एंकर बिंदुओं के निर्देशांक हैं।</p>
+
+  <p>चौथा पैरामीटर, <code>d</code>, अंतिम नियंत्रण बिंदु का समन्वय है।</p>
+
+  <p>पांचवां पैरामीटर, <code>t</code>, वक्र के साथ प्रक्षेपित होने वाली मात्रा है। 0 पहला एंकर पॉइंट है, 1 दूसरा एंकर पॉइंट है, और 0.5 उनके बीच का आधा रास्ता है।</p>
+line: 1054
 isConstructor: false
 itemtype: तरीका
-alt: कैनवास के मध्य-दाईं ओर दाहिनी ओर मुड़ने वाली रेखा और उससे निकलने वाली 7 छोटी रेखाएँ।
 example:
   - |-
 
     <div>
     <code>
-    noFill();
-    curve(5, 26, 73, 24, 73, 61, 15, 65);
-    let steps = 6;
-    for (let i = 0; i <= steps; i++) {
-      let t = i / steps;
-      let x = curvePoint(5, 73, 73, 15, t);
-      let y = curvePoint(26, 24, 61, 65, t);
-      //ellipse(x, y, 5, 5);
-      let tx = curveTangent(5, 73, 73, 15, t);
-      let ty = curveTangent(26, 24, 61, 65, t);
-      let a = atan2(ty, tx);
-      a -= PI / 2.0;
-      line(x, y, cos(a) * 8 + x, sin(a) * 8 + y);
+    function setup() {
+      createCanvas(100, 100);
+
+      background(200);
+
+      // Set the coordinates for the curve's anchor and control points.
+      let x1 = 5;
+      let y1 = 26;
+      let x2 = 73;
+      let y2 = 24;
+      let x3 = 73;
+      let y3 = 61;
+      let x4 = 15;
+      let y4 = 65;
+
+      // Draw the curve.
+      noFill();
+      curve(x1, y1, x2, y2, x3, y3, x4, y4);
+
+      // Draw tangents along the curve's path.
+      fill(255);
+
+      // Top circle.
+      stroke(0);
+      let x = curvePoint(x1, x2, x3, x4, 0);
+      let y = curvePoint(y1, y2, y3, y4, 0);
+      circle(x, y, 5);
+
+      // Top tangent line.
+      // Scale the tangent point to draw a shorter line.
+      stroke(255, 0, 0);
+      let tx = 0.2 * curveTangent(x1, x2, x3, x4, 0);
+      let ty = 0.2 * curveTangent(y1, y2, y3, y4, 0);
+      line(x + tx, y + ty, x - tx, y - ty);
+
+      // Center circle.
+      stroke(0);
+      x = curvePoint(x1, x2, x3, x4, 0.5);
+      y = curvePoint(y1, y2, y3, y4, 0.5);
+      circle(x, y, 5);
+
+      // Center tangent line.
+      // Scale the tangent point to draw a shorter line.
+      stroke(255, 0, 0);
+      tx = 0.2 * curveTangent(x1, x2, x3, x4, 0.5);
+      ty = 0.2 * curveTangent(y1, y2, y3, y4, 0.5);
+      line(x + tx, y + ty, x - tx, y - ty);
+
+      // Bottom circle.
+      stroke(0);
+      x = curvePoint(x1, x2, x3, x4, 1);
+      y = curvePoint(y1, y2, y3, y4, 1);
+      circle(x, y, 5);
+
+      // Bottom tangent line.
+      // Scale the tangent point to draw a shorter line.
+      stroke(255, 0, 0);
+      tx = 0.2 * curveTangent(x1, x2, x3, x4, 1);
+      ty = 0.2 * curveTangent(y1, y2, y3, y4, 1);
+      line(x + tx, y + ty, x - tx, y - ty);
+
+      describe(
+        'A black curve on a gray square. A white circle moves back and forth along the curve.'
+      );
     }
     </code>
     </div>
@@ -54,9 +121,10 @@ params:
       <p>0 और 1 के बीच का मान</p>
     type: संख्या
 return:
-  description: स्थिति t पर स्पर्शरेखा
+  description: स्पर्शरेखा रेखा पर एक बिंदु का समन्वय।
   type: संख्या
 chainable: false
 ---
+
 
 # curveTangent
