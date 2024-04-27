@@ -4,15 +4,24 @@ module: आकार
 submodule: 3D आदिम
 file: src/webgl/3d_primitives.js
 description: >
-  <p>एक नया p5.Geometry बनाना प्रारंभ करता है। बाद में खींची गई आकृतियों को ज्यामिति में जोड़ा जाएगा और फिर <a href="/reference/p5/endGeometry">endGeometry()</a> फ़ंक्शन कॉल होन पर वापस कर दिया जाएगा।
+  <p>एक नए <a href="/reference/p5/p5.Geometry">p5.Geometry</a> ऑब्जेक्ट में आकृतियाँ जोड़ना शुरू करता है।</p>
 
-  आकृतियाँ बनाने वाले फ़ंक्शन को पास करने के लिए कोई व्यक्ति <a href="/reference/p5/buildGeometry">buildGeometry()</a> का भी उपयोग कर सकता है।</p>
+  <p> <code>beginGeometry()</code> और <a href="/reference/p5/endGeometry">endGeometry()</a> फ़ंक्शन <a href="/reference/p5/sphere">sphere()</a> जैसी सरल आकृतियों से जटिल 3D आकृतियाँ बनाने में सहायता करते हैं|
+  
+  <code>beginGeometry()</code> एक कस्टम <a href="/reference/p5/p5.Geometry">p5.Geometry</a> ऑब्जेक्ट में आकृतियाँ जोड़ना शुरू करता है और <a href="/reference/p5/EndGeometry">endGeometry()</a> उन्हें जोड़ना बंद कर देता है।</p>
 
-  <p>यदि आपको हर फ्रेम में जटिल आकृतियाँ बनाने की ज़रूरत है जो समय के साथ नहीं बदलती हैं, तो उन्हें <code>beginGeometry()</code> और <code>endGeometry()</code> के साथ पहले से संयोजित करें और फिर उसे बनाएं। ये अलग-अलग टुकड़ों को बार-बार खींचने की तुलना में ज़्यादा तेज़ काम करेगा।</p>
+  <p><code>beginGeometry()</code> और <a href="/reference/p5/endGeometry">endGeometry()</a> रेखाचित्रों को और अधिक उपयोगी बनाने में मदद कर सकते हैं।
+  
+  उदाहरण के लिए, यदि स्केच चलते समय कोई जटिल 3D आकार नहीं बदलता है, तो इसे <code>beginGeometry()</code> और <a href="/reference/p5/endGeometry">endGeometry() के साथ बनाया जा सकता है। </a>.
+
+  <a href="/reference/p5/p5.Geometry">p5.Geometry</a> ऑब्जेक्ट को एक बार बनाना और फिर उसे खींचना अलग-अलग टुकड़ों को बार-बार खींचने की तुलना में तेज़ चलेगा।</p>
+
+  <p>3D आकार बनाने के दूसरे तरीके के लिए <a href="/reference/p5/buildGeometry">buildGeometry()</a> देखें।</p>
+
+  <p>ध्यान दें: <code>beginGeometry()</code> का उपयोग केवल WebGL मोड में किया जा सकता है।</p>
 line: 13
 isConstructor: false
 itemtype: तरीका
-alt: अंतरिक्ष में तैरती विभिन्न सपाट, घुमावदार और 3D आकृतियों की एक श्रृंखला।
 example:
   - |-
 

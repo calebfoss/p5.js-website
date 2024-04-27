@@ -4,49 +4,50 @@ module: आकार
 submodule: शीर्ष
 file: src/core/shape/vertex.js
 description: >
-  <p><a href='/reference/p5/beginShape'>beginShape()</a> और <a href='/reference/p5/endShape'>endShape()</a> फ़ंक्शंस का उपयोग करने से उपयोगकर्ता अधिक जटिल आकार बना पाते हैं|
+  <p>कस्टम आकार में शीर्ष जोड़ना प्रारंभ करता है।</p>
 
-  <a href='/reference/p5/beginShape'>beginShape()</a> किसी आकृति के शीर्षों की रिकॉर्डिंग शुरू करता है और <a href='/reference/p5/endShape'>endShape()</a> रिकॉर्डिंग बंद कर देता है|
+  <p><code>beginShape()</code> और <a href="/reference/p5/endShape">endShape()</a> फ़ंक्शन 2D या 3D में कस्टम आकार बनाने की अनुमति देते हैं।
+  
+  <code>beginShape()</code> एक कस्टम आकार में शीर्ष जोड़ना शुरू करता है और <a href="/reference/p5/endShape">endShape()</a> उन्हें जोड़ना बंद कर देता है।</p>
 
-  kind पैरामीटर का मान यह बताता है कि दिए गए शीर्षों से किस प्रकार की आकृतियाँ बनानी हैं।
-
-  कोई मोड निर्दिष्ट नहीं होने से, आकार कोई भी अनियमित बहुभुज हो सकता है।</p>
-
-  <p> <a href="/reference/p5/beginShape">beginShape()</a> के लिए उपलब्ध पैरामीटर हैं:</p>
-
-  <p>POINTS: बिंदुओं की एक श्रृंखला बनाएं।</p>
-  <p>LINES: असंबद्ध रेखाखंडों (व्यक्तिगत रेखाएं) की एक श्रृंखला बनाएं।</p>
-  <p>TRIANGLES: अलग-अलग त्रिभुजों की एक श्रृंखला बनाएं।</p>
-  <p>TRIANGLE_FAN: पहले शीर्ष को पंखे की तरह साझा करते हुए जुड़े हुए त्रिभुजों की एक श्रृंखला बनाएं। </p>
-  <p>TRIANGLE_STRIP: स्ट्रिप फैशन में जुड़े हुए त्रिकोणों की एक श्रृंखला बनाएं।</p>
-  <p>QUADS: अलग-अलग क्वाड्स की एक श्रृंखला बनाएं</p>
-  <p>QUAD_STRIP: अगला क्वाड बनाने के लिए आसन्न किनारों का उपयोग करके क्वाड स्ट्रिप बनाएं।</p>
-  <p>TESS (केवल WEBGL): स्पष्ट टेसेलेशन द्वारा वक्र को भरने के लिए अनियमित बहुभुज को संभालें।</p>
-
-  <p> <a href="/reference/p5/beginShape">beginShape()</a> फ़ंक्शन को कॉल करने के बाद, <a href="/reference/p5/vertex">vertex()</a> की एक श्रृंखला आदेशों का पालन करना होगा।
+  <p>पैरामीटर, <code>kind</code>, बनाने के लिए आकार का प्रकार निर्धारित करता है।
+  
+  डिफ़ॉल्ट रूप से, कोई भी अनियमित बहुभुज बनाया जा सकता है।
+  
+  प्रकार के लिए उपलब्ध मोड हैं:</p>
 
   आकृति बनाना बंद करने के लिए, <a href="/reference/p5/endShape">endShape()</a> पर कॉल करें।
 
-  प्रत्येक आकृति को वर्तमान स्ट्रोक रंग के साथ रेखांकित किया जाएगा और भरण रंग से भरा जाएगा।</p>
+  <li><code>POINTS</code> बिंदुओं की एक श्रृंखला बनाने के लिए।</li>
 
-  <p>रूपांतरण जैसे <a href='/reference/p5/translate'>translate()</a>, <a href='/reference/p5/rotate'>rotate()</a>, और < एक href='/reference/p5/scale'>scale()</a> <a href='/reference/p5/beginShape'>beginShape()</a> के भीतर काम नहीं करते हैं।
+  <li><code>LINES</code> असंबद्ध रेखा खंडों की एक श्रृंखला बनाने के लिए।</li>
 
-   <a href="/reference/p5/beginShape">beginShape()</a> के भीतर अन्य आकृतियों का उपयोग करना भी संभव नहीं है, जैसे <a href='/reference/p5/ellipse'>ellipse()</a> या <a href='/reference/p5/rect'>rect()</a>।</p>
-line: 71
+  <li><code>TYRIANGLES</code> अलग-अलग त्रिभुजों की एक श्रृंखला बनाने के लिए।</li>
+
+  <li><code>TRIANGLE_FAN</code> पंखे की तरह पहले शीर्ष को साझा करने वाले जुड़े हुए त्रिकोणों की एक श्रृंखला बनाने के लिए।</li>
+
+  <li><code>TRIANGLE_STRIP</code> स्ट्रिप फैशन में जुड़े हुए त्रिकोणों की एक श्रृंखला बनाने के लिए।</li>
+
+  <li><code>QUADS</code> अलग-अलग चतुर्भुजों की एक श्रृंखला बनाने के लिए।</li>
+
+  <li><code>QUAD_STRIP</code> अगला क्वाड बनाने के लिए आसन्न किनारों का उपयोग करके क्वाड स्ट्रिप बनाने के लिए।</li>
+
+  <li><code>TESS</code> स्पष्ट टेसेलेशन (केवल WebGL) द्वारा एक भरने वाला वक्र बनाने के लिए।</li>
+
+  </ul>
+
+  <p><code>beginShape()</code> को कॉल करने के बाद, <a href='/reference/p5/vertex'>vertex()</a>, <a href='/reference/p5/bezierVertex">bezierVertex()</a>, <a href="/reference/p5/quadraticVertex">quadraticVertex()</a>, और/या <a href="/reference/p5/curveVertex" >curveVertex()</a> को कॉल करके आकृतियाँ बनाई जा सकती हैं।
+  
+  <a href="/reference/p5/endShape">endShape()</a> को कॉल करने से आकृति में शीर्ष जोड़ना बंद हो जाएगा।
+  
+  प्रत्येक आकृति को वर्तमान स्ट्रोक रंग के साथ रेखांकित किया जाएगा और वर्तमान भरण रंग से भरा जाएगा।</p>
+  
+  <p>रूपांतरण जैसे <a href='/reference/p5/translate'>translate()</a>, <a href='/reference/p5/rotate'>rotate()</a>, और <a href='/reference/p5/scale'>scale()</a> <code>beginShape()</code> और <a href='/reference/p5/endShape'>endShape()</a> के बीच काम नहीं करता है।
+  
+  अन्य आकृतियों का उपयोग <code>beginShape()</code> और <a href="/reference/p5/endShape">endShape()</a> के बीच करना भी संभव नहीं है, जैसे <a href='/reference/p5/ellipse'>ellipse()</a> या <a href='/reference/p5/rect'>rect()</a>।</p>
+line: 129
 isConstructor: false
 itemtype: तरीका
-alt: |-
-  कैनवास के मध्य-दाहिनी ओर काली रूपरेखा के साथ सफेद चौकोर आकार।
-  कैनवास के मध्य-दाहिनी ओर चौकोर आकार में 4 काले बिंदु।
-  2 क्षैतिज काली रेखाएँ। कैनवास के ऊपर-दाएँ और नीचे-दाएँ में।
-  शीर्ष पर क्षैतिज, मध्य में ऊर्ध्वाधर और नीचे क्षैतिज के साथ 3 रेखा आकार।
-  कैनवास के मध्य-दाईं ओर वर्गाकार रेखा का आकार।
-  दाएं कैनवास के मध्य में 2 सफेद त्रिकोण आकार। बायां एक ऊपर और दायां नीचे की ओर इशारा कर रहा है।
-  मध्य-दाएँ कैनवास में 5 क्षैतिज इंटरलॉकिंग और बारी-बारी से सफेद त्रिकोण।
-  45 डिग्री घुमाए गए चौकोर आकार में 4 इंटरलॉकिंग सफेद त्रिकोण।
-  मध्य-दाएँ कैनवास में 2 सफेद आयताकार आकृतियाँ। दोनों 20×55.
-  3 अगल-बगल सफेद आयत, मध्य-दाएं कैनवास में केंद्र का आयत छोटा है।
-  कैनवास के मध्य-ऊपर-बाएँ काली रूपरेखा के साथ मोटा सफेद एल-आकार।
 example:
   - |-
 
