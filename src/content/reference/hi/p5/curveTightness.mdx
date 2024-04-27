@@ -1,55 +1,35 @@
 ---
 title: curveTightness
-module: Shape
-submodule: Curves
+module: आकार
+submodule: वक्र
 file: src/core/shape/curves.js
 description: >
-  <p>Adjusts the way <a href="/reference/p5/curve">curve()</a> and
+  <p> <a href='/reference/p5/curve'>curve()</a> और <a href='/reference/p5/curveVertex'>curveVertex()</a> के साथ बनाए गए फॉर्म की गुणवत्ता को संशोधित करता है।
 
-  <a href="/reference/p5/curveVertex">curveVertex()</a> draw.</p>
+  पैरामीटर tightness यह निर्धारित करती है कि वक्र शीर्ष बिंदुओं पर कैसे फिट बैठता है।
 
-  <p>Spline curves are like cables that are attached to a set of points.
+  मान 0.0 tightness के लिए डिफ़ॉल्ट मान है (यह मान वक्रों को Catmull-Rom स्प्लाइन के रूप में परिभाषित करता है) और मान 1.0 सभी बिंदुओं को सीधी रेखाओं से जोड़ता है।
 
-  <code>curveTightness()</code> adjusts how tightly the cable is attached to the
-  points.</p>
-
-  <p>The parameter, <code>tightness</code>, determines how the curve fits to the
-  vertex
-
-  points. By default, <code>tightness</code> is set to 0. Setting tightness to
-  1,
-
-  as in <code>curveTightness(1)</code>, connects the curve's points using
-  straight
-
-  lines. Values in the range from –5 to  5 deform curves while leaving them
-
-  recognizable.</p>
-line: 875
+  -5.0 और 5.0 की सीमा के भीतर के मान वक्रों को विकृत कर देंगे लेकिन उन्हें पहचानने योग्य बना देंगे और जैसे-जैसे मान परिमाण में बढ़ेंगे, वे विकृत बने रहेंगे।</p>
+line: 399
 isConstructor: false
-itemtype: method
+itemtype: तरीका
+alt: दाहिनी ओर तीर के आकार की रेखा, बिंदु mouseX और ताना आकार के साथ चलते हैं।
 example:
   - |-
 
     <div>
     <code>
-    // Move the mouse left and right to see the curve change.
-
+    // Move the mouse left and right to see the curve change
     function setup() {
       createCanvas(100, 100);
-
-      describe('A black curve forms a sideways U shape. The curve deforms as the user moves the mouse from left to right');
+      noFill();
     }
 
     function draw() {
-      background(200);
-
-      // Set the curve's tightness using the mouse.
-      let t = map(mouseX, 0, 100, -5, 5, true);
+      background(204);
+      let t = map(mouseX, 0, width, -5, 5);
       curveTightness(t);
-
-      // Draw the curve.
-      noFill();
       beginShape();
       curveVertex(10, 26);
       curveVertex(10, 26);
@@ -65,10 +45,9 @@ class: p5
 params:
   - name: amount
     description: |
-      <p>amount of tightness.</p>
-    type: Number
+      <p>मूल शीर्षों से विरूपण की मात्रा</p>
+    type: संख्या
 chainable: true
 ---
-
 
 # curveTightness
