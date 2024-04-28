@@ -4,21 +4,24 @@ module: आकार
 submodule: शीर्ष
 file: src/core/shape/vertex.js
 description: >
-  <p>द्विघात बेज़ियर वक्रों के लिए शीर्ष निर्देशांक निर्दिष्ट करता है। quadraticVertex() पर प्रत्येक कॉल एक नियंत्रण बिंदु और बेज़ियर वक्र के एक एंकर बिंदु की स्थिति को परिभाषित करती है, और आकार में एक नया खंड जोड़ती है।
+  <p>एक कस्टम आकार में एक द्विघात बेज़ियर वक्र खंड जोड़ता है।</p>
 
-  इससे पहले कि qudraticVertex() को पहली बार <a href="/reference/p5/beginShape">beginShape()</a> कॉल के भीतर उपयोग किया जाए, इसे पहला एंकर पॉइंट सेट करने के लिए <a href="/reference/p5/vertex">vertex()</a> पर कॉल के साथ शुरू किया जाना चाहिए। 
+  <p><code>quadraticVertex()</code> कस्टम आकृतियों में एक घुमावदार खंड जोड़ता है। इसके द्वारा बनाए गए बेज़ियर वक्र खंड <a href="/reference/p5/bezierVertex">bezierVertex()</a> फ़ंक्शन द्वारा बनाए गए समान हैं।
 
-  WebGL मोड के लिए quadraticVertex() का उपयोग 2D के साथ-साथ 3D मोड में भी किया जा सकता है।
+  <code>quadraticVertex()</code> को <a href="/reference/p5/beginShape">beginShape()</a> और <a href="/reference/p5/endShape">endShape()</a>कार्य के बीच बुलाया जाना चाहिए। घुमावदार खंड पिछले शीर्ष को पहले एंकर बिंदु के रूप में उपयोग करता है, इसलिए <code>quadraticVertex()</code> का उपयोग करने से पहले <a href="/reference/p5/vertex">vertex()</a> पर कम से कम एक कॉल होनी चाहिए </p>
 
-  2D मोड 4 पैरामीटर की अपेक्षा करता है, जबकि 3D मोड 6 पैरामीटर (z कोआर्डिनेट सहित) की अपेक्षा करता है।</p>
+  <p>पहले दो पैरामीटर, <code>cx</code> और <code>cy</code>, वक्र का नियंत्रण बिंदु निर्धारित करते हैं।
 
-  <p>इस फ़ंक्शन का उपयोग <a href="/reference/p5/beginShape">beginShape()</a> और <a href="/reference/p5/endShape">endShape()</a> के बीच किया जाना चाहिए और केवल तभी जब <a href="/reference/p5/beginShape">beginShape()</a> के लिए कोई MODE या POINTS पैरामीटर निर्दिष्ट नहीं है।</p>
-line: 772
+  नियंत्रण बिंदु वक्र को अपनी ओर "खींचता" है।</p>
+
+  <p>अंतिम दो पैरामीटर, <code>x3</code>, और <code>y3</code>, अंतिम एंकर बिंदु सेट करते हैं। अंतिम लंगर बिंदु वह है जहां वक्र समाप्त होता है।</p>
+
+  <p>बेज़ियर कर्व्स को WebGL मोड का उपयोग करके 3D में भी खींचा जा सकता है। <code>bezierVertex()</code> के 3D संस्करण में आठ तर्क हैं क्योंकि प्रत्येक बिंदु में x-, y-, और z-निर्देशांक है।</p>
+
+  <p>ध्यान दें: <code>quadraticVertex()</code> तब काम नहीं करेगा जब कोई तर्क <a href="/reference/p5/beginShape">beginShape()</a> को पास किया जाता है।</p>
+line: 1569
 isConstructor: false
 itemtype: तरीका
-alt: |-
-  4 पिक्सेल मोटे स्ट्रोक भार के साथ धनुषाकार आकार की काली रेखा।
-  4 पिक्सेल मोटे स्ट्रोक भार के साथ पीछे की ओर एस-आकार की काली रेखा।
 example:
   - |-
 
@@ -65,19 +68,19 @@ overloads:
     params:
       - name: cx
         description: |
-          <p>नियंत्रण बिंदु के लिए x-कोआर्डिनेट</p>
+          <p>नियंत्रण बिंदु का x-निर्देशांक</p>
         type: संख्या
       - name: cy
         description: |
-          <p>नियंत्रण बिंदु के लिए y-कोआर्डिनेट</p>
+          <p>नियंत्रण बिंदु का y-निर्देशांक</p>
         type: संख्या
       - name: x3
         description: |
-          <p>एंकर बिंदु के लिए x-कोआर्डिनेट</p>
+          <p>एंकर बिंदु का x-निर्देशांक</p>
         type: संख्या
       - name: y3
         description: |
-          <p>एंकर बिंदु के लिए y-कोआर्डिनेट</p>
+          <p>एंकर बिंदु का y-निर्देशांक</p>
         type: संख्या
     chainable: 1
   - line: 837
@@ -90,7 +93,7 @@ overloads:
         type: संख्या
       - name: cz
         description: |
-          <p>नियंत्रण बिंदु के लिए z-कोआर्डिनेट (WebGL मोड के लिए) </p>
+          <p>नियंत्रण बिंदु का z-निर्देशांक</p>
         type: संख्या
       - name: x3
         description: ""
@@ -100,9 +103,8 @@ overloads:
         type: संख्या
       - name: z3
         description: |
-          <p>एंकर बिंदु के लिए z-कोआर्डिनेट (WebGL मोड के लिए)</p>
+          <p>एंकर बिंदु का z-निर्देशांक</p>
         type: संख्या
-    chainable: 1
 chainable: true
 ---
 

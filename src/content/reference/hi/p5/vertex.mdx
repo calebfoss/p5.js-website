@@ -4,18 +4,18 @@ module: आकार
 submodule: शीर्ष
 file: src/core/shape/vertex.js
 description: >
-  <p>सभी आकृतियों का निर्माण शीर्षों की एक श्रृंखला को जोड़कर किया जाता है।
+  <p>कस्टम आकार में एक शीर्ष जोड़ता है।</p>
 
-  <a href='/reference/p5/vertex'>vertex()</a> का उपयोग बिंदुओं, रेखाओं, त्रिभुजों, चतुर्भुजों और बहुभुजों के लिए शीर्ष निर्देशांक निर्दिष्ट करने के लिए किया जाता है। इसका उपयोग विशेष रूप से <a href='/reference/p5/beginShape'>beginShape()</a> और <a href='/reference/p5/endShape'>endShape()</a> फ़ंक्शंस के भीतर किया जाता है।</p>
-line: 930
+  <p><code>vertex()</code> <a href="/reference/p5/beginShape">beginShape()</a> और <a href="/reference/p5/endShape">endShape()</a> फ़ंक्शन के बीच खींचे गए शीर्षों के निर्देशांक सेट करता है।</p>
+
+  <p>पहले दो पैरामीटर, <code>x</code> और <code>y</code>, शीर्ष के x- और y-निर्देशांक सेट करते हैं।</p>
+
+  <p>तीसरा पैरामीटर, <code>z</<p>कस्टम आकार में एक शीर्ष जोड़ता है। यह WebGL मोड में शीर्ष का z-निर्देशांक सेट करता है। डिफ़ॉल्ट रूप से, <code>z</code> 0 है।</p>
+
+  <p>चौथा और पांचवां पैरामीटर, <code>u</code> और <code>v</code>, भी वैकल्पिक हैं। <a href="/reference/p5/endShape">endShape()</a> के साथ उपयोग करने पर वे शीर्ष की बनावट के लिए u- और v-निर्देशांक सेट करते हैं। डिफ़ॉल्ट रूप से, <code>u</code> और <code>v</code> दोनों 0 हैं।</p>
+line: 1850
 isConstructor: false
 itemtype: तरीका
-alt: |-
-  कैनवास के मध्य-दाहिनी ओर चौकोर आकार में 4 काले बिंदु।
-  हीरे की आकृति बनाने वाले 4 बिंदु।
-  8 अंक एक सितारा बनाते हैं।
-  8 बिंदु 4 रेखाएँ बनाते हैं।
-  बीच में एक खोखले खंड के साथ एक घूमने वाली 3D आकृति।
 example:
   - |-
 
@@ -138,11 +138,11 @@ overloads:
     params:
       - name: x
         description: |
-          <p>शीर्ष का x-कोआर्डिनेट</p>
+          <p>शीर्ष का x-निर्देशांक।</p>
         type: संख्या
       - name: "y"
         description: |
-          <p>शीर्ष का y-कोआर्डिनेट</p>
+          <p>शीर्ष का y-निर्देशांक।</p>
         type: संख्या
     chainable: 1
   - line: 1061
@@ -155,7 +155,7 @@ overloads:
         type: संख्या
       - name: z
         description: |
-          <p>शीर्ष का z-कोआर्डिनेट।यदि निर्दिष्ट नहीं है तो यह 0 पर डिफॉल्ट हो जाता है।</p>
+          <p>शीर्ष का z-निर्देशांक। डिफ़ॉल्ट 0।</p>
         type: संख्या
         optional: true
     chainable: 1
@@ -173,12 +173,12 @@ overloads:
         optional: true
       - name: u
         description: |
-          <p>शीर्ष की बनावट के लिए u-कोआर्डिनेट</p>
+          <p>यू-शीर्ष की बनावट का समन्वय। डिफ़ॉल्ट 0।</p>
         type: संख्या
         optional: true
       - name: v
         description: |
-          <p>शीर्ष की बनावट के लिए v-कोआर्डिनेट</p>
+          <p>वी-शीर्ष की बनावट का समन्वय। डिफ़ॉल्ट 0।</p>
         type: संख्या
         optional: true
     chainable: 1
