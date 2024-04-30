@@ -4,10 +4,52 @@ module: Events
 submodule: Touch
 file: src/events/touch.js
 description: >
-  <p>每次点击注册后，touchStarted() 函数会被调用一次。如果没有定义 <a href="/reference/p5/touchStarted">touchStarted()</a> 函数，如果定义了 <a href="/reference/p5/mousePressed">mousePressed()</a> 函数，就会调用此函数。<br><br>
+  <p>每当用户屏幕幕时调用的函数。</p>
 
-  浏览器可能会对各种点击事件附加不同的默认行为。要阻止点击事件的任何默认行为，请在方法的末尾添加 "return false"。</br></br></p>
-line: 70
+  <p>每当用户开始触摸触屏设备时，声明一个名为 <code>touchStarted()</code> 的函数会设置一个代码块，自动运行：</p>
+
+  <code>
+
+  function touchStarted() {
+    // Code to run.
+  }
+
+  </code>
+
+
+  <p>当 p5.js 调用 <code>touchStarted()</code> 时，<a href="/reference/p5/touches">touches</a> 数组将被更新为最新的触摸点：</p>
+
+  <code>
+
+  function touchStarted() {
+    // Paint over the background.
+    background(200);
+
+  <p>  // Mark each touch point once with a circle.
+    for (let touch of touches) {
+      circle(touch.x, touch.y, 40);
+    }
+  }
+
+  </p></code>
+
+  <p>参数 event 是可选的。<code>touchStarted()</code> 会被传递为一个描述触摸事件属性的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent" target="_blank">TouchEvent</a> 对象：</p>
+
+  <code>
+
+  function touchStarted(event) {
+    // Code to run that uses the event.
+    console.log(event);
+  }
+
+  </code>
+
+
+  <p>在触屏设备上，如果未声明 <code>touchStarted()</code>，当用户触摸开始时，<a href="/reference/p5/mousePressed">mousePressed()</a> 会运行。如果声明了 <code>touchStarted()</code>，那么当用户触摸开始时将运行 <code>touchStarted()</code>，而 <a href="/reference/p5/mousePressed">mousePressed()</a> 不会运行。</p>
+
+  <p>注意：<code>touchStarted()</code>、<a href="/reference/p5/touchEnded">touchEnded()</a> 和 <a href="/reference/p5/touchMoved">touchMoved()</a> 都是相关的。<code>touchStarted()</code> 会在用户触摸触屏设备时立即运行。
+  <a href="/reference/p5/touchEnded">touchEnded()</a> 会在用户结束触摸时立即运行。<a href="/reference/p5/touchMoved">touchMoved()</a> 会在用户移动任何触摸点时重复运行。</p>
+line: 125
 isConstructor: false
 itemtype: method
 example:

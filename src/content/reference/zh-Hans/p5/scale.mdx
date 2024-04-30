@@ -4,10 +4,18 @@ module: Transform
 submodule: Transform
 file: src/core/transform.js
 description: >
-  <p>通过扩展或收缩顶点来增加或减少形状的尺寸。对象始终从它们相对于坐标系的原点进行缩放。缩放值以十进制百分比指定。例如，函数调用 scale(2.0) 会将形状的尺寸增加 200%。</p>
-  <p>变换应用于之后发生的所有事情，并且对函数的连续调用会累积效果。例如，调用 scale(2.0)，然后再调用 scale(1.5) 等同于调用 scale(3.0)。如果在 <a href="/reference/p5/draw">draw()</a> 中调用 <a href="/reference/p5/scale">scale()</a>，则当循环重新开始时，变换会被重置。</p>
-  <p>仅在 WebGL 模式下，此函数与 z 参数才可以一起使用。通过 <a href="/reference/p5/push">push()</a> 和 <a href="/reference/p5/pop">pop()</a> 可以进一步控制此函数。</p>
-line: 377
+  <p>缩放坐标系。</p>
+
+  <p>默认情况下，形状以其原始比例绘制。一个宽度为 50 像素的矩形在 100 像素宽的画布上看起来占据了一半的宽度。 <code>scale()</code> 函数可以缩小或拉伸坐标系，使形状以不同的大小呈现。有两种方式可以使用参数来调用 <code>scale()</code>，以设置缩放因子。</p>
+
+  <p>第一种调用 <code>scale()</code> 的方式使用数字来设置缩放量。第一个参数 <code>s</code> 设置每个轴的缩放量。例如，调用 <code>scale(2)</code> 将 x 轴、y 轴和 z 轴拉伸2倍。接下来的两个参数 <code>y</code> 和 <code>z</code> 是可选的。它们设置 y 轴和 z 轴的缩放量。例如，调用 <code>scale(2, 0.5, 1)</code> 将x轴拉伸2倍，y轴缩小 0.5 倍，z 轴保持不变。</p>
+
+  <p>第二种调用 <code>scale()</code> 的方式使用一个 <a href="/reference/p5/p5.Vector">p5.Vector</a> 对象来设置缩放因子。例如，调用 <code>scale(myVector)</code> 使用 <code>myVector</code> 的 x、y 和 z 分量来设置沿 x、y 和 z 轴的缩放量。这样做与调用 <code>scale(myVector.x, myVector.y, myVector.z)</code> 是一样的。</p>
+
+  <p>默认情况下，转换会累积。例如，连续两次调用 <code>scale(1)</code> 与调用一次 <code>scale(2)</code> 效果相同。可以使用 <a href="/reference/p5/push">push()</a> 和 <a href="/reference/p5/pop">pop()</a> 函数将转换隔离到不同的绘图组中。</p>
+
+  <p>注意：转换会在绘制循环的开始处重置。在 <a href="/reference/p5/draw">draw()</a> 函数中调用 <code>scale(2)</code> 不会导致形状持续增长。</p>
+line: 879
 isConstructor: false
 itemtype: method
 alt: |-
@@ -37,16 +45,16 @@ overloads:
     params:
       - name: s
         description: |
-          <p>对象缩放的百分比，或如果给定多个参数，对象在 X 轴上缩放的百分比。</p>
+          <p>沿着正 x 轴缩放的量。</p>
         type: 'Number|p5.Vector|Number[]'
       - name: 'y'
-        description: |
-          <p>对象在 Y 轴上缩放的百分比。</p>
+        description: >
+          <p>沿着正 y 轴缩放的量。默认为 <code>s</code>。</p>
         type: Number
         optional: true
       - name: z
-        description: |
-          <p>对象在 Z 轴上缩放的百分比（仅适用于 WebGL）。</p>
+        description: >
+          沿着正 z 轴缩放的量。默认为 <code>y</code>。</p>
         type: Number
         optional: true
     chainable: 1
@@ -54,7 +62,7 @@ overloads:
     params:
       - name: scales
         description: |
-          <p>对象在每个轴上的缩放百分比。</p>
+          <p>应使用其分量来进行缩放的向量。</p>
         type: 'p5.Vector|Number[]'
     chainable: 1
 chainable: true

@@ -4,10 +4,17 @@ module: Transform
 submodule: Transform
 file: src/core/transform.js
 description: >
-  <p>按照角度参数指定的量围绕 X 轴错切形状。角度应该以当前的 angleMode 指定。对象始终围绕它们相对于原点的位置错切，正数会将对象顺时针错切。</p>
-  <p>变换应用于之后发生的所有事情，并且对函数的连续调用会累积效果。例如，调用 shearX(PI/2)，然后再调用 shearX(PI/2) 等同于调用shearX(PI)。如果在 <a href="/reference/p5/draw">draw()</a> 中调用 <a href="/reference/p5/shearX">shearX()</a>，则当循环重新开始时，变换会被重置。</p>
-  <p>从技术上讲，<a href="/reference/p5/shearX">shearX()</a> 将当前变换矩阵乘以一个旋转矩阵。可以通过 <a href="/reference/p5/push">push()</a> 和 <a href="/reference/p5/pop">pop()</a> 函数进一步控制此函数。</p>
-line: 451
+  <p>倾斜 x 轴，使形状呈现出倾斜。</p>
+
+  <p>默认情况下，x 轴和 y 轴是垂直的。<code>shearY()</code> 
+  函数转换坐标系，平移y 坐标，而 x 坐标保持不变。</p>
+
+  <p>第一个参数 <code>angle</code> 是倾斜的量。例如，调用 <code>shearX(1)</code> 使用以下公式转换所有的y坐标：<code>x = x + y * tan(angle)</code>。shearX() 函数使用当前的 <a href="/reference/p5/angleMode">angleMode()</a> 来解释角度值。</p>
+
+  <p>默认情况下，变换是累积的。例如，连续两次调用 <code>shearX(1)</code> 的效果与一次调用 <code>shearX(2)</code> 相同。可以使用 <a href="/reference/p5/push">push()</a> 和 <a href="/reference/p5/pop">pop()</a> 函数将变换隔离在特定的绘图组中。</p>
+
+  <p>注意：变换会在绘制循环的开头被重置。在 <a href="/reference/p5/draw">draw()</a> 函数内调用 <code>shearX(1)</code> 不会导致形状连续错切。</p>
+line: 1070
 isConstructor: false
 itemtype: method
 alt: white irregular quadrilateral with black outline at top middle.
@@ -24,8 +31,8 @@ example:
 class: p5
 params:
   - name: angle
-    description: |
-      <p>错切角度根据当前的 angleMode 指定为弧度或度数。</p>
+    description: >
+      <p>当前 <a href="#/p5/angleMode">angleMode()</a> 下要倾斜的角度。</p>
     type: Number
 chainable: true
 ---

@@ -4,11 +4,14 @@ module: Transform
 submodule: Transform
 file: src/core/transform.js
 description: >
-<p>通过角度参数指定的量围绕 X 轴旋转形状。可以通过 RADIANS 或 DEGREES 输入角度。</p>
-  <p>此方法仅在 WebGL 模式下有效。</p>
-  <p>对象始终围绕它们相对于原点的位置旋转，正数会使对象顺时针旋转。</p>
-  <p>当 <a href="/reference/p5/draw">draw()</a> 重新开始时，所有变换都会被重置。</p>
-line: 261
+  <p>在 WebGL 模式下，围绕 x 轴旋转坐标系。</p>
+
+  <p>参数 <code>angle</code> 是旋转的角度。例如，调用 <code>rotateX(1)</code> 会使坐标系围绕 x 轴旋转 1 弧度。<code>rotateX()</code> 根据当前的 <a href="/reference/p5/angleMode">angleMode()</a> 解释角度值。</p>
+
+  <p>默认情况下，转换会累积。例如，连续调用两次 <code>rotateX(1)</code> 与调用一次 <code>rotateX(2)</code> 效果相同。可以使用 <a href="/reference/p5/push">push()</a> 和 <a href="/reference/p5/pop">pop()</a> 函数将转换隔离到不同的绘图组中。</p>
+
+  <p>注意：转换会在绘制循环的开始处重置。在 <a href="/reference/p5/draw">draw()</a> 函数中调用 <code>rotateX(1)</code> 不会导致形状旋转。</p>
+line: 471
 isConstructor: false
 itemtype: method
 alt: 3d box rotating around the x axis.
@@ -32,8 +35,8 @@ example:
 class: p5
 params:
   - name: angle
-    description: |
-      <p>旋转角度，根据当前的 angleMode，指定为弧度或度数。</p>
+    description: >
+      <p>当前 <a href="#/p5/angleMode">angleMode()</a> 中的旋转角度。</p>
     type: Number
 chainable: true
 ---

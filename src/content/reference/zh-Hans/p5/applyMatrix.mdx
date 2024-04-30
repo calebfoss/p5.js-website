@@ -4,21 +4,33 @@ module: Transform
 submodule: Transform
 file: src/core/transform.js
 description: >
-  <p>将当前矩阵乘以通过参数指定的矩阵。这是一个强大的操作，可以一次性执行平移、缩放、剪切和旋转的等效操作。
-  您可以在 <a href="https://en.wikipedia.org/wiki/Transformation_matrix">维基百科</a>。</p>
-  
-  上了解更多有关变换矩阵的信息。这里参数的命名遵循 <a href="https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-transform">WHATWG 规范</a> 的命名，并对应于一个表单的变换矩阵:</p>
+<p>将转换矩阵应用于坐标系。</p>
 
-  <blockquote>
+<p>转换如 <a href="/reference/p5/translate">translate()</a>、<a href="/reference/p5/rotate">rotate()</a> 和 <a href="/reference/p5/scale">scale()</a> 在幕后使用矩阵-向量乘法。称为矩阵的数字表格编码了每个转换。然后矩阵中的值会与画布上的每个点相乘，这些点由向量表示。</p>
 
-  <p><img style="max-width: 150px" src="/assets/transformation-matrix.png"
-  alt="The transformation matrix used when applyMatrix is called"/></p>
+<p><code>applyMatrix()</code> 允许一次应用多个转换。查看 <a href="https://en.wikipedia.org/wiki/Transformation_matrix" target="_blank">Wikipedia</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web" target="_blank">MDN</a> 以获取有关转换的更多详细信息。</p>
 
-  </blockquote>
+<p>有两种方式可以在二维和三维中调用 <code>applyMatrix()</code>。</p>
 
-  <p><img style="max-width: 300px" src="/assets/transformation-matrix-4-4.png"
-  alt="The transformation matrix used when applyMatrix is called with 4x4
-  matrix"/></p>
+<p>在二维模式下，参数 <code>a</code>、<code>b</code>、<code>c</code>、<code>d</code>、<code>e</code> 和 <code>f</code> 对应于以下转换矩阵中的元素：</p>
+
+<blockquote>
+<p><img style="max-width: 150px" src="/assets/transformation-matrix.png" alt="The transformation matrix used when applyMatrix is called in 2D
+  mode."/></p>
+
+</blockquote>
+<p>数字可以个别传递，如 <code>applyMatrix(2, 0, 0, 0, 2, 0)</code>。也可以作为数组传递，如 <code>applyMatrix([2, 0, 0, 0, 2, 0])</code>。</p>
+
+<p>在三维模式下，参数 <code>a</code>、<code>b</code>、<code>c</code>、<code>d</code>、<code>e</code>、<code>f</code>、<code>g</code>、<code>h</code>、<code>i</code>、<code>j</code>、<code>k</code>、<code>l</code>、<code>m</code>、<code>n</code>、<code>o</code> 和 <code>p</code> 对应于以下转换矩阵中的元素：</p>
+
+<p><img style="max-width: 300px" src="/assets/transformation-matrix-4-4.png" alt="The transformation matrix used when applyMatrix is called in 3D
+  mode."/></p>
+
+<p>数字可以个别传递，如 <code>applyMatrix(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1)</code>。也可以作为数组传递，如 <code>applyMatrix([2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1])</code>。</p>
+
+<p>默认情况下，转换会累积。可以使用<a href="/reference/p5/push">push()</a> 和 <a href="/reference/p5/pop">pop()</a> 函数将转换隔离到不同的绘图组中。</p>
+
+<p>注意：转换会在绘制循环的开始处重置。在 <a href="/reference/p5/draw">draw()</a> 函数中调用 <code>applyMatrix()</code> 不会导致形状连续变换。</p>
 line: 11
 isConstructor: false
 itemtype: method
@@ -152,34 +164,34 @@ overloads:
     params:
       - name: arr
         description: >
-          <p>一组数字 - 应为6或16长度（2×3 或 4×4 矩阵值）。</p>
+          <p>一个包含转换矩阵元素的数组。其长度应为 6（2D）或 16（3D）。</p>
         type: Array
     chainable: 1
   - line: 157
     params:
       - name: a
         description: |
-          <p>定义 2×3 或 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: b
         description: |
-          <p>定义 2×3 或 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: c
         description: |
-          <p>定义 2×3 或 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: d
         description: |
-          <p>定义 2×3 或 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: e
         description: |
-          <p>定义 2×3 或 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: f
         description: |
-          <p>定义 2×3 或 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
     chainable: 1
   - line: 167
@@ -204,43 +216,43 @@ overloads:
         type: Number
       - name: g
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: h
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: i
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: j
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: k
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: l
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: m
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: 'n'
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: o
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
       - name: p
         description: |
-          <p>定义 4×4 矩阵相乘的数字。</p>
+          <p>转换矩阵的一个元素。</p>
         type: Number
     chainable: 1
 chainable: true
