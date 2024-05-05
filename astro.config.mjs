@@ -62,4 +62,9 @@ export default defineConfig({
   image: {
     domains: ["openprocessing.org"],
   },
+  markdown: {
+    shikiConfig: {
+      theme: 'github-light',
+    },
+  },
 });
