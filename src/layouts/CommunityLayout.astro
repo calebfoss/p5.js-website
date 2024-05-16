@@ -45,7 +45,9 @@ setJumpToState({
 <BaseLayout title="Community">
   <section>
     <h2>{t("Sketches")}<a id="sketches"></a></h2>
-    <ul class="grid grid-cols-2 gap-y-xl gap-x-[40px] lg:grid-cols-4">
+    <ul
+      class="grid grid-cols-2 gap-y-xl gap-x-gutter-sm lg:gap-x-gutter-md lg:grid-cols-4"
+    >
       {
         sketches.map((sk, i) => (
           <li
@@ -63,7 +65,9 @@ setJumpToState({
         ))
       }
     </ul>
-    <div class="grid grid-cols-2 gap-y-xl gap-x-[40px] lg:grid-cols-4">
+    <div
+      class="grid grid-cols-2 gap-y-xl gap-x-gutter-sm lg:gap-x-gutter-md lg:grid-cols-4"
+    >
       <LinkButton url="/sketches" variant="link" class="mt-lg col-span-1 w-full"
         >{t("All Sketches")}</LinkButton
       >
@@ -72,7 +76,9 @@ setJumpToState({
 
   <section>
     <h2>{t("Libraries")}<a id="libraries"></a></h2>
-    <ul class="grid grid-cols-2 gap-y-xl gap-x-[40px] lg:grid-cols-4">
+    <ul
+      class="grid grid-cols-2 gap-y-xl gap-x-gutter-sm lg:gap-x-gutter-md lg:grid-cols-4"
+    >
       {
         libraries.map((lib) => (
           <li>
@@ -81,7 +87,9 @@ setJumpToState({
         ))
       }
     </ul>
-    <div class="grid grid-cols-2 gap-y-xl gap-x-[40px] lg:grid-cols-4">
+    <div
+      class="grid grid-cols-2 gap-y-xl gap-x-gutter-sm lg:gap-x-gutter-md lg:grid-cols-4"
+    >
       <LinkButton
         url="/libraries"
         variant="link"
@@ -92,7 +100,9 @@ setJumpToState({
 
   <section>
     <h2>{t("Events")}<a id="events"></a></h2>
-    <ul class="grid grid-cols-2 gap-y-xl gap-x-[40px] lg:grid-cols-4">
+    <ul
+      class="grid grid-cols-2 gap-y-xl gap-x-gutter-sm lg:gap-x-gutter-md lg:grid-cols-4"
+    >
       {
         events.map((event, i) => (
           <li
@@ -108,7 +118,9 @@ setJumpToState({
         ))
       }
     </ul>
-    <div class="grid grid-cols-2 gap-y-xl gap-x-[40px] lg:grid-cols-4">
+    <div
+      class="grid grid-cols-2 gap-y-xl gap-x-gutter-sm lg:gap-x-gutter-md lg:grid-cols-4"
+    >
       <LinkButton url="/events" variant="link" class="mt-lg col-span-1 w-full"
         >{t("All Events")}</LinkButton
       >
