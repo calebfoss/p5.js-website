@@ -76,8 +76,12 @@ Open a new issue on the [p5.js-website repository](https://github.com/processing
 
    ```yaml
    ---
+   featuredImage: "path/to/thumbnail"
+   featuredImageAlt: Describe the thumbnail's visual content
    title: Example Title
-   one-line-description: Describe what the creator can do with this example in one sentence.
+   oneLineDescription: Describe what the creator can do with this example in one sentence.
+   relatedReference: 
+   - language abbreviation/p5/name of reference item
    ---
    ```
 
