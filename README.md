@@ -12,7 +12,7 @@ This document describes the process for revising the p5.js examples for the 2023
 - [Suggestions for Content & Design](#suggestions-for-content--design)
 - [Preview](#preview)
 
-## Review & Analysis
+For making code changes, check out the [technical overview](./docs/techical_overview.md) to get started.
 
 We reviewed all 190 current examples for the base p5 library (excluding the sound library), as well as the 29 examples revised/written by Malay Vassa for GSoC: [review data](https://docs.google.com/spreadsheets/d/1HJMtTNhSRh-jJM25fSvpKvge65Ee5F93CuB75TNnfM0/edit?usp=sharing). We gathered data to inform both the curation and editing processes.
 
