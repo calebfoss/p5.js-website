@@ -1,7 +1,7 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 
 contact_links:
-  - name: 🌸 p5.js Issues
+  - name: 🌸 p5.js Library Issues
     url: https://github.com/processing/p5.js/issues
     about: Report issues with the p5.js here.
   - name: 🖥️ Web Editor Issues

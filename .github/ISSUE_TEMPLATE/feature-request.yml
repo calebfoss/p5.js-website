@@ -14,17 +14,12 @@ body:
       label: Most appropriate sub-area of p5.js?
       options:
         - Home
-        - Download
-        - Donate
-        - Get Started
         - Reference
-        - Libraries
-        - Learn
-        - Teach
+        - Tutorials
         - Examples
-        - Books
-        - Community
-        - Showcase
+        - Contribute
+        - Community (Sketches, Libraries, Events)
+        - About
         - Other (specify if possible)
     validations:
       required: true
