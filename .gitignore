@@ -34,3 +34,7 @@ dist/*
 !dist/books/media.zip
 !dist/learn/books/media.zip
 
+temp/*
+in/
+out/
+translator/
