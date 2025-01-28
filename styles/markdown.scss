@@ -102,3 +102,11 @@
     padding-bottom: 0;
   }
 }
+
+.dark-theme  {
+  .rendered-markdown {
+    a {
+      color: var(--type-magenta-pale);
+    }
+  }
+}
