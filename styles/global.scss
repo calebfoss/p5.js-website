@@ -274,8 +274,7 @@ section,
   }
 
   .dark-theme & {
-    background-color: #ddd !important;
-    filter: invert(100%);
+    background-color: var(--bg-black) !important;
   }
 }
 
