@@ -21,6 +21,9 @@ interface Props {
 
 const { example, code, relatedExamples } = Astro.props;
 
+const baseLegacyPath = "https://archive.p5js.org/examples/";
+const baseProcessingPath = "https://processing.org/examples/";
+
 const currentLocale = getCurrentLocale(Astro.url.pathname);
 const t = await getUiTranslator(currentLocale);
 
@@ -47,10 +50,16 @@ const { Content } = await example.render();
 
 const [categoryDir, exampleDir] = example.id.split("/").slice(1);
 
+const additionalAuthors = example.data.additionalContributors ?? [];
 
-const categoryAuthors = authorData[categoryDir as keyof typeof authorData];
+const categoryGitAuthors = authorData[categoryDir as keyof typeof authorData];
 
-const exampleAuthors = categoryAuthors[exampleDir as keyof (typeof categoryAuthors)] as AuthorData[];
+const exampleGitAuthors = categoryGitAuthors[exampleDir as keyof (typeof categoryGitAuthors)] as AuthorData[];
+
+const allExampleAuthors = additionalAuthors
+  .concat(exampleGitAuthors
+    .map(author => ({...author, name: author.name.length ? author.name : author.login}))
+  );
 ---
 
 <Head
@@ -71,15 +80,23 @@ const exampleAuthors = categoryAuthors[exampleDir as keyof (typeof categoryAutho
   <div class="mt-xl mb-4xl lg:mb-3xl max-w-[770px]">
     <div class="rendered-markdown">
       <Content />
-      <p>Contributors: {exampleAuthors.map((author, index) => {
-        const name = author.name.length ? author.name : author.login;
+      <p>Contributors: {allExampleAuthors.map((author, index, arr) => {
+        const name = author.name;
 
-        const comma = index < exampleAuthors.length - 1 ? ', ' : ''
+        const comma = index < arr.length - 1 ? ', ' : ''
         
         if(author.url.length === 0) return <>{name}{comma}</>;
       
         return <><a href={author.url} target="_blank">{name}</a>{comma}</>
       })}</p>
+      {example.data.legacyTitle && example.data.legacyPath 
+        ? <p>Modified from <a href={baseLegacyPath + example.data.legacyPath} target="_blank">{example.data.legacyTitle}</a>.</p> 
+          : null}
+      {example.data.processingTitle && example.data.processingPath
+        ? <p>Originally ported from the Processing example
+            <a href={baseProcessingPath + example.data.processingPath} target="_blank">{example.data.processingTitle}</a>.
+          </p>
+          : null}
     </div>
     <EditableSketch code={code} />
     <p>{example.data.arialabel}</p>

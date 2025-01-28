@@ -17,5 +17,10 @@ export const examplesCollection = defineCollection({
       relatedReference: z.array(reference("reference")).optional(),
       featuredImage: image(),
       featuredImageAlt: z.string().optional().default(""),
+      legacyTitle: z.string().optional(),
+      legacyPath: z.string().optional(),
+      processingTitle: z.string().optional(),
+      processingPath: z.string().optional(),
+      additionalContributors: z.array(z.object({name: z.string(), url: z.string()})).optional()
     }),
 });
